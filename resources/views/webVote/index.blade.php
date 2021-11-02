@@ -26,7 +26,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="{{ asset('image/logo.png') }}" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -35,31 +35,31 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="dashboard.html">
+              <a class="nav-link active" href='{{ webVote.index }}'>
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="icons.html">
+              <a class="nav-link" href="'{{ webVote.index }}'>
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">Data Kandidat</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="map.html">
+              <a class="nav-link" href='{{ webVote.index }}'>
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.html">
+              <a class="nav-link" href='{{ webVote.index }}'>
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tables.html">
+              <a class="nav-link" href="'{{ webVote.index }}'">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Laporan</span>
               </a>
@@ -73,7 +73,7 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+              <a class="nav-link" href="'{{ webVote.index }}'" target="_blank">
                 <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Logout</span>
               </a>
