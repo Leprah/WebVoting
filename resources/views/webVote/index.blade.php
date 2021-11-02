@@ -41,25 +41,25 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.index') }}">
+              <a class="nav-link" href="{{ route('webVote.dataKandidat') }}">
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">Data Kandidat</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.index') }}">
+              <a class="nav-link" href="{{ route('webVote.Pemilih') }}">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.index') }}">
+              <a class="nav-link" href="{{ route('webVote.statistik') }}">
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.index') }}">
+              <a class="nav-link" href="{{ route('webVote.laporan') }}">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Laporan</span>
               </a>
@@ -90,19 +90,7 @@
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
-          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-            <div class="form-group mb-0">
-              <div class="input-group input-group-alternative input-group-merge">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input class="form-control" placeholder="Search" type="text">
-              </div>
-            </div>
-            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </form>
+          
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item d-xl-none">
