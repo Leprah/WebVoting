@@ -32,3 +32,5 @@ Route::get('/webVote/laporan', 'WebVoteController@laporan')->name('webVote.lapor
 Route::get('/webVote/statistik', 'WebVoteController@statistik')->name('webVote.statistik');
 
 Route::get('/webVote/kandidat/create', 'WebVoteController@master')->name('kandidat.create');
+
+Route::get('/webVote/chart', 'ChartController@index')->name('chart');

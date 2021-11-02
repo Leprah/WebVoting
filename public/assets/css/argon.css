@@ -8769,7 +8769,7 @@ a.close.disabled
 
 .bg-primary
 {
-    background-color: #5e72e4 !important;
+    background-color: #E5E5E5 !important;
 }
 
 a.bg-primary:hover,
@@ -20420,7 +20420,7 @@ textarea[resize='horizontal']
 }
 .icon-lg + .icon-text
 {
-    width: calc(100% - $icon-size-lg - 1);
+    width: calc(100% - icon-size-lg - 1);
 }
 
 .icon-sm
@@ -20435,7 +20435,7 @@ textarea[resize='horizontal']
 }
 .icon-sm + .icon-text
 {
-    width: calc(100% - $icon-size-sm - 1);
+    width: calc(100% - icon-size-sm - 1);
 }
 
 .icon-xs
@@ -20450,7 +20450,7 @@ textarea[resize='horizontal']
 }
 .icon-xs + .icon-text
 {
-    width: calc(100% - $icon-size-xs - 1);
+    width: calc(100% - icon-size-xs - 1);
 }
 
 .icon-shape
@@ -24088,7 +24088,7 @@ button.bg-cyan:focus
 
 .bg-white
 {
-    background-color: #fff !important;
+    background-color: #62467F !important;
 }
 
 a.bg-white:hover,
