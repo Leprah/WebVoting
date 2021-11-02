@@ -61,7 +61,7 @@
             <li class="nav-item">
               <a class="nav-link" href="tables.html">
                 <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Hasil Pemilihan</span>
+                <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
@@ -70,55 +70,16 @@
                 <span class="nav-link-text">Laporan</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register.html">
-                <i class="ni ni-circle-08 text-pink"></i>
-                <span class="nav-link-text">Login</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upgrade.html">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Register</span>
-              </a>
-            </li>
           </ul>
           <!-- Divider -->
           <hr class="my-3">
           <!-- Heading -->
-          <h6 class="navbar-heading p-0 text-muted">
-            <span class="docs-normal">Documentation</span>
-          </h6>
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
               <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
                 <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Getting started</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
-                <i class="ni ni-palette"></i>
-                <span class="nav-link-text">Foundation</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
-                <i class="ni ni-ui-04"></i>
-                <span class="nav-link-text">Components</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
-                <i class="ni ni-chart-pie-35"></i>
-                <span class="nav-link-text">Plugins</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active active-pro" href="upgrade.html">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Upgrade to PRO</span>
+                <span class="nav-link-text">Logout</span>
               </a>
             </li>
           </ul>
@@ -392,7 +353,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Kandidat</h5>
                       <span class="h2 font-weight-bold mb-0">350,897</span>
                     </div>
                     <div class="col-auto">
@@ -414,7 +375,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Pemilih</h5>
                       <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
                     <div class="col-auto">
@@ -436,7 +397,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Sudah Memilih</h5>
                       <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
                     <div class="col-auto">
@@ -458,7 +419,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Belum Memilih</h5>
                       <span class="h2 font-weight-bold mb-0">49,65%</span>
                     </div>
                     <div class="col-auto">
@@ -550,88 +511,7 @@
             </div>
             <div class="table-responsive">
               <!-- Projects table -->
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Page name</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col">Unique users</th>
-                    <th scope="col">Bounce rate</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      /argon/
-                    </th>
-                    <td>
-                      4,569
-                    </td>
-                    <td>
-                      340
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      /argon/index.html
-                    </th>
-                    <td>
-                      3,985
-                    </td>
-                    <td>
-                      319
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      /argon/charts.html
-                    </th>
-                    <td>
-                      3,513
-                    </td>
-                    <td>
-                      294
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      /argon/tables.html
-                    </th>
-                    <td>
-                      2,050
-                    </td>
-                    <td>
-                      147
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      /argon/profile.html
-                    </th>
-                    <td>
-                      1,795
-                    </td>
-                    <td>
-                      190
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              
             </div>
           </div>
         </div>
@@ -649,107 +529,7 @@
             </div>
             <div class="table-responsive">
               <!-- Projects table -->
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Referral</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      Facebook
-                    </th>
-                    <td>
-                      1,480
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">60%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      Facebook
-                    </th>
-                    <td>
-                      5,480
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">70%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      Google
-                    </th>
-                    <td>
-                      4,807
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">80%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      Instagram
-                    </th>
-                    <td>
-                      3,678
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">75%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      twitter
-                    </th>
-                    <td>
-                      2,645
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">30%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              
             </div>
           </div>
         </div>

@@ -21,6 +21,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/webVote/index', 'WebVoteController@index')->name('webVote.index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/webVote/dataKandidat', 'WebVoteController@dataKandidat')->name('webVote.dataKandidat');
+
+Route::get('/webVote/dataPemilih', 'WebVoteController@dataPemilih')->name('webVote.dataPemilih');
+
+Route::get('/webVote/laporan', 'WebVoteController@laporan')->name('webVote.laporan');
+
+Route::get('/webVote/statistik', 'WebVoteController@statistik')->name('webVote.statistik');
+
+Route::get('/webVote/master', 'WebVoteController@master')->name('webVote.master');
+
+Route::get('/webVote/kandidat/create', 'WebVoteController@master')->name('kandidat.create');
