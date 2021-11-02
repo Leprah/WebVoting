@@ -34,7 +34,5 @@ class WebVoteController extends Controller
         return view('webVote.statistik');
     }
 
-    public function master(){
-        return view('webVote.master');
-    }
+
 }
