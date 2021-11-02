@@ -64,15 +64,19 @@
                 <span class="nav-link-text">Laporan</span>
               </a>
             </li>
+          </ul><hr class="my-3">
+          <!-- Heading -->
+         
+          <!-- Navigation -->
+          <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="login.html">
-                <i class="ni ni-key-25 text-info"></i>
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+                <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Logout</span>
               </a>
             </li>
-            
-            
           </ul>
+
         </div>
       </div>
     </div>
