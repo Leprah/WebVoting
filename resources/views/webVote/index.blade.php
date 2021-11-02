@@ -35,31 +35,31 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href='{{ webVote.index }}'>
+              <a class="nav-link active" href="{{ route('webVote.index') }}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="'{{ webVote.index }}'>
+              <a class="nav-link" href="{{ route('webVote.index') }}">
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">Data Kandidat</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href='{{ webVote.index }}'>
+              <a class="nav-link" href="{{ route('webVote.index') }}">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href='{{ webVote.index }}'>
+              <a class="nav-link" href="{{ route('webVote.index') }}">
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="'{{ webVote.index }}'">
+              <a class="nav-link" href="{{ route('webVote.index') }}">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Laporan</span>
               </a>
@@ -73,7 +73,7 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="'{{ webVote.index }}'" target="_blank">
+              <a class="nav-link" href="{{ __('Logout') }}" target="_blank">
                 <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Logout</span>
               </a>
