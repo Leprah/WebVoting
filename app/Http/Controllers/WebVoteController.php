@@ -13,8 +13,7 @@ class WebVoteController extends Controller
     }
 
     public function dataKandidat(){
-        $batas = 10;
-        $data_kandidat = Kandidat::orderBy('id', 'desc')->paginate($batas);
+        $data_kandidat = Kandidat::orderBy('id', 'desc');
         $no = $batas * ($data_kandidat->currentPage() - 1);
         return view('webVote.dataKandidat', compact('data_kandidat', 'no'));
     }

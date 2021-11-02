@@ -6,28 +6,20 @@ use Illuminate\Support\Facades\Schema;
 
 class Pemilih extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('pemilih', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('nim');
-            $table->integer('angkatan');
             $table->string('jurusan');
+            $table->integer('angkatan');
+            $table->integer('status');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('pemilih');
