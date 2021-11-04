@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Page plugins -->
   <!-- Argon CSS -->
-  <link rel="stylesheet" href="{{ asset('css/css.css') }}">
+  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
 </head>
 
 <body>
@@ -26,7 +26,11 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
+<<<<<<< HEAD
+          <img src="../image/logo.png" class="navbar-brand-img" alt="...">
+=======
           <img src="{{ asset('image/logo.png') }}" class="navbar-brand-img" alt="...">
+>>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
         </a>
       </div>
       <div class="navbar-inner">
