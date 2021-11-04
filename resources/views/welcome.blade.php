@@ -26,11 +26,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-<<<<<<< HEAD
-          <img src="../image/logo.png" class="navbar-brand-img" alt="...">
-=======
           <img src="{{ asset('image/logo.png') }}" class="navbar-brand-img" alt="...">
->>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
         </a>
       </div>
       <div class="navbar-inner">
