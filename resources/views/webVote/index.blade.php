@@ -35,31 +35,51 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link active" href="dashboard.html">
+=======
+              <a class="nav-link active" href="{{ route('webVote.index') }}">
+>>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link" href="icons.html">
+=======
+              <a class="nav-link" href="{{ route('webVote.dataKandidat') }}">
+>>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">Data Kandidat</span>
               </a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link" href="map.html">
+=======
+              <a class="nav-link" href="{{ route('webVote.Pemilih') }}">
+>>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link" href="profile.html">
+=======
+              <a class="nav-link" href="{{ route('webVote.statistik') }}">
+>>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link" href="tables.html">
+=======
+              <a class="nav-link" href="{{ route('webVote.laporan') }}">
+>>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Laporan</span>
               </a>
@@ -73,7 +93,11 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+=======
+              <a class="nav-link" href="{{ __('Logout') }}" target="_blank">
+>>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
                 <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Logout</span>
               </a>
@@ -90,7 +114,11 @@
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
+<<<<<<< HEAD
           <h1>Selamat Datang</h1>
+=======
+          
+>>>>>>> 37cfe57944862b9283ffd62cc323805bc53dd2dc
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item d-xl-none">
