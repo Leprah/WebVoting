@@ -45,6 +45,7 @@
                     <th>NIM</th>
                     <th>Jurusan</th>
                     <th>Angkatan</th>
+                    <th>Status</th>
                     <th width="280px">Action</th>
                   </tr>
                 </thead>
@@ -56,6 +57,7 @@
                         <td>{{ $pemilih->nim }}</td>
                         <td>{{ $pemilih->jurusan}}</td>
                         <td>{{ $pemilih->angkatan}}</td>
+                        <td>{{ $pemilih->status}}</td>
                         <td><center>
                         <a href="/webVote/kandidat/edit/{{ $kandidat->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>
                         <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
