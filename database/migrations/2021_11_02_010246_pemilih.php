@@ -15,7 +15,6 @@ class Pemilih extends Migration
             $table->string('nim');
             $table->string('jurusan');
             $table->integer('angkatan');
-            $table->integer('status');
             $table->timestamps();
         });
     }
