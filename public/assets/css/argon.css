@@ -96,7 +96,7 @@ body
     text-align: left;
 
     color: #525f7f;
-    background-color: #f8f9fe;
+    background-color: #fcfdff;
 }
 
 [tabindex='-1']:focus:not(:focus-visible)
@@ -6154,7 +6154,7 @@ input[type='button'].btn-block
 
 .navbar-light .navbar-nav .nav-link
 {
-    color: rgba(0, 0, 0, .6);
+    color: white(0, 0, 0, .6);
 }
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus
@@ -6171,7 +6171,7 @@ input[type='button'].btn-block
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active
 {
-    color: rgba(0, 0, 0, .9);
+    color: white(0, 0, 0, .9);
 }
 
 .navbar-light .navbar-toggler
@@ -6211,7 +6211,7 @@ input[type='button'].btn-block
 
 .navbar-dark .navbar-nav .nav-link
 {
-    color: rgba(255, 255, 255, .95);
+    color: black(255, 255, 255, .95);
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus
@@ -6291,9 +6291,11 @@ input[type='button'].btn-block
 .card-body
 {
     min-height: 1px;
-    padding: 1.5rem; 
-
+    padding: 1.5rem;
+    background-color: #62467F;
+    height: 112px;
     flex: 1 1 auto;
+    border-radius: .975rem; 
 }
 
 .card-title
@@ -21595,8 +21597,8 @@ textarea[resize='horizontal']
     padding-right: 1rem;
     padding-left: 1rem;
 
-    border-radius: .375rem; 
-    background: #f6f9fc;
+   
+    background: #FEC260;
 }
 .navbar-vertical.navbar-expand-xs .lavalamp-object
 {
@@ -22852,7 +22854,7 @@ textarea[resize='horizontal']
 
 .nav-link
 {
-    color: #525f7f;
+    color: #fcfdff;
 }
 .nav-link:hover
 {
