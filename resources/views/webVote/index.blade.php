@@ -48,29 +48,20 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.dataPemilih') }}">
-<<<<<<< HEAD
-=======
               <a class="nav-link" href="map.html">
->>>>>>> 5b11d701848eb50bced964139c79edc52f978260
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
             </li>
             <li class="nav-item">
-<<<<<<< HEAD
-=======
               <a class="nav-link" href="profile.html">
->>>>>>> 5b11d701848eb50bced964139c79edc52f978260
               <a class="nav-link" href="{{ route('webVote.statistik') }}">
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
-<<<<<<< HEAD
-=======
               <a class="nav-link" href="tables.html">
->>>>>>> 5b11d701848eb50bced964139c79edc52f978260
               <a class="nav-link" href="{{ route('webVote.laporan') }}">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Laporan</span>
@@ -85,10 +76,7 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-<<<<<<< HEAD
-=======
               <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
->>>>>>> 5b11d701848eb50bced964139c79edc52f978260
               <a class="nav-link" href="{{ __('Logout') }}" target="_blank">
                 <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Logout</span>
@@ -106,10 +94,7 @@
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
-<<<<<<< HEAD
           <h1>Selamat Datang</h1>
-=======
->>>>>>> 5b11d701848eb50bced964139c79edc52f978260
           
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
@@ -290,11 +275,7 @@
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted">
-<<<<<<< HEAD
-              &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Web Voting Team</a>
-=======
               &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative x E-voting Team</a>
->>>>>>> 5b11d701848eb50bced964139c79edc52f978260
             </div>
           </div>
           <div class="col-lg-6">
