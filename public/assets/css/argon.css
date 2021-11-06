@@ -21592,13 +21592,12 @@ textarea[resize='horizontal']
 }
 .navbar-vertical.navbar-expand-xs .navbar-nav > .nav-item > .nav-link.active
 {
-    margin-right: .5rem;
-    margin-left: .5rem;
+
     padding-right: 1rem;
     padding-left: 1rem;
-
-   
-    background: #FEC260;
+    background:rgba(249, 186, 48, 0.47);
+    margin:0px auto;
+  
 }
 .navbar-vertical.navbar-expand-xs .lavalamp-object
 {
@@ -29840,3 +29839,72 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
 {
     background: transparent;
 }
+
+.thead-color{
+    background-color: #FEC260;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+.modal-content {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+#left {
+    float:left;
+    width:100px;
+}
+
+#center {
+    margin:0 auto;
+}
+
+#right {
+    float:right;
+    
+}
+
+.admin {
+color: #32325d;
+   }
+

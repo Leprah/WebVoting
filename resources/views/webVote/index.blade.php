@@ -48,7 +48,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.dataPemilih') }}">
-              <a class="nav-link" href="map.html">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
@@ -94,7 +93,7 @@
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
-          <h1>Selamat Datang</h1>
+          <h1>Dashboard</h1>
           
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
@@ -149,7 +148,7 @@
                   <span class="avatar avatar-sm rounded-circle">
                     <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
                   </span>
-                  <div class="media-body  ml-2  d-none d-lg-block">
+                  <div class="admin media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">Admin</span>
                   </div>
                 </div>
@@ -270,6 +269,8 @@
     <div class='panel'>
       <div class='pull-left' id='liveCount'></div>
   </div>
+  <div class="container-fluid">
+
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
@@ -287,6 +288,7 @@
           </div>
         </div>
       </footer>
+      </div>
     </div>
   </div>
   <!-- Argon Scripts -->

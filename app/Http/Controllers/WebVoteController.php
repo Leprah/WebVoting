@@ -13,7 +13,8 @@ class WebVoteController extends Controller
     }
 
     public function dataKandidat(){
-        $data_kandidat = Kandidat::orderBy('id', 'desc');
+        $batas = 3;
+        $data_kandidat = Kandidat::orderBy('id', 'desc')->paginate($batas);
         $no = $batas * ($data_kandidat->currentPage() - 1);
         return view('webVote.dataKandidat', compact('data_kandidat', 'no'));
     }
@@ -33,5 +34,11 @@ class WebVoteController extends Controller
         return view('webVote.statistik');
     }
 
+    public function master(){
+        return view('webVote.master');
+    }
 
+    public function create(){
+        return view('kandidat.create');
+    }
 }

@@ -1,25 +1,129 @@
 @extends('webVote.master')
 
+@section('judul')
+<h1>Data Pemilih</h1>
+@endsection
+
+@section('menu')
+<div class="collapse navbar-collapse" id="sidenav-collapse-main">
+          <!-- Nav items -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('webVote.index') }}">
+                <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('webVote.dataKandidat') }}">
+                <i class="ni ni-planet text-orange"></i>
+                <span class="nav-link-text">Data Kandidat</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ route('webVote.dataPemilih') }}">
+                <i class="ni ni-pin-3 text-primary"></i>
+                <span class="nav-link-text">Data Pemilih</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">
+              <a class="nav-link" href="{{ route('webVote.statistik') }}">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Statistik</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tables.html">
+              <a class="nav-link" href="{{ route('webVote.laporan') }}">
+                <i class="ni ni-bullet-list-67 text-default"></i>
+                <span class="nav-link-text">Laporan</span>
+              </a>
+            </li>
+            
+          </ul>
+          <hr class="my-3">
+          <!-- Heading -->
+         
+          <!-- Navigation -->
+          <ul class="navbar-nav mb-md-3">
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+              <a class="nav-link" href="{{ __('Logout') }}" target="_blank">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Logout</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+@endsection
+
+@section('tambah')
+<div class="container-fluid">
+<div id ="right">
+            <div>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambahDataKandidat">
+Tambah Data
+</button>
+<!-- modal tambah data -->
+<div class="modal fade" id="tambahDataKandidat" tabindex="-1" role="dialog" aria-labelledby="tambahDataKandidatTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document" id="center">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tambahDataKandidatTitle">Tambah Data Pemilih</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <form>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nama</label>
+                     <input type="text" name="name" class="form-control">
+                     <!---->
+                </div> 
+                <div class="form-group">
+                    <label>NIM</label>
+                    <input type="text" name="description" class="form-control"> 
+                    <!---->
+                </div>
+                <div class="form-group">
+                    <label>Jurusan</label> 
+                    <input type="text" name="price" class="form-control">
+                    <!---->
+                </div>
+                <div class="form-group">
+                    <label>Angkatan</label> 
+                    <input type="text" name="price" class="form-control">
+                    <!---->
+                </div>
+            </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    
+            </div>
+
+            </div>
+            </div>
+@endsection
+
 
 @section('content')
-<div class="header bg-primary pb-6">
+<div>
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Data Pemilih</h6>
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Data Pemilih</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Data Pemilih</li>
-                </ol>
-              </nav>
-            </div>
-            <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-sm btn-neutral">New</a>
-              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-            </div>
+ 
+
           </div>
         </div>
       </div>
@@ -30,15 +134,10 @@
         <div class="col">
           <div class="card">
             <!-- Card header -->
-            <div>
-            <div class="pull-left">
-                <a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Data</a>
-            </div>
-            </div>
             <!-- Light table -->
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
-                <thead class="thead-light">
+                <thead class="thead-color">
                   <tr>
                     <th>No</th>
                     <th>Nama</th>
@@ -68,31 +167,7 @@
               </table>
             </div>
             <!-- Card footer -->
-            <div class="card-footer py-4">
-              <nav aria-label="...">
-                <ul class="pagination justify-content-end mb-0">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">
-                      <i class="fas fa-angle-left"></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">
-                      <i class="fas fa-angle-right"></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            
           </div>
         </div>
       </div>

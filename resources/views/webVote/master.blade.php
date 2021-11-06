@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-
-</head>
+  
+  </head>
 
 <body>
   <!-- Sidenav -->
@@ -32,53 +32,7 @@
       </div>
       <div class="navbar-inner">
         <!-- Collapse -->
-        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-          <!-- Nav items -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">
-                <i class="ni ni-tv-2 text-primary"></i>
-                <span class="nav-link-text">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="icons.html">
-                <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Data Kandidat</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="map.html">
-                <i class="ni ni-pin-3 text-primary"></i>
-                <span class="nav-link-text">Data Pemilih</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profile.html">
-                <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Statistik</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tables.html">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Laporan</span>
-              </a>
-            </li>
-          </ul><hr class="my-3">
-          <!-- Heading -->
-         
-          <!-- Navigation -->
-          <ul class="navbar-nav mb-md-3">
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
-                <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Logout</span>
-              </a>
-            </li>
-          </ul>
-
-        </div>
+        @yield('menu')
       </div>
     </div>
   </nav>
@@ -89,19 +43,7 @@
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
-          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-            <div class="form-group mb-0">
-              <div class="input-group input-group-alternative input-group-merge">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input class="form-control" placeholder="Search" type="text">
-              </div>
-            </div>
-            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </form>
+          @yield('judul')
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item d-xl-none">
@@ -155,8 +97,8 @@
                   <span class="avatar avatar-sm rounded-circle">
                     <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
                   </span>
-                  <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                  <div class="admin media-body  ml-2  d-none d-lg-block">
+                    <span class="mb-0 text-sm  font-weight-bold">Admin</span>
                   </div>
                 </div>
               </a>
@@ -172,14 +114,6 @@
                   <i class="ni ni-settings-gear-65"></i>
                   <span>Settings</span>
                 </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-calendar-grid-58"></i>
-                  <span>Activity</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-support-16"></i>
-                  <span>Support</span>
-                </a>
                 <div class="dropdown-divider"></div>
                 <a href="#!" class="dropdown-item">
                   <i class="ni ni-user-run"></i>
@@ -192,7 +126,35 @@
       </div>
     </nav>
     <!-- Header -->
+    <div>
+      <br>
+      <br>
+    </div>
+@yield('tambah')
+<div class="container-fluid">
+
+    <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input class="form-control" placeholder="Search" type="text">
+              </div>
+            </div>
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form>
+
+</div>
+
+
     <!-- Header -->
+    <div class="container-fluid">
+      <br>
+      <br>
+    </div>
    
     <!-- Page content -->
     
@@ -206,7 +168,7 @@
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted">
-              &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Web Voting Teamm</a>
+              &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative x E-voting Team</a>
             </div>
           </div>
           <div class="col-lg-6">
@@ -232,5 +194,8 @@
   <script src="../assets/js/argon.js?v=1.2.0"></script>
  
 </body>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </html>
+
