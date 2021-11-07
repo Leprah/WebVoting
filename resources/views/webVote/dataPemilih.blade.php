@@ -66,49 +66,7 @@
             <div>
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambahDataKandidat">
 Tambah Data
-</button>
-<!-- modal tambah data -->
-<div class="modal fade" id="tambahDataKandidat" tabindex="-1" role="dialog" aria-labelledby="tambahDataKandidatTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document" id="center">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="tambahDataKandidatTitle">Tambah Data Pemilih</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        <form>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Nama</label>
-                     <input type="text" name="name" class="form-control">
-                     <!---->
-                </div> 
-                <div class="form-group">
-                    <label>NIM</label>
-                    <input type="text" name="description" class="form-control"> 
-                    <!---->
-                </div>
-                <div class="form-group">
-                    <label>Jurusan</label> 
-                    <input type="text" name="price" class="form-control">
-                    <!---->
-                </div>
-                <div class="form-group">
-                    <label>Angkatan</label> 
-                    <input type="text" name="price" class="form-control">
-                    <!---->
-                </div>
-            </div>
-            </form>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <button type="button" class="btn btn-primary">Simpan</button>
-            </div>
-        </div>
-    </div>
-</div>
-                                                    
+</button>             
             </div>
 
             </div>
