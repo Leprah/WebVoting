@@ -114,10 +114,15 @@ Tambah Data
                         <td>{{ $pemilih->nim }}</td>
                         <td>{{ $pemilih->jurusan}}</td>
                         <td>{{ $pemilih->angkatan}}</td>
-                        <td>{{ $pemilih->status}}</td>
+                        @if($pemilih-> status == 1 ){
+                          <td class='checkmark'>{{ $pemilih-> status }}</td>
+                        }@else{
+                          <td class='cross'>{{ $pemilih->status }}</td>
+                        }
+                        @endif
                         <td><center>
-                        <a href="/webVote/kandidat/edit/{{ $kandidat->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>
-                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
+                        <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>
+                        <a href="/webVote/pemilih/delete/{{ $pemilih->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
                         </center></td>
                     </tr>
                 @endforeach
