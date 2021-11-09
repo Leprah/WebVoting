@@ -29890,11 +29890,15 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
     outline: 0;
 }
 
+.chart {
+    
+    border-style: ridge;
+    border-radius: .975rem;
+}
 #left {
     float:left;
-    width:100px;
+    
 }
-
 #center {
     margin:0 auto;
 }

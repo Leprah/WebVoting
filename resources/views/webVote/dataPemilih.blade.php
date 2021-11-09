@@ -10,33 +10,33 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.index') }}">
-                <i class="ni ni-tv-2 text-primary"></i>
+                <i class="ni ni-tv-2 text-white"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.dataKandidat') }}">
-                <i class="ni ni-planet text-orange"></i>
+                <i class="ni ni-single-02 "></i>
                 <span class="nav-link-text">Data Kandidat</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="{{ route('webVote.dataPemilih') }}">
-                <i class="ni ni-pin-3 text-primary"></i>
+                <i class="ni ni-single-02"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="profile.html">
               <a class="nav-link" href="{{ route('webVote.statistik') }}">
-                <i class="ni ni-single-02 text-yellow"></i>
+                <i class="ni ni-chart-bar-32"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="tables.html">
               <a class="nav-link" href="{{ route('webVote.laporan') }}">
-                <i class="ni ni-bullet-list-67 text-default"></i>
+                <i class="ni ni-bullet-list-67"></i>
                 <span class="nav-link-text">Laporan</span>
               </a>
             </li>

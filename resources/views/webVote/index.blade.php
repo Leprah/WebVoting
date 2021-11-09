@@ -36,32 +36,32 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" href="{{ route('webVote.index') }}">
-                <i class="ni ni-tv-2 text-primary"></i>
+                <i class="ni ni-tv-2 text-white"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.dataKandidat') }}">
-                <i class="ni ni-planet text-orange"></i>
+                <i class="ni ni-single-02"></i>
                 <span class="nav-link-text">Data Kandidat</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.dataPemilih') }}">
-                <i class="ni ni-pin-3 text-primary"></i>
+                <i class="ni ni-single-02"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.statistik') }}">
-                <i class="ni ni-single-02 text-yellow"></i>
+                <i class="ni ni-chart-bar-32"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="tables.html">
               <a class="nav-link" href="{{ route('webVote.laporan') }}">
-                <i class="ni ni-bullet-list-67 text-default"></i>
+                <i class="ni ni-bullet-list-67"></i>
                 <span class="nav-link-text">Laporan</span>
               </a>
             </li>
@@ -289,9 +289,17 @@
       </div>
     </div>
     <!-- Page content -->
-    <div class='panel'>
-      <div class='pull-left' id='liveCount'></div>
+    <div class="container-fluid">
+    <br>
+    <h3>Quick Count</h3>
+    </div>
+    <div class="container-fluid">
+      <div class='chart' id='liveCount'>
+      </div>
   </div>
+ <br>
+ <br>
+
   <div class="container-fluid">
 
       <!-- Footer -->
@@ -337,7 +345,7 @@
             type: 'pie'
         },
         title: {
-            text: 'Browser market shares in January, 2018'
+            text: ''
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -349,6 +357,16 @@
         },
         plotOptions: {
             pie: {
+              colors: [
+                    '#A12568', 
+                    '#FEC260',
+                    '#2A0944',
+                    '#24CBE5', 
+                    '#64E572', 
+                    '#FF9655', 
+                    '#FFF263', 
+                    '#6AF9C4'
+                  ],
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
@@ -361,25 +379,17 @@
             name: 'Brands',
             colorByPoint: true,
             data: [{
-                name: 'Chrome',
-                y: 61.41,
+                name: 'Ana',
+                y: 15,
                 sliced: true,
                 selected: true
             }, {
-                name: 'Internet Explorer',
-                y: 11.84
+                name: 'Alief',
+                y: 35
             }, {
-                name: 'Firefox',
-                y: 10.85
-            }, {
-                name: 'Edge',
-                y: 4.67
-            }, {
-                name: 'Safari',
-                y: 4.18
-            }, {
-                name: 'Other',
-                y: 7.05
+                name: 'Aveenda',
+                y: 50
+           
             }]
         }]
     });
