@@ -14,13 +14,19 @@ class Pemilih extends Migration
             $table->string('nama');
             $table->string('nim');
             $table->string('jurusan');
-            $table->integer('angkatan');
+            $table->string('angkatan');
+            $table->integer('status');
             $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('pemilih');
+        //
     }
 }
