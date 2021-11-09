@@ -63,14 +63,11 @@
 @section('tambah')
 <div class="container-fluid">
 <div id ="right">
-            <div>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambahDataKandidat">
-Tambah Data
-</button>             
-            </div>
+<a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Buku</a>
+</div>
+</div>
 
-            </div>
-            </div>
+
 @endsection
 
 
