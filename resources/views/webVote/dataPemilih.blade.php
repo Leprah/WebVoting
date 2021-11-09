@@ -116,8 +116,8 @@ Tambah Data
                         <td>{{ $pemilih->angkatan}}</td>
                         <td>{{ $pemilih->status}}</td>
                         <td><center>
-                        <a href="/webVote/kandidat/edit/{{ $kandidat->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>
-                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
+                        <a href="/webVote/kandidat/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>
+                        <a href="/webVote/kandidat/delete/{{ $pemilih->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
                         </center></td>
                     </tr>
                 @endforeach
