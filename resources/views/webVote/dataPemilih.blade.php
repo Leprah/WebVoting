@@ -48,13 +48,37 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
-              <a class="nav-link" href="{{ __('Logout') }}" target="_blank">
-                <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Logout</span>
-              </a>
+              @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+              @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+              @endguest
             </li>
           </ul>
+          
 
         </div>
 
@@ -111,12 +135,8 @@
                         <td>{{ $pemilih->nim }}</td>
                         <td>{{ $pemilih->jurusan}}</td>
                         <td>{{ $pemilih->angkatan}}</td>
-                        @if($pemilih-> status == 1 ){
-                          <td class='checkmark'>{{ $pemilih-> status }}</td>
-                        }@else{
-                          <td class='cross'>{{ $pemilih->status }}</td>
-                        }
-                        @endif
+                        <td>{{ $pemilih->status}}</td>
+
                         <td><center>
                         <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>
                         <a href="/webVote/pemilih/delete/{{ $pemilih->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
