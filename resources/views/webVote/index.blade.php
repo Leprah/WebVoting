@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Page plugins -->
   <!-- Argon CSS -->
-  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+  <link rel="stylesheet" href="{{ asset('assets/css/argon.css?v=1.2.0') }}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('assets/css/status.css') }}" type="text/css">
 </head>
 
 <body>
@@ -74,35 +75,34 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-            @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+              @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+              @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-              </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+              @endguest
             </li>
           </ul>
         </div>
