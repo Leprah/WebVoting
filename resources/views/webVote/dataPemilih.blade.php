@@ -114,11 +114,10 @@ Tambah Data
                         <td>{{ $pemilih->nim }}</td>
                         <td>{{ $pemilih->jurusan}}</td>
                         <td>{{ $pemilih->angkatan}}</td>
-                        @if($pemilih-> status == 1 ){
+                        @if($pemilih->status == '1' )
                           <td class='checkmark'>{{ $pemilih-> status }}</td>
-                        }@else{
+                        @else
                           <td class='cross'>{{ $pemilih->status }}</td>
-                        }
                         @endif
                         <td><center>
                         <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>

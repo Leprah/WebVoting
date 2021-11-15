@@ -67,7 +67,6 @@
 <a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Buku</a>
 </div>
 </div>
-</div>
 
 @endsection
 
