@@ -20,10 +20,10 @@
                         </div>
                     </div>
                     <br>
-              <div class="d-flex justify-content-between pd-top-btn-vt">
-                <a href="#" class="btn btn-sm btn-info  mr-4 size-btn-vt">Info</a>
-                <a href="#" class="btn btn-sm btn-default float-right size-btn-vt">Vote</a>
-              </div>
+                    <div class="d-flex justify-content-between pd-top-btn-vt">
+                        <button type="button" class="btn btn-sm btn-info  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
+                        <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
+                    </div>
             </div>
         </div>    
     </div>
@@ -42,10 +42,10 @@
                         </div>
                     </div>
                     <br>
-              <div class="d-flex justify-content-between pd-top-btn-vt">
-                <a href="#" class="btn btn-sm btn-info  mr-4 size-btn-vt">Info</a>
-                <a href="#" class="btn btn-sm btn-default float-right size-btn-vt">Vote</a>
-              </div>
+                    <div class="d-flex justify-content-between pd-top-btn-vt">
+                        <button type="button" class="btn btn-sm btn-info  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
+                        <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
+                    </div>
             </div>
         </div>    
     </div>
@@ -64,16 +64,39 @@
                         </div>
                     </div>
                     <br>
-              <div class="d-flex justify-content-between pd-top-btn-vt">
-                <a href="#" class="btn btn-sm btn-info  mr-4 size-btn-vt">Info</a>
-                <a href="#" class="btn btn-sm btn-default float-right size-btn-vt">Vote</a>
-              </div>
+                <div class="d-flex justify-content-between pd-top-btn-vt">
+                    <button type="button" class="btn btn-sm btn-info  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
+                    <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
+                </div>
             </div>
         </div>    
     </div>
 
 
     </div>        
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" id="center" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 @endsection
