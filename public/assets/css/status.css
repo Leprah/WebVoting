@@ -1,0 +1,19 @@
+.checkmark {
+    display: inline-block;
+    transform: rotate(45deg);
+    height: 25px;
+    width: 12px;
+    margin-left: 60%; 
+    border-bottom: 7px solid #78b13f;
+    border-right: 7px solid #78b13f;
+}
+.cross {
+    background-size: cover;
+    color: red;
+    text-align: center;
+    font-size: 24px;
+    padding: 40px;
+    display: inline-block;
+    font-family: sans-serif;
+    cursor: default;
+}
