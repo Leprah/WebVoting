@@ -37,8 +37,8 @@ class WebVoteController extends Controller
     public function master(){
         return view('webVote.master');
     }
-
-    public function create(){
-        return view('kandidat.create');
+    public function voter(){
+        return view('voter.vote');
     }
+
 }

@@ -6391,8 +6391,9 @@ input[type='button'].btn-block
 .card-img,
 .card-img-top
 {
-    border-top-left-radius: calc(.375rem - 1px);
-    border-top-right-radius: calc(.375rem - 1px);
+    padding-top: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
 }
 
 .card-img,
@@ -29912,3 +29913,86 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
 color: #32325d;
    }
 
+.container-data{
+
+padding-right: 55px;
+padding-left: 55px;
+padding-top: 55px;
+padding-bottom: 55px;
+position: absolute;
+width: 1070px;
+
+left: 100px;
+right: 100px;
+top: 200px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
+
+}
+.body-voter{
+    max-width: 100%;
+    overflow-x: hidden;
+
+    font-family: Open Sans, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    margin: 0;
+
+    text-align: left;
+
+    color: #525f7f;
+    background-color: #3B185F;
+}
+
+.bg-nav-vote{
+    background-color: #2A0944;
+}
+
+.judul-vote{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 78px;
+
+    /* identical to box height */
+    text-align: center;
+    color: #FEC260;
+}
+
+.mg-vote{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.card-vote{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    width: 400px;
+    height: 550px;
+}
+
+.bg-foot-vt{
+    background-color: #2A0944;
+}
+
+.pd-top-btn-vt{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.size-btn-vt{
+    width: 100px;
+    height: 30px;
+}

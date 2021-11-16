@@ -88,7 +88,7 @@
 @section('tambah')
 <div class="container-fluid">
 <div id ="right">
-<a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Buku</a>
+<a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Data</a>
 </div>
 </div>
 

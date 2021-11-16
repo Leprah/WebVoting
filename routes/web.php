@@ -30,4 +30,8 @@ Route::get('/webVote/statistik', 'WebVoteController@statistik')->name('webVote.s
 
 Route::get('/webVote/master', 'WebVoteController@master')->name('webVote.master');
 
-Route::get('/kandidat/create', 'WebVoteController@create')->name('kandidat.create');
+Route::get('/kandidat/create', 'KandidatController@create')->name('kandidat.create');
+
+Route::get('/pemilih/create', 'PemilihController@create')->name('pemilih.create');
+
+Route::get('/voter/vote', 'WebVoteController@voter')->name('voter.vote');
