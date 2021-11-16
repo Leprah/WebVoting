@@ -47,13 +47,37 @@
           <!-- Heading -->
          
           <!-- Navigation -->
+      
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
-              <a class="nav-link" href="{{ __('Logout') }}" target="_blank">
-                <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Logout</span>
-              </a>
+              @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+              @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+              @endguest
             </li>
           </ul>
 
@@ -64,19 +88,20 @@
 @section('tambah')
 <div class="container-fluid">
 <div id ="right">
-<a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Buku</a>
+<a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Data</a>
 </div>
-</div>
+
 
 @endsection
 
 @section('content')
-<div class>
+<div>
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
-            
-            
+            <div class="col-lg-6 col-7">
+ 
+
           </div>
         </div>
       </div>
@@ -87,7 +112,6 @@
         <div class="col">
           <div class="card">
             <!-- Card header -->
- 
             <!-- Light table -->
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
@@ -119,32 +143,7 @@
               </table>
             </div>
             <!-- Card footer -->
-            <div class="card-footer py-4">
-              <nav aria-label="...">
-                <ul class="pagination justify-content-end mb-0">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">
-                      <i class="fas fa-angle-left"></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">
-                      <i class="fas fa-angle-right"></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
             </div>
-          </div>
         </div>
       </div>                                          
 
