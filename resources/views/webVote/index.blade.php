@@ -62,7 +62,7 @@
             <li class="nav-item">
               <a class="nav-link" href="tables.html">
               <a class="nav-link" href="{{ route('webVote.laporan') }}">
-                <i class="ni ni-bullet-list-67"></i>
+                <i class="ni ni-single-copy-04"></i>
                 <span class="nav-link-text">Laporan</span>
               </a>
             </li>
@@ -196,8 +196,8 @@
                       <span class="h2 font-weight-bold mb-0">350,897</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                        <i class="ni ni-active-40"></i>
+                      <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
+                        <i class="ni ni-single-02"></i>
                       </div>
                     </div>
                   </div>
@@ -214,8 +214,8 @@
                       <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                        <i class="ni ni-chart-pie-35"></i>
+                      <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
+                        <i class="ni ni-single-02"></i>
                       </div>
                     </div>
                   </div>
@@ -232,8 +232,8 @@
                       <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                        <i class="ni ni-money-coins"></i>
+                      <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
+                        <i class="ni ni-check-bold"></i>
                       </div>
                     </div>
                   </div>
@@ -250,7 +250,7 @@
                       <span class="h2 font-weight-bold mb-0">49,65%</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
                         <i class="ni ni-chart-bar-32"></i>
                       </div>
                     </div>
