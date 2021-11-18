@@ -90,7 +90,6 @@
 <div id ="right">
 <a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Data</a>
 </div>
-</div>
 
 
 @endsection

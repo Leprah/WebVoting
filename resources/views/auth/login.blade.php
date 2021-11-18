@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V16</title>
+	<title>E-Web Vote</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -37,6 +37,7 @@
 				</span>
 				
 				<form method="POST" action="{{ route('login') }}">
+				@csrf
 				<div class="login100-form validate-form p-b-33 p-t-5">
 					<div class="wrap-input100 validate-input" data-validate = "Enter email">
 					<input id="email" type="email" class="form-control @error('email') is-invalid @enderror input100" placeholder="Email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -60,7 +61,7 @@
 					</div>
 				</div>
 					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" type="submit">
 							Login
 						</button>
 					</div>
@@ -89,6 +90,16 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+
+	<footer class="footer pt-0">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-lg-2">
+            <div class="copyright text-center  text-lg-left  text-muted">
+              &copy; 2021 <a>Creative x E-voting Team</a>
+            </div>
+          </div>
+    	</div>
+    </footer>
 
 </body>
 </html>
