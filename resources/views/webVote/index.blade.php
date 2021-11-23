@@ -144,10 +144,14 @@
               <!-- User di navbar -->
               <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
+<<<<<<< HEAD
                     <!-- Icon admin navbar -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                       <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                     </svg>
+=======
+                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+>>>>>>> 5b6b9c5850a1cedb8fbfdd12080352156b7e2558
                   </span>
                   <div class="admin media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
@@ -263,7 +267,7 @@
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
-                        <i class="ni ni-chart-bar-32"></i>
+                      <i class="ni ni-fat-delete"></i>
                       </div>
                     </div>
                   </div>
@@ -285,7 +289,9 @@
   </div>
  <br>
  <br>
+
   <div class="container-fluid">
+
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
