@@ -139,7 +139,7 @@
 
                         <td><center>
                         <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>
-                        <a href="/webVote/pemilih/delete/{{ $pemilih->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
+                        <a href="{{  }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
                         </center></td>
                     </tr>
                 @endforeach
