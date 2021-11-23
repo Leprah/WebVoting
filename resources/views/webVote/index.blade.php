@@ -143,7 +143,7 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../image/thumbnail.png">
+                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
                   </span>
                   <div class="admin media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">Admin</span>
@@ -251,7 +251,7 @@
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
-                        <i class="ni ni-chart-bar-32"></i>
+                      <i class="ni ni-fat-delete"></i>
                       </div>
                     </div>
                   </div>
@@ -273,7 +273,9 @@
   </div>
  <br>
  <br>
+
   <div class="container-fluid">
+
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
