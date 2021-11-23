@@ -132,14 +132,14 @@
             <!-- Light table -->
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
-                <thead class="thead-color">
-                  <tr>
-                    <th>No</th>
-                    <th>Foto</th>
-                    <th>Nama</th>
-                    <th>Visi</th>
-                    <th>Misi</th>
-                    <th width="280px">Action</th>
+                <thead class="thead-color" >
+                  <tr style="font-size:12px;">
+                    <th style="font-size:12px;">No</th>
+                    <th style="font-size:12px;">Foto</th>
+                    <th style="font-size:12px;">Nama</th>
+                    <th style="font-size:12px;">Visi</th>
+                    <th style="font-size:12px;">Misi</th>
+                    <th style="font-size:12px;" width="280px">Action</th>
                   </tr>
                 </thead>
                 <tbody class="list">

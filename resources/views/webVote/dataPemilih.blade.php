@@ -134,13 +134,13 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-color">
                   <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>NIM</th>
-                    <th>Jurusan</th>
-                    <th>Angkatan</th>
-                    <th>Status</th>
-                    <th width="280px">Action</th>
+                    <th style="font-size:12px;">No</th>
+                    <th style="font-size:12px;">Nama</th>
+                    <th style="font-size:12px;">NIM</th>
+                    <th style="font-size:12px;">Jurusan</th>
+                    <th style="font-size:12px;">Angkatan</th>
+                    <th style="font-size:12px;">Status</th>
+                    <th style="font-size:12px;" width="280px">Action</th>
                   </tr>
                 </thead>
                 <tbody class="list">
