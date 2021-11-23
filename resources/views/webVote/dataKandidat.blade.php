@@ -87,9 +87,9 @@
 
 @section('tambah')
 <div class="container-fluid">
-<div id ="right">
-<a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Data</a>
-</div>
+  <div id ="right">
+    <a class="btn btn-success btn-sm" href="{{ route('kandidat.create') }}"> Tambah Data</a>
+  </div>
 </div>
 
 @endsection
@@ -151,8 +151,8 @@
                         <td>{{ $kandidat->visi }}</td>
                         <td>{{ $kandidat->misi}}</td>
                         <td><center>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editDataKandidat">Edit</button>
-                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editDataKandidat">Edit</button>
+                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-danger"> Hapus</button></a>
                         </center></td>
                     </tr>
                 @endforeach
