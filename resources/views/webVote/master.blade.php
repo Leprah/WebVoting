@@ -180,6 +180,65 @@
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script>
+    // Build the chart
+    Highcharts.chart('liveCount', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: ''
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+              colors: [
+                    '#A12568', 
+                    '#FEC260',
+                    '#2A0944',
+                    '#24CBE5', 
+                    '#64E572', 
+                    '#FF9655', 
+                    '#FFF263', 
+                    '#6AF9C4'
+                  ],
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Ana',
+                y: 15,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Alief',
+                y: 35
+            }, {
+                name: 'Aveenda',
+                y: 50
+           
+            }]
+        }]
+    });
+    </script>
   
 </body>
 

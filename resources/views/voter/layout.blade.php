@@ -31,7 +31,7 @@
           <!-- Search form -->
           
           <a class="navbar-top" href="javascript:void(0)">
-          <img src="../image/logo.png" height="30" width="100" class="navbar-brand-img" alt="...">
+          <img src="../image/logo.png" height="30" width="120" class="navbar-brand-img" alt="...">
           </a>
 
           <!-- Navbar links -->

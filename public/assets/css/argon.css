@@ -29842,6 +29842,8 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
     background: transparent;
 }
 
+/* code tambahan */
+
 .thead-color{
     background-color: #FEC260;
 }
@@ -29956,7 +29958,7 @@ box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 78px;
 
     /* identical to box height */
@@ -29964,10 +29966,30 @@ box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
     color: #FEC260;
 }
 
+.no-urut{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 78px;
+
+    /* identical to box height */
+    text-align: center;
+   
+}
+
+.lingkaran{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 60px;
+	height: 60px;
+	background: #FEC260;
+	border-radius: 100%;
+    margin:0 auto;
+}
+
 .mg-vote{
-    margin-top: 20px;
-    margin-left: 150px;
-    margin-right: 70px;
+    margin:0 auto;
 }
 
 .card-vote{
