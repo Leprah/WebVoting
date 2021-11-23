@@ -8,20 +8,23 @@ use Illuminate\Support\Facades\Auth;
 
 class RedirectIfAuthenticated
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @param  string|null  $guard
-     * @return mixed
-     */
-    public function handle($request, Closure $next, $guard = null)
-    {
+    public function handle($request, Closure $next, $guard = null) {
         if (Auth::guard($guard)->check()) {
-            return redirect(RouteServiceProvider::HOME);
+          $level = Auth::user()->level; 
+      
+          switch ($level) {
+            case 'admin':
+               return redirect('/webVote/index');
+               break;
+            case 'voter':
+               return redirect('/voter/vote');
+               break; 
+      
+            default:
+               return redirect('/auth/login'); 
+               break;
+          }
         }
-
         return $next($request);
-    }
+      }
 }
