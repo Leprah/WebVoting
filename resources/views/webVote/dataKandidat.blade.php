@@ -158,10 +158,12 @@
                 @endforeach
                 </tbody>
               </table>
-              </div>
+            </div>
             <!-- Card footer -->
             
           </div>
+        </div>
+        </div>
         </div>
                                
 
