@@ -10,7 +10,7 @@
   <!-- Favicon -->
   <link rel="icon" href="../image/thumbnail.png" type="image/png">
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700">
   <!-- Icons -->
   <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
@@ -71,12 +71,15 @@
           <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
             <li class="nav-item dropdown">
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="media align-items-center">
+              <!-- User di navbar -->
+              <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../image/thumbnail.png">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
                   </span>
                   <div class="admin media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">Admin</span>
+                    <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
                   </div>
                 </div>
               </a>
@@ -109,21 +112,8 @@
     </div>
     
     @yield('tambah')
-    <div class="container-fluid">
-    <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-            <div class="form-group mb-0">
-              <div class="input-group input-group-alternative input-group-merge">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input class="form-control" placeholder="Search" type="text">
-              </div>
-            </div>
-            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </form>
-    </div>
+    @yield('search')
+
 
     <!-- Header -->
     <div class="container-fluid">
@@ -142,12 +132,11 @@
       <br>
       <br>
       <br>
-      <br>
-      <br>
+
 
       </div>
   
-
+      <div class="container-fluid">
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
@@ -165,7 +154,7 @@
           </div>
         </div>
       </footer>
-      
+      </div>
   
   <!-- Argon Scripts -->
   <!-- Core -->
@@ -180,6 +169,65 @@
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script>
+    // Build the chart
+    Highcharts.chart('liveCount', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: ''
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+              colors: [
+                    '#A12568', 
+                    '#FEC260',
+                    '#2A0944',
+                    '#24CBE5', 
+                    '#64E572', 
+                    '#FF9655', 
+                    '#FFF263', 
+                    '#6AF9C4'
+                  ],
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Ana',
+                y: 15,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Alief',
+                y: 35
+            }, {
+                name: 'Aveenda',
+                y: 50
+           
+            }]
+        }]
+    });
+    </script>
   
 </body>
 

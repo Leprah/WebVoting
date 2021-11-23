@@ -6,10 +6,10 @@
 <br>
 <div class="container-fluid mg-vote">
     <div class="row">
-    <div class="col-xl-4 order-xl-2">
+    <div class="col-xl-3 order-xl-2 mg-vote">
         <div class="card-vote card-profile">
-        <h1 class="judul-vote">1</h1>
-            <img src="../assets/img/theme/img-1-1000x600.jpg" height="300" width="250" alt="Image placeholder" class="card-img-top">
+        <h2 class="no-urut lingkaran">1</h2>
+            <img src="../assets/img/theme/img-1-1000x600.jpg" height="250" width="80" alt="Image placeholder" class="card-img-top">
             <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                     <div class="text-center">
                         <h5 class="h3">
@@ -19,7 +19,7 @@
                         <i class="ni location_pin mr-2"></i>TRPL'20
                         </div>
                     </div>
-                    <br>
+                    
                     <div class="d-flex justify-content-between pd-top-btn-vt">
                         <button type="button" class="btn btn-sm btn-info  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
                         <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
@@ -28,10 +28,10 @@
         </div>    
     </div>
 
-        <div class="col-xl-4 order-xl-2">
+        <div class="col-xl-3 order-xl-2 mg-vote">
         <div class="card-vote card-profile">
-        <h1 class="judul-vote">2</h1>
-            <img src="../assets/img/theme/img-1-1000x600.jpg" height="300" width="250" alt="Image placeholder" class="card-img-top">
+        <h2 class="no-urut lingkaran">2</h2>
+            <img src="../assets/img/theme/img-1-1000x600.jpg" height="250" width="80" alt="Image placeholder" class="card-img-top">
             <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                     <div class="text-center">
                         <h5 class="h3">
@@ -41,7 +41,7 @@
                         <i class="ni location_pin mr-2"></i>TRPL'20
                         </div>
                     </div>
-                    <br>
+                    
                     <div class="d-flex justify-content-between pd-top-btn-vt">
                         <button type="button" class="btn btn-sm btn-info  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
                         <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
@@ -50,10 +50,10 @@
         </div>    
     </div>
 
-    <div class="col-xl-4 order-xl-2">
+    <div class="col-xl-3 order-xl-2 mg-vote">
         <div class="card-vote card-profile">
-        <h1 class="judul-vote">3</h1>
-            <img src="../assets/img/theme/img-1-1000x600.jpg" height="300" width="250" alt="Image placeholder" class="card-img-top">
+        <h2 class="no-urut lingkaran">3</h2>
+            <img src="../assets/img/theme/img-1-1000x600.jpg" height="250" width="80" alt="Image placeholder" class="card-img-top">
             <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                     <div class="text-center">
                         <h5 class="h3">
@@ -63,7 +63,7 @@
                         <i class="ni location_pin mr-2"></i>TRPL'20
                         </div>
                     </div>
-                    <br>
+                    
                 <div class="d-flex justify-content-between pd-top-btn-vt">
                     <button type="button" class="btn btn-sm btn-info  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
                     <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>

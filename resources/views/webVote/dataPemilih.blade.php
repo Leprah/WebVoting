@@ -87,26 +87,42 @@
 @section('tambah')
 <div class="container-fluid">
 <div id ="right">
-<a class="btn btn-success" href="{{ route('pemilih.create') }}"> Tambah Data</a>
+<a class="btn btn-success btn-sm" href="{{ route('pemilih.create') }}"> Tambah Data</a>
 </div>
 </div>
 
+@endsection
 
+@section('search')
+<div class="container-fluid">
+    <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input class="form-control" placeholder="Search" type="text">
+              </div>
+            </div>
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form>
+    </div>
 @endsection
 
 
 @section('content')
-<div>
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
  
 
+            </div>
           </div>
         </div>
       </div>
-    </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
@@ -118,13 +134,13 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-color">
                   <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>NIM</th>
-                    <th>Jurusan</th>
-                    <th>Angkatan</th>
-                    <th>Status</th>
-                    <th width="280px">Action</th>
+                    <th style="font-size:12px;" width="30px">No</th>
+                    <th style="font-size:12px;">Nama</th>
+                    <th style="font-size:12px;">NIM</th>
+                    <th style="font-size:12px;">Jurusan</th>
+                    <th style="font-size:12px;">Angkatan</th>
+                    <th style="font-size:12px;">Status</th>
+                    <th style="font-size:12px;" width="80px">Action</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -138,8 +154,8 @@
                         <td>{{ $pemilih->status}}</td>
 
                         <td><center>
-                        <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-primary"> Edit</button></a>
-                        <a href="{{  }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
+                        <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-primary btn-sm"> Edit</button></a>
+                        <a href="/webVote/pemilih/delete/{{ $pemilih->id }}"><button type="button" class="btn btn-danger btn-sm"> Hapus</button></a>
                         </center></td>
                     </tr>
                 @endforeach
@@ -150,6 +166,7 @@
             
           </div>
         </div>
-      </div>
+        </div>
+        </div>
 
 @endsection

@@ -2013,6 +2013,7 @@ pre code
 
         flex: 0 0 25%;
     }
+
     .col-xl-4
     {
         max-width: 33.33333%; 
@@ -6391,7 +6392,7 @@ input[type='button'].btn-block
 .card-img,
 .card-img-top
 {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 45px;
     padding-right: 45px;
 }
@@ -29841,6 +29842,8 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
     background: transparent;
 }
 
+/* code tambahan */
+
 .thead-color{
     background-color: #FEC260;
 }
@@ -29955,7 +29958,7 @@ box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 78px;
 
     /* identical to box height */
@@ -29963,10 +29966,33 @@ box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
     color: #FEC260;
 }
 
+.no-urut{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    
+
+    /* identical to box height */
+    text-align: center;
+   
+}
+
+.lingkaran{
+    width: 60px;
+	height: 60px;
+	background: #FEC260;
+	border-radius: 100%;
+    margin:0 auto;
+    display: inline-flex;
+    padding: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .mg-vote{
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin:0 auto;
 }
 
 .card-vote{
@@ -29979,8 +30005,8 @@ box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
     border-radius: 0;
     background-color: #fff;
     background-clip: border-box;
-    width: 400px;
-    height: 550px;
+    width: 350px;
+    height: 450px;
 }
 
 .bg-foot-vt{
@@ -30000,3 +30026,10 @@ box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
 .bg-transparent-white{
     background : rgba(255, 255, 255, 0.3) ;
 }
+
+.col-xl-27
+    {
+        max-width: 27%; 
+
+        flex: 0 0 27%;
+    }

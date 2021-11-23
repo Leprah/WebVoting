@@ -19,7 +19,7 @@
     "require-dev": {
         "facade/ignition": "^2.0",
         "fzaninotto/faker": "^1.9.1",
-        "laravel/ui": "2.4",
+        "laravel/ui": "^2.0",
         "mockery/mockery": "^1.3.1",
         "nunomaduro/collision": "^4.1",
         "phpunit/phpunit": "^8.5"
@@ -62,4 +62,5 @@
             "@php artisan key:generate --ansi"
         ]
     }
+    
 }

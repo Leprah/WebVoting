@@ -31,7 +31,7 @@
           <!-- Search form -->
           
           <a class="navbar-top" href="javascript:void(0)">
-          <img src="../image/logo.png" class="navbar-brand-img" alt="...">
+          <img src="../image/logo.png" height="30" width="120" class="navbar-brand-img" alt="...">
           </a>
 
           <!-- Navbar links -->
@@ -93,18 +93,10 @@
       </div>
     </nav>
     <!-- Header -->
-    <div>
-      <br>
-    </div>
     
-    @yield('kembali')
-    @yield('title')
 
     <!-- Header -->
-    <div class="container-fluid">
-      <br>
-      <br>
-    </div>
+   
    
     <!-- Page content -->
     

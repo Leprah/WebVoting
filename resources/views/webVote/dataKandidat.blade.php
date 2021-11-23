@@ -87,25 +87,42 @@
 
 @section('tambah')
 <div class="container-fluid">
-<div id ="right">
-<a class="btn btn-success" href="{{ route('kandidat.create') }}"> Tambah Data</a>
+  <div id ="right">
+    <a class="btn btn-success btn-sm" href="{{ route('kandidat.create') }}"> Tambah Data</a>
+  </div>
 </div>
-
 
 @endsection
 
+@section('search')
+<div class="container-fluid">
+    <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input class="form-control" placeholder="Search" type="text">
+              </div>
+            </div>
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form>
+    </div>
+@endsection
+
 @section('content')
-<div>
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
  
 
+            </div>
           </div>
         </div>
       </div>
-    </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
@@ -115,14 +132,14 @@
             <!-- Light table -->
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
-                <thead class="thead-color">
-                  <tr>
-                    <th>No</th>
-                    <th>Foto</th>
-                    <th>Nama</th>
-                    <th>Visi</th>
-                    <th>Misi</th>
-                    <th width="280px">Action</th>
+                <thead class="thead-color" >
+                  <tr style="font-size:12px;">
+                    <th style="font-size:12px;">No</th>
+                    <th style="font-size:12px;">Foto</th>
+                    <th style="font-size:12px;">Nama</th>
+                    <th style="font-size:12px;">Visi</th>
+                    <th style="font-size:12px;">Misi</th>
+                    <th style="font-size:12px;" width="280px">Action</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -134,8 +151,8 @@
                         <td>{{ $kandidat->visi }}</td>
                         <td>{{ $kandidat->misi}}</td>
                         <td><center>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editDataKandidat">Edit</button>
-                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-danger"> Hapus</button></a>
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editDataKandidat">Edit</button>
+                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-danger"> Hapus</button></a>
                         </center></td>
                     </tr>
                 @endforeach
@@ -143,9 +160,12 @@
               </table>
             </div>
             <!-- Card footer -->
-            </div>
+            
+          </div>
         </div>
-      </div>                                          
+        </div>
+        </div>
+                               
 
 @endsection
 
