@@ -10,7 +10,7 @@
   <!-- Favicon -->
   <link rel="icon" href="../image/thumbnail.png" type="image/png">
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700">
   <!-- Icons -->
   <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
@@ -141,12 +141,16 @@
           <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
             <li class="nav-item dropdown">
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="media align-items-center">
+              <!-- User di navbar -->
+              <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../image/thumbnail.png">
+                    <!-- Icon admin navbar -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
                   </span>
                   <div class="admin media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">Admin</span>
+                    <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
                   </div>
                 </div>
               </a>
@@ -186,22 +190,47 @@
 </div>
           <!-- Card stats -->
           <div class="row">
+
             <div class="col-xl-3 col-md-6">
               <div class="card card-stats">
-                <!-- Card body -->
+
+                <!-- Card body Jumlah Kandidat-->
                 <div class="card-body">
                   <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Kandidat</h5>
-                      <span class="h2 font-weight-bold mb-0">350,897</span>
-                    </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
                         <i class="ni ni-single-02"></i>
                       </div>
                     </div>
+                    <div class="col">
+                      <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Kandidat</h5>
+                      <span class="h2 font-weight-bold mb-0" style="color:white;">350,897</span>
+                    </div>
+                    
                   </div>
                 </div>
+              
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+
+                <!-- Card body Jumlah Pemilih -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
+                        <i class="ni ni-single-02"></i>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Pemilih</h5>
+                      <span class="h2 font-weight-bold mb-0" style="color:white;">2,356</span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
             <div class="col-xl-3 col-md-6">
@@ -209,33 +238,16 @@
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Pemilih</h5>
-                      <span class="h2 font-weight-bold mb-0">2,356</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
-                        <i class="ni ni-single-02"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Sudah Memilih</h5>
-                      <span class="h2 font-weight-bold mb-0">924</span>
-                    </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-transparent-white text-white rounded-circle shadow">
                         <i class="ni ni-check-bold"></i>
                       </div>
                     </div>
+                    <div class="col">
+                      <h5 class="card-title text-uppercase mb-0" style="color:white;">Sudah Memilih</h5>
+                      <span class="h2 font-weight-bold mb-0" style="color:white;">924</span>
+                    </div>
+                    
                   </div>
                 </div>
               </div>

@@ -35,3 +35,6 @@ Route::get('/kandidat/create', 'KandidatController@create')->name('kandidat.crea
 Route::get('/pemilih/create', 'PemilihController@create')->name('pemilih.create');
 
 Route::get('/voter/vote', 'WebVoteController@voter')->name('voter.vote');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
