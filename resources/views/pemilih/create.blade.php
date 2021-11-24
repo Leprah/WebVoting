@@ -1,4 +1,4 @@
-@extends('kandidat.layout')
+@extends('Pemilih.layout')
 
 @section('judul')
 <h1>Data Pemilih</h1>
