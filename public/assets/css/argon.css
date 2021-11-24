@@ -10548,6 +10548,7 @@ button.bg-darker:focus
 .mt-3,
 .my-3
 {
+    color: white;
     margin-top: 1rem !important;
 }
 

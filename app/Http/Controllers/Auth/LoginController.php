@@ -21,7 +21,7 @@ class LoginController extends Controller
                 return view('voter.vote');
                 break;
             default:
-                return view('auth.login'); 
+                return view('/'); 
                 break;
         }
     }

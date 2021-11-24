@@ -129,7 +129,6 @@
         </div>
       </footer>
   
-  
   <!-- Argon Scripts -->
   <!-- Core -->
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
