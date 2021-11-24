@@ -15,7 +15,7 @@
 @section('kembali')
 <div class="container-fluid">
 <div id ="right">
-<a class="btn btn-primary" href="{{ route('webVote.dataKandidat') }}"> Kembali</a>
+<a class="btn btn-primary btn-sm" href="{{ route('webVote.dataKandidat') }}"> Kembali</a>
 </div>
 </div>
 
@@ -167,9 +167,9 @@
         <div class="col-xs-12 col-sm-12 col-md-12 text-left">
             <br>
 
-                <button type="submit" class="btn btn-success">Simpan</button>
+                <button type="submit" class="btn btn-success btn-sm">Simpan</button>
                 
-                <a class="btn btn-danger" href="/buku"> Batal</a>
+                <a class="btn btn-danger btn-sm" href="/buku"> Batal</a>
         </div>
 
        
