@@ -67,6 +67,11 @@
 					</div>
 
 				</form>
+				<br>
+				<br>
+				<br>
+				<br>
+				<img src="../image/logo ungu.png" height="40" width="170" style="display:block; margin:auto;">
 			</div>
 		</div>
 	</div>
