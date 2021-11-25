@@ -91,7 +91,7 @@
 
 
 
-
+<div class="container-fluid"> 
 
 <form action="/" method="POST" enctype="multipart/form-data">
 
@@ -142,5 +142,6 @@
 
     </div>
     </form>
+</div>
 </div>
 @endsection

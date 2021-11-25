@@ -118,34 +118,15 @@
     <!-- Header -->
     <div class="container-fluid">
     <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
+    <br>
+    <br>
+    <br>
    
     <!-- Page content -->
     
 
     @yield('content')
+    </div>
 
     <div class="container-fluid">
       <br>
@@ -153,8 +134,22 @@
       <br>
       <br>
       <br>
-
-
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       </div>
   
       <div class="container-fluid">

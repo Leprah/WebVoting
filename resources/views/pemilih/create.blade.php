@@ -86,21 +86,11 @@
 
 @endif
 
+<div class="container-fluid">   
 <div class="container-fluid">
-
-
-
-
-
-
-<form action="/" method="POST" enctype="multipart/form-data">
-
-    @csrf
-
-    
-
     <div class="container-data">
-
+    <form action="/" method="POST" enctype="multipart/form-data">
+    @csrf
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama :</label>
             <div class="col-sm-10">
@@ -148,5 +138,6 @@
 
     </div>
     </form>
+</div>
 </div>
 @endsection
