@@ -28,14 +28,12 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.html">
               <a class="nav-link" href="{{ route('webVote.statistik') }}">
                 <i class="ni ni-chart-bar-32"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tables.html">
               <a class="nav-link" href="{{ route('webVote.laporan') }}">
                 <i class="ni ni-bullet-list-67"></i>
                 <span class="nav-link-text">Laporan</span>
