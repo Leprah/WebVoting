@@ -105,7 +105,7 @@
                     <th style="font-size:12px;">Nama</th>
                     <th style="font-size:12px;">Visi</th>
                     <th style="font-size:12px;">Misi</th>
-                    <th style="font-size:12px;" width="280px">Action</th>
+                    <th style="font-size:12px;" width="80px">Action</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -117,8 +117,8 @@
                         <td>{{ $kandidat->visi }}</td>
                         <td>{{ $kandidat->misi}}</td>
                         <td><center>
-                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editDataKandidat">Edit</button>
-                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-danger"> Hapus</button></a>
+                        <a href="/webVote/kandidat/edit/{{ $kandidat->id }}"><button type="button" class="btn btn-primary btn-sm"> Edit</button></a>
+                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-danger btn-sm"> Hapus</button></a>
                         </center></td>
                     </tr>
                 @endforeach
