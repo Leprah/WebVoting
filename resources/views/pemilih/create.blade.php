@@ -15,7 +15,9 @@
 @section('kembali')
 <div class="container-fluid">
 <div id ="right">
-<a class="btn btn-primary btn-sm" href="{{ route('webVote.dataPemilih') }}"> Kembali</a>
+<a class="btn btn-primary btn-sm" href="{{ route('webVote.dataPemilih') }}"> 
+Kembali
+</a>
 </div>
 </div>
 
@@ -53,8 +55,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.laporan') }}">
-                <i class="ni ni-bullet-list-67"></i>
-                <span class="nav-link-text">Laporan</span>
+                <i class="ni ni-settings-gear-65"></i>
+                <span class="nav-link-text">Pengaturan</span>
               </a>
             </li>
             

@@ -34,8 +34,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.laporan') }}">
-                <i class="ni ni-bullet-list-67"></i>
-                <span class="nav-link-text">Laporan</span>
+                <i class="ni ni-settings-gear-65"></i>
+                <span class="nav-link-text">Pengaturan</span>
               </a>
             </li>
             
@@ -119,7 +119,7 @@
                         <td>{{ $pemilih->status}}</td>
 
                         <td><center>
-                        <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-primary btn-sm"> Edit</button></a>
+                        <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-ungu btn-sm"> Edit</button></a>
                         <a href="/webVote/pemilih/delete/{{ $pemilih->id }}"><button type="button" class="btn btn-danger btn-sm"> Hapus</button></a>
                         </center></td>
                     </tr>

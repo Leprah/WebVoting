@@ -22,7 +22,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.dataPemilih') }}">
-
                 <i class="ni ni-single-02"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
@@ -35,8 +34,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.laporan') }}">
-                <i class="ni ni-bullet-list-67"></i>
-                <span class="nav-link-text">Laporan</span>
+                <i class="ni ni-settings-gear-65"></i>
+                <span class="nav-link-text">Pengaturan</span>
               </a>
             </li>
             
