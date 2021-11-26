@@ -34,7 +34,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.laporan') }}">
+              <a class="nav-link" href="{{ route('webVote.pengaturan') }}">
                 <i class="ni ni-settings-gear-65"></i>
                 <span class="nav-link-text">Pengaturan</span>
               </a>

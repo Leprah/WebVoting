@@ -18,6 +18,9 @@
   <!-- Argon CSS -->
   <link rel="stylesheet" href="{{ asset('assets/css/argon.css?v=1.2.0') }}" type="text/css">
   <link rel="stylesheet" href="{{ asset('assets/css/status.css') }}" type="text/css">
+  
+	  <script src="{{ asset('assets/datepicker/jquery-2.1.3.min.js') }}"></script>
+    <script src="{{ asset('assets/datepicker/metro.js') }}"></script>
 </head>
 
 <body>
@@ -120,7 +123,6 @@
     <br>
     <br>
     <br>
-    <br>
    
     <!-- Page content -->
     
@@ -150,20 +152,23 @@
       <br>
       <br>
       <br>
+      <br>
+      <br>
+      <br>
       </div>
   
-      <div class="container-fluid">
+    
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
-            <div class="copyright text-center  text-lg-left  text-muted">
+            <div class="copyright text-center  text-lg-left  text-muted px-4">
               &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
             </div>
           </div>
         </div>
       </footer>
-      </div>
+   
   
   <!-- Argon Scripts -->
   <!-- Core -->

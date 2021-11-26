@@ -16,7 +16,7 @@ Route::get('/webVote/dataKandidat', 'WebVoteController@dataKandidat')->name('web
 
 Route::get('/webVote/dataPemilih', 'WebVoteController@dataPemilih')->name('webVote.dataPemilih');
 
-Route::get('/webVote/laporan', 'WebVoteController@laporan')->name('webVote.laporan');
+Route::get('/webVote/pengaturan', 'WebVoteController@pengaturan')->name('webVote.pengaturan');
 
 Route::get('/webVote/statistik', 'WebVoteController@statistik')->name('webVote.statistik');
 

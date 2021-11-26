@@ -143,19 +143,18 @@
 
       </div>
   
-      <div class="container-fluid">
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
-            <div class="copyright text-center  text-lg-left  text-muted">
+            <div class="copyright text-center  text-lg-left  text-muted px-4">
               &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
             </div>
           </div>
           
         </div>
       </footer>
-      </div>
+
   
   <!-- Argon Scripts -->
   <!-- Core -->
