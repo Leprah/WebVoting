@@ -18,9 +18,6 @@
   <!-- Argon CSS -->
   <link rel="stylesheet" href="{{ asset('assets/css/argon.css?v=1.2.0') }}" type="text/css">
   <link rel="stylesheet" href="{{ asset('assets/css/status.css') }}" type="text/css">
-  
-	  <script src="{{ asset('assets/datepicker/jquery-2.1.3.min.js') }}"></script>
-    <script src="{{ asset('assets/datepicker/metro.js') }}"></script>
 </head>
 
 <body>
