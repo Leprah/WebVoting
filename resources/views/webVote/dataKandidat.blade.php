@@ -114,20 +114,8 @@
                         <td>{{ ++$no}}</td>
                         <td><img src="{{asset('thumb/'.$kandidat->foto) }}" width="100px"></td>
                         <td>{{ $kandidat->nama }}</td>
-                        <td>
-                          <ul>
-                            @if ($kandidat->visi === '-')
-                            @else
-                              <li>{{ $kandidat->visi }}</li>
-                            @endif
-
-                            @if ($kandidat->misi === '-')
-                            @else
-                              <li>{{ $kandidat->misi }}</li>
-                            @endif
-                          </ul>
-                        </td>
-                        <td> sementara kosong </td>
+                        <td>{!! $kandidat->visi !!}</td>
+                        <td>{!! $kandidat->misi !!}</td>
                         <td>
                         <form action="{{route('kandidat.destroy',$kandidat->id)}}" method="POST" > @csrf
                           <a href=" {{ route('kandidat.edit', $kandidat->id) }}" class="btn btn-sm btn-ungu">Edit</a>
