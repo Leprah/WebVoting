@@ -13,8 +13,8 @@
             <div class="col-xl-3 order-xl-2 mg-vote">
                 <div class="card-vote card-profile">
                     <h2 class="no-urut lingkaran">{{ ++$no}}</h2>
-                    <img src="{{asset('thumb/'.$kandidat->foto) }}" height="250" width="80" alt="Image placeholder" class="card-img-top">
-                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                    <img src="{{asset('thumb/'.$kandidat->foto) }}" height="230" width="70" alt="Image placeholder" class="card-img-top">
+                    <div class="card-header-vote text-center">
                         <div class="text-center">
                             <h5 class="h3">
                             {{ $kandidat->nama }}

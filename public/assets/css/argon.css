@@ -6394,7 +6394,7 @@ input[type='button'].btn-block
 .card-img,
 .card-img-top
 {
-    padding-top: 25px;
+    padding-top: 20px;
     padding-left: 45px;
     padding-right: 45px;
 }
@@ -30006,10 +30006,19 @@ color: #32325d;
     border-radius: 0;
     background-color: #fff;
     background-clip: border-box;
-    width: 100%;
+    width: 95%;
 	height: auto;
 	grid-column: span 8;
 	margin: 10px 0;
+}
+
+.card-header-vote {
+    margin-bottom: 0;
+    padding: 1.05rem 1.15rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    background-color: #fff;
 }
 
 .bg-foot-vt{
