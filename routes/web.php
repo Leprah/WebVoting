@@ -22,6 +22,8 @@ Route::get('/webVote/statistik', 'WebVoteController@statistik')->name('webVote.s
 
 Route::get('/webVote/master', 'WebVoteController@master')->name('webVote.master');
 
+Route::get('/webVote/laporan', 'WebVoteController@laporan')->name('webVote.laporan');
+
 // pemilih
 Route::get('/pemilih/create', 'PemilihController@create')->name('pemilih.create');
 

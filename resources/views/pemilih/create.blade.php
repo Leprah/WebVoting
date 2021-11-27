@@ -66,7 +66,6 @@ Kembali
          
           <!-- Navigation -->
       
-<<<<<<< HEAD
           <!-- <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
               @guest
@@ -101,10 +100,6 @@ Kembali
           </ul>
 
         </div> -->
-=======
-          
-        </div>
->>>>>>> 275f01d2bc5877917016f1d201a45e98dd494e85
 
 @endsection
 

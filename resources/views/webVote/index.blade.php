@@ -6,7 +6,6 @@
 
 @section('menu')
 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-<<<<<<< HEAD
   <!-- Nav items -->
   <ul class="navbar-nav">
     <li class="nav-item">
@@ -53,68 +52,7 @@
         </a>
       </li>
     </ul> -->
-=======
-          <!-- Nav items -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="{{ route('webVote.index') }}">
-                <i class="ni ni-tv-2 text-white"></i>
-                <span class="nav-link-text">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.dataKandidat') }}">
-                <i class="ni ni-single-02"></i>
-                <span class="nav-link-text">Data Kandidat</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.dataPemilih') }}">
-                <i class="ni ni-single-02"></i>
-                <span class="nav-link-text">Data Pemilih</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.statistik') }}">
-                <i class="ni ni-chart-bar-32"></i>
-                <span class="nav-link-text">Statistik</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('webVote.pengaturan') }}">
-                <i class="ni ni-settings-gear-65"></i>
-                <span class="nav-link-text">Pengaturan</span>
-              </a>
-            </li>
-            
-          </ul>
-          <hr class="my-3">
-          <!-- Heading -->
-         
-          <!-- Navigation -->
-      
-          <ul class="navbar-nav mb-md-3">
-            <li class="nav-item">
-              <li class="nav-item dropdown">
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ route('logout') }}"
-                      onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                      {{ __('Logout') }}
-                  </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                      @csrf
-                  </form>
-                </div>
-              </li>
-            </li>
-          </ul>
-        </div>
->>>>>>> 275f01d2bc5877917016f1d201a45e98dd494e85
-
 @endsection
-
-
 
 @section('content')
       <div class="container-fluid">
@@ -136,16 +74,12 @@
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Kandidat</h5>
                       <span class="h1 font-weight-bold mb-0" style="color:white;">350,897</span>
                     </div>
-                    
                   </div>
                 </div>
-              
               </div>
             </div>
-
             <div class="col-xl-3 col-md-6">
               <div class="card card-stats">
-
                 <!-- Card body Jumlah Pemilih -->
                 <div class="card-body">
                   <div class="row">
@@ -165,7 +99,6 @@
             </div>
             <div class="col-xl-3 col-md-6">
               <div class="card card-stats">
-
                 <!-- Card body Sudah Memilih -->
                 <div class="card-body">
                   <div class="row">
@@ -206,13 +139,9 @@
               </div>
             </div>
           </div>
-       
     <!-- Page content -->   
     <br>
     <h3>Quick Count</h3>
     <div class='chart' id='liveCount'></div>
-
 </div>
-
- 
  @endsection

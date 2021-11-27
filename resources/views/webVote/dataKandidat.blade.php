@@ -116,7 +116,6 @@
                         <td>{{ $kandidat->nama }}</td>
                         <td>{{ $kandidat->visi }}</td>
                         <td>{{ $kandidat->misi}}</td>
-<<<<<<< HEAD
                         <td>
                         <form action="{{route('kandidat.destroy',$kandidat->id)}}" method="POST" > @csrf
                           <a href=" {{ route('kandidat.edit', $kandidat->id) }}">
@@ -125,12 +124,6 @@
                         <i class="fa fa-times"></i>hapus</button>
                         </form>
                         </td>
-=======
-                        <td><center>
-                        <a href="/webVote/kandidat/edit/{{ $kandidat->id }}"><button type="button" class="btn btn-ungu btn-sm"> Edit</button></a>
-                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-danger btn-sm"> Hapus</button></a>
-                        </center></td>
->>>>>>> 275f01d2bc5877917016f1d201a45e98dd494e85
                     </tr>
                 @endforeach
                 </tbody>
