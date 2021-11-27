@@ -6394,7 +6394,7 @@ input[type='button'].btn-block
 .card-img,
 .card-img-top
 {
-    padding-top: 5px;
+    padding-top: 25px;
     padding-left: 45px;
     padding-right: 45px;
 }
@@ -29979,6 +29979,8 @@ color: #32325d;
 }
 
 .lingkaran{
+    position: relative;
+    top: 10px;
     width: 60px;
 	height: 60px;
 	background: #FEC260;
@@ -30005,8 +30007,8 @@ color: #32325d;
     border-radius: 0;
     background-color: #fff;
     background-clip: border-box;
-    width: 350px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
 }
 
 .bg-foot-vt{
@@ -30037,6 +30039,13 @@ color: #32325d;
 .btn-ungu{
     background-color: #62467F;
     color: #fff;
+    border-color: #62467F;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.btn-bdr-u{
+    background-color: #FFFFFF;
+    color: #62467F;
     border-color: #62467F;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
@@ -30077,7 +30086,7 @@ color: #32325d;
 
 .ft-ds{
     position: relative;
-    top: 30px;
+    top: 40px;
 }
 
 .ft-cr{
