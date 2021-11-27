@@ -66,7 +66,7 @@
          
           <!-- Navigation -->
       
-          <ul class="navbar-nav mb-md-3">
+          <!-- <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
               @guest
                 <li class="nav-item">
@@ -99,7 +99,7 @@
             </li>
           </ul>
 
-        </div>
+        </div> -->
 
 @endsection
 

@@ -146,14 +146,18 @@
                 @foreach ($data_kandidat as $kandidat)
                     <tr>
                         <td>{{ ++$no}}</td>
-                        <td><img src="/image/{{ $kandidat->image }}" width="100px"></td>
+                        <td><img src="{{asset('thumb/'.$kandidat->foto) }}" width="100px"></td>
                         <td>{{ $kandidat->nama }}</td>
                         <td>{{ $kandidat->visi }}</td>
                         <td>{{ $kandidat->misi}}</td>
-                        <td><center>
-                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editDataKandidat">Edit</button>
-                        <a href="/webVote/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-danger"> Hapus</button></a>
-                        </center></td>
+                        <td>
+                        <form action="{{route('kandidat.destroy',$kandidat->id)}}" method="POST" > @csrf
+                          <a href=" {{ route('kandidat.edit', $kandidat->id) }}">
+                        <i class="fa fa-pencil-alt"></i>Edit</a>
+                          <button onClick="return confirm('Yakin mau dihapus?')" class="btn btn-sm btn-danger">
+                        <i class="fa fa-times"></i>hapus</button>
+                        </form>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

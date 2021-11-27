@@ -9,8 +9,6 @@
 <h3>Edit Data Kandidat</h3>
 </div>
 </div>
-
-
 @endsection
 @section('kembali')
 <div class="container-fluid">
@@ -18,10 +16,7 @@
 <a class="btn btn-primary btn-sm" href="{{ route('webVote.dataKandidat') }}"> Kembali</a>
 </div>
 </div>
-
-
 @endsection
-
 @section('menu')
 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
@@ -40,7 +35,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('webVote.dataPemilih') }}">
-
                 <i class="ni ni-single-02"></i>
                 <span class="nav-link-text">Data Pemilih</span>
               </a>
@@ -59,13 +53,11 @@
                 <span class="nav-link-text">Laporan</span>
               </a>
             </li>
-            
           </ul>
           <hr class="my-3">
           <!-- Heading -->
          
           <!-- Navigation -->
-      
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
               @guest
@@ -82,14 +74,12 @@
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
-
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
-
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
@@ -98,82 +88,54 @@
               @endguest
             </li>
           </ul>
-
         </div>
-
 @endsection
-
-
 @section('content')
-
 @if (count($errors) > 0)
-
     <ul class="alert alert-danger">
-
             @foreach ($errors->all() as $error)
-
                 <li>{{ $error }}</li>
-
             @endforeach
-
         </ul>
-
 @endif
-
 <div class="container-fluid">
-
-
-
-
-
-
 <form action="/" method="POST" enctype="multipart/form-data">
-
     @csrf
-
-    
-
     <div class="container-data">
-
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="nama" placeholder="Nama">
+                <input type="email" class="form-control" name="nama" placeholder="Nama">
             </div>
         </div>
     
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Visi :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="alamat" placeholder="Visi">
+                <input type="email" class="form-control" name="visi" placeholder="Visi">
             </div>
         </div>
     
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Misi :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="alamat" placeholder="Misi">
+                <input type="email" class="form-control" name="misi" placeholder="Misi">
             </div>
         </div>
 
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Foto :</label>
             <div class="col-sm-10">
-            <input type="file" name="image" class="form-control" placeholder="image">
+            <input type="file" name="foto" class="form-control" placeholder="image">
             </div>
         </div>
 
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-left">
             <br>
-
                 <button type="submit" class="btn btn-success btn-sm">Simpan</button>
-                
                 <a class="btn btn-danger btn-sm" href="/buku"> Batal</a>
         </div>
-
-       
-
     </div>
     </form>
 </div>

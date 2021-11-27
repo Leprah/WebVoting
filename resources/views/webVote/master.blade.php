@@ -65,8 +65,6 @@
                 <i class="ni ni-zoom-split-in"></i>
               </a>
             </li>
-
-      
           </ul>
           <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
             <li class="nav-item dropdown">

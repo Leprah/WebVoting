@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Kandidat;
 use App\Pemilih;
 use App\Galeri;
+use Image;
+use File;
 
 class KandidatController extends Controller
 {
@@ -15,38 +17,58 @@ class KandidatController extends Controller
 
     public function store(Request $request){
         $this->validate($request,[
-        'ju' => 'required|string',
-        'penulis' => 'required|string|max:30',
-        'harga' => 'required|numeric',
-        'terbit' => 'required|date',
+        'nama' => 'required|string',
+        'visi' => 'required|string|max:30',
+        'misi' => 'required|string',
+        // 'foto' => 'required|image|mimes: jpg,png,jpeg',
         ]);
-        $buku = new Buku;
-        $buku->judul = $request->judul;
-        $buku->penulis = $request->penulis; 
-        $buku->harga = $request->harga;
-        $buku->terbit = $request->terbit;
-        $buku->save();
-        return redirect('/buku')->with('pesan','Data Buku Berhasil di Simpan');
+        $data = new Kandidat;
+        $data->nama = $request->nama;
+        $data->visi = $request->visi; 
+        $data->misi = $request->misi;
+
+        $foto = $request->foto;
+        $namafile = time().'.'. $foto->getClientOriginalExtension();
+        Image::make($foto)->resize(200,150)->save('thumb/'.$namafile);
+        $foto->move('image/', $namafile);
+        $data->foto = $namafile;
+        $data->save();
+        return redirect('webVote/dataKandidat')->with('pesan','Data Kandidat Berhasil disimpan');
     }
     public function destroy($id){
-        $buku = Buku::find($id);
-        $buku->delete();
-        return redirect('/buku')->with('pesan','Data Buku Berhasil di Hapus');;
+        $data = Kandidat::find($id);
+        $data->delete();
+        return redirect('webVote/dataKandidat')->with('pesan','Data Kandidat Berhasil dihapus');;
     }
     public function edit($id)
     {
-        $buku = Buku::find($id);
-        return view('buku.update', ['buku'=>$buku]);
+        $data = Kandidat::find($id);
+        return view('kandidat/edit', ['Kandidat'=>$data]);
     }
+
     public function update(Request $request, $id)
     {
-        $buku = Buku::find($id);
-        $buku-> judul = $request-> judul;
-        $buku-> penulis = $request-> penulis;
-        $buku-> harga = $request-> harga;
-        $buku-> terbit = $request-> terbit;
+        $data = Kandidat::find($id);
+        $data->nama = $request->nama;
+        $data->visi = $request->visi;
+        $data->misi = $request->misi;
         
-        $buku->update();
-        return redirect('buku')->with('pesan','Data Buku Berhasil di Edit');
+        if ($request->foto!= NULL) {
+            $oldfilename = $galeri->foto;
+            $image_path = "thumb/" . $oldfilename;
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
+            $foto = $request->foto;
+            $namafile = time() . '.' . $foto->getClientOriginalExtension();
+
+            Image::make($foto)->resize(200, 150)->save('thumb/' . $namafile);
+            $foto->move('images/', $namafile);
+
+            $data->foto = $namafile;
+        }
+
+        $data->update();
+        return redirect('webVote/dataKandidat')->with('pesan', 'Data Galeri Berhasil diedit');
     }
 }

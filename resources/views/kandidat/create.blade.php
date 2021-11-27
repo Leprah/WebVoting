@@ -10,7 +10,6 @@
 </div>
 </div>
 
-
 @endsection
 @section('kembali')
 <div class="container-fluid">
@@ -59,13 +58,12 @@
                 <span class="nav-link-text">Laporan</span>
               </a>
             </li>
-            
           </ul>
           <hr class="my-3">
           <!-- Heading -->
          
           <!-- Navigation -->
-      
+<!--       
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
               @guest
@@ -98,82 +96,58 @@
               @endguest
             </li>
           </ul>
-
-        </div>
+        </div> -->
 
 @endsection
-
 
 @section('content')
 
 @if (count($errors) > 0)
-
-    <ul class="alert alert-danger">
-
-            @foreach ($errors->all() as $error)
-
-                <li>{{ $error }}</li>
-
-            @endforeach
-
-        </ul>
-
+  <ul class="alert alert-danger">
+    @foreach ($errors->all() as $error)
+      <li>{{ $error }}</li>
+    @endforeach
+  </ul>
 @endif
 
 <div class="container-fluid">
-
-
-
-
-
-
-<form action="/" method="POST" enctype="multipart/form-data">
-
+<!-- Form Inout Data Kandidat -->
+<form action="{{route('kandidat.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
-
-    
-
     <div class="container-data">
-
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="nama" placeholder="Nama">
+                <input type="text" class="form-control" name="nama" placeholder="Nama">
             </div>
         </div>
     
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Visi :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="alamat" placeholder="Visi">
+                <input type="text" class="form-control" name="visi" placeholder="Visi">
             </div>
         </div>
     
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Misi :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="alamat" placeholder="Misi">
+                <input type="text" class="form-control" name="misi" placeholder="Misi">
             </div>
         </div>
 
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Foto :</label>
             <div class="col-sm-10">
-            <input type="file" name="image" class="form-control" placeholder="image">
+            <input type="file" name="foto" class="form-control" placeholder="image">
             </div>
         </div>
 
-
         <div class="col-xs-12 col-sm-12 col-md-12 text-left">
             <br>
-
-                <button type="submit" class="btn btn-success btn-sm">Simpan</button>
-                
-                <a class="btn btn-danger btn-sm" href="/buku"> Batal</a>
+              <button type="submit" class="btn btn-success btn-sm">Simpan</button>
+              <a class="btn btn-danger btn-sm" href="{{ url()->previous() }}"> Batal</a>
         </div>
-
-       
-
     </div>
     </form>
 </div>
