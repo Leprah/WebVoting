@@ -86,6 +86,8 @@ section
 
 body
 {
+    max-width: 100%;
+    overflow-x: hidden;
     font-family: Open Sans, sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -96,7 +98,7 @@ body
     text-align: left;
 
     color: #525f7f;
-    background-color: #fcfdff;
+    background-color: #FFFFFF;
 }
 
 [tabindex='-1']:focus:not(:focus-visible)
@@ -29919,19 +29921,16 @@ color: #32325d;
 
 .container-data{
 
-padding-right: 55px;
-padding-left: 55px;
-padding-top: 55px;
-padding-bottom: 55px;
-position: absolute;
-width: 1070px;
-
-left: 100px;
-right: 100px;
-top: 200px;
-
-background: #FFFFFF;
-box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
+    padding-right: 40px;
+    padding-left: 55px;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    position: absolute;
+    display: block;
+    overflow-x: auto;
+    width: 85%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
 
 }
 .body-voter{
@@ -30034,3 +30033,45 @@ box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
 
         flex: 0 0 27%;
     }
+
+.btn-ungu{
+    background-color: #62467F;
+    color: #fff;
+    border-color: #62467F;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.text-form{
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding: 0 185px;
+    padding-top: 5px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    color: rgba(163, 163, 163, 0.50);
+}
+
+.kotak-plus{
+    position: relative;
+    top: 10px;
+    left: 185px;
+    width: 20px;
+	height: 20px;
+	background: rgba(163, 163, 163, 0.35);
+	border-radius: 20%;
+    display: inline-flex;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-pth{
+    color: white;
+}
+
+.pd-fm{
+    padding: 0 190px;
+    padding-top: 12px;
+}
+

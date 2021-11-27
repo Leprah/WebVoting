@@ -45,17 +45,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.html">
               <a class="nav-link" href="{{ route('webVote.statistik') }}">
                 <i class="ni ni-chart-bar-32"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tables.html">
-              <a class="nav-link" href="{{ route('webVote.laporan') }}">
-                <i class="ni ni-bullet-list-67"></i>
-                <span class="nav-link-text">Laporan</span>
+              <a class="nav-link" href="{{ route('webVote.pengaturan') }}">
+                <i class="ni ni-settings-gear-65"></i>
+                <span class="nav-link-text">Pengaturan</span>
               </a>
             </li>
           </ul>
@@ -63,6 +61,7 @@
           <!-- Heading -->
          
           <!-- Navigation -->
+<<<<<<< HEAD
 <!--       
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
@@ -97,6 +96,11 @@
             </li>
           </ul>
         </div> -->
+=======
+      
+          
+        </div>
+>>>>>>> 275f01d2bc5877917016f1d201a45e98dd494e85
 
 @endsection
 
@@ -111,8 +115,19 @@
 @endif
 
 <div class="container-fluid">
+<<<<<<< HEAD
 <!-- Form Inout Data Kandidat -->
 <form action="{{route('kandidat.store')}}" method="POST" enctype="multipart/form-data">
+=======
+
+
+
+
+<div class="container-fluid"> 
+
+<form action="/" method="POST" enctype="multipart/form-data">
+
+>>>>>>> 275f01d2bc5877917016f1d201a45e98dd494e85
     @csrf
     <div class="container-data">
         <div class="form-group row">
@@ -120,6 +135,9 @@
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="nama" placeholder="Nama">
             </div>
+            <span class="text-form">
+              Nama yang diisikan adalah nama sesuai dokumen KTP/KTM.
+            </span>
         </div>
     
         <div class="form-group row">
@@ -127,6 +145,9 @@
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="visi" placeholder="Visi">
             </div>
+            <span class="text-form kotak-plus color-pth"><br>
+              +
+            </span><span class="text-form pd-fm"> Tambah visi </span>
         </div>
     
         <div class="form-group row">
@@ -134,6 +155,9 @@
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="misi" placeholder="Misi">
             </div>
+            <span class="text-form kotak-plus color-pth"><br>
+                 +
+            </span><span class="text-form pd-fm"> Tambah misi </span>  
         </div>
 
         <div class="form-group row">
@@ -150,5 +174,6 @@
         </div>
     </div>
     </form>
+</div>
 </div>
 @endsection

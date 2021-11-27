@@ -54,7 +54,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="tables.html">
-              <a class="nav-link" href="{{ route('webVote.laporan') }}">
+              <a class="nav-link" href="{{ route('webVote.pengaturan') }}">
                 <i class="ni ni-bullet-list-67"></i>
                 <span class="nav-link-text">Laporan</span>
               </a>

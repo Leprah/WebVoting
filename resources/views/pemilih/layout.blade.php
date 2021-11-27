@@ -118,34 +118,14 @@
     <!-- Header -->
     <div class="container-fluid">
     <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
+    <br>
+    <br>
    
     <!-- Page content -->
     
 
     @yield('content')
+    </div>
 
     <div class="container-fluid">
       <br>
@@ -153,29 +133,39 @@
       <br>
       <br>
       <br>
-
-
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       </div>
   
-      <div class="container-fluid">
+    
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
-            <div class="copyright text-center  text-lg-left  text-muted">
-              &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative x E-voting Team</a>
+            <div class="copyright text-center  text-lg-left  text-muted px-4">
+              &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-              </li>
-            </ul>
           </div>
         </div>
       </footer>
-      </div>
+   
   
   <!-- Argon Scripts -->
   <!-- Core -->

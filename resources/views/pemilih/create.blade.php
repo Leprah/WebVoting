@@ -15,7 +15,9 @@
 @section('kembali')
 <div class="container-fluid">
 <div id ="right">
-<a class="btn btn-primary btn-sm" href="{{ route('webVote.dataPemilih') }}"> Kembali</a>
+<a class="btn btn-primary btn-sm" href="{{ route('webVote.dataPemilih') }}"> 
+Kembali
+</a>
 </div>
 </div>
 
@@ -46,17 +48,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.html">
               <a class="nav-link" href="{{ route('webVote.statistik') }}">
                 <i class="ni ni-chart-bar-32"></i>
                 <span class="nav-link-text">Statistik</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tables.html">
-              <a class="nav-link" href="{{ route('webVote.laporan') }}">
-                <i class="ni ni-bullet-list-67"></i>
-                <span class="nav-link-text">Laporan</span>
+              <a class="nav-link" href="{{ route('webVote.pengaturan') }}">
+                <i class="ni ni-settings-gear-65"></i>
+                <span class="nav-link-text">Pengaturan</span>
               </a>
             </li>
             
@@ -66,6 +66,7 @@
          
           <!-- Navigation -->
       
+<<<<<<< HEAD
           <!-- <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
               @guest
@@ -100,6 +101,10 @@
           </ul>
 
         </div> -->
+=======
+          
+        </div>
+>>>>>>> 275f01d2bc5877917016f1d201a45e98dd494e85
 
 @endsection
 
@@ -120,40 +125,39 @@
 
 @endif
 
+<div class="container-fluid">   
 <div class="container-fluid">
-
-
-
-
-
-
-<form action="/" method="POST" enctype="multipart/form-data">
-
-    @csrf
-
-    
-
     <div class="container-data">
-
+    <form action="/" method="POST" enctype="multipart/form-data">
+    @csrf
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama :</label>
             <div class="col-sm-10">
                 <input type="email" class="form-control" id="nama" placeholder="Nama">
             </div>
+            <span class="text-form">
+              Nama yang diisikan adalah nama sesuai dokumen KTP/KTM.
+            </span>
         </div>
     
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">NIM :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="alamat" placeholder="Visi">
+                <input type="email" class="form-control" id="alamat" placeholder="NIM">
             </div>
+            <span class="text-form">
+              NIM yang diisikan adalah NIM sesuai dokumen KTM.
+            </span>
         </div>
     
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Jurusan :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="alamat" placeholder="Misi">
+                <input type="email" class="form-control" id="alamat" placeholder="Jurusan">
             </div>
+            <span class="text-form">
+               Silahkan isi jurusan Anda.
+            </span>
         </div>
 
         <div class="form-group row">
@@ -168,19 +172,14 @@
 	        </select>
             </div>
         </div>
-
-
         <div class="col-xs-12 col-sm-12 col-md-12 text-left">
             <br>
-
                 <button type="submit" class="btn btn-success btn-sm">Simpan</button>
                 
                 <a class="btn btn-danger btn-sm" href="/buku"> Batal</a>
         </div>
-
-       
-
     </div>
     </form>
+</div>
 </div>
 @endsection

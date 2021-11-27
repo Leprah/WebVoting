@@ -26,8 +26,8 @@ class WebVoteController extends Controller
         return view('webVote.dataPemilih', compact('data_pemilih', 'no'));
     }
 
-    public function laporan(){
-        return view('webVote.laporan');
+    public function pengaturan(){
+        return view('webVote.pengaturan');
     }
 
     public function statistik(){
