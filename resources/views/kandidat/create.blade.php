@@ -1,4 +1,4 @@
-@extends('pemilih.layout')
+@extends('Pemilih.layout')
 
 @section('judul')
 <h1>Data Kandidat</h1>
@@ -127,5 +127,5 @@
     </div>
     </form>
 </div>
-</div>
+
 @endsection

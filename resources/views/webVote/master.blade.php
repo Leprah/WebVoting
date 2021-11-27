@@ -127,19 +127,6 @@
 
     @yield('content')
 
-    <div class="container-fluid">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
-      </div>
   
       <!-- Footer -->
       <footer class="footer pt-0">
