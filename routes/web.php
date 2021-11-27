@@ -34,9 +34,11 @@ Route::get('/kandidat/create', 'KandidatController@create')->name('kandidat.crea
 
 Route::post('/kandidat/store', 'KandidatController@store')->name('kandidat.store');
 
-Route::get('/webVote/kandidat/edit/{id}', 'KandidatController@edit')->name('kandidat.edit');
+Route::post('/kandidat/update/{id}', 'KandidatController@update')->name('kandidat.update');
 
-Route::get('/webVote/kandidat/delete/{id}', 'KandidatController@destroy')->name('kandidat.destroy');
+Route::get('/kandidat/edit/{id}', 'KandidatController@edit')->name('kandidat.edit');
+
+Route::get('/kandidat/delete/{id}', 'KandidatController@destroy')->name('kandidat.destroy');
 
 // Voter
 Route::get('/voter/vote', 'WebVoteController@voter')->middleware('level:voter')->name('voter.vote');

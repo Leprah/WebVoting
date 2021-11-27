@@ -130,10 +130,8 @@
                         <td> sementara kosong </td>
                         <td>
                         <form action="{{route('kandidat.destroy',$kandidat->id)}}" method="POST" > @csrf
-                          <a href=" {{ route('kandidat.edit', $kandidat->id) }}">
-                        <i class="fa fa-pencil-alt"></i>Edit</a>
-                          <button onClick="return confirm('Yakin mau dihapus?')" class="btn btn-sm btn-danger">
-                        <i class="fa fa-times"></i>hapus</button>
+                          <a href=" {{ route('kandidat.edit', $kandidat->id) }}" class="btn btn-sm btn-ungu">Edit</a>
+                          <button onClick="return confirm('Yakin mau dihapus?')" class="btn btn-sm btn-danger">Hapus</button>
                         </form>
                         </td>
                     </tr>

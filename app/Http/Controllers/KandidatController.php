@@ -71,4 +71,6 @@ class KandidatController extends Controller
         $data->update();
         return redirect('webVote/dataKandidat')->with('pesan', 'Data Galeri Berhasil diedit');
     }
+
+    
 }
