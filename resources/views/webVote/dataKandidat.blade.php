@@ -114,16 +114,12 @@
                         <td>{{ ++$no}}</td>
                         <td><img src="{{asset('thumb/'.$kandidat->foto) }}" width="100px"></td>
                         <td>{{ $kandidat->nama }}</td>
-                        <td>{{ $kandidat->visi }}</td>
-                        <td>{{ $kandidat->misi}}</td>
+                        <td>{!! $kandidat->visi !!}</td>
+                        <td>{!! $kandidat->misi !!}</td>
                         <td>
-                        <form action="{{route('kandidat.destroy',$kandidat->id)}}" method="POST" > @csrf
-                          <a href=" {{ route('kandidat.edit', $kandidat->id) }}">
-                        <i class="fa fa-pencil-alt"></i>Edit</a>
-                          <button onClick="return confirm('Yakin mau dihapus?')" class="btn btn-sm btn-danger">
-                        <i class="fa fa-times"></i>hapus</button>
-                        </form>
-                        </td>
+                          <a href="/kandidat/edit/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-ungu"> Edit</button></a>
+                          <a href="/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-danger" onClick="return confirm('Yakin mau dihapus?')"> Hapus</button></a>
+                          </td>
                     </tr>
                 @endforeach
                 </tbody>

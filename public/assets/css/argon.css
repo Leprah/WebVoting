@@ -6394,7 +6394,7 @@ input[type='button'].btn-block
 .card-img,
 .card-img-top
 {
-    padding-top: 5px;
+    padding-top: 20px;
     padding-left: 45px;
     padding-right: 45px;
 }
@@ -19940,7 +19940,6 @@ a.btn-icon-only
 .footer
 {
     padding: 30px 0; 
-
     background: #f8f9fe;
 }
 .footer .col-footer .heading
@@ -29925,9 +29924,10 @@ color: #32325d;
     padding-left: 55px;
     padding-top: 55px;
     padding-bottom: 40px;
-    position: absolute;
+    position: relative;
+    left: 80px;
+    top: 80px;
     display: block;
-    overflow-x: auto;
     width: 85%;
     background: #FFFFFF;
     box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.2);
@@ -29970,7 +29970,7 @@ color: #32325d;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 28px;
     
 
     /* identical to box height */
@@ -29979,8 +29979,10 @@ color: #32325d;
 }
 
 .lingkaran{
-    width: 60px;
-	height: 60px;
+    position: relative;
+    top: 10px;
+    width: 50px;
+	height: 50px;
 	background: #FEC260;
 	border-radius: 100%;
     margin:0 auto;
@@ -29999,14 +30001,24 @@ color: #32325d;
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
     word-wrap: break-word;
     border: 1px solid rgba(0, 0, 0, .05);
     border-radius: 0;
     background-color: #fff;
     background-clip: border-box;
-    width: 350px;
-    height: 450px;
+    width: 95%;
+	height: auto;
+	grid-column: span 8;
+	margin: 10px 0;
+}
+
+.card-header-vote {
+    margin-bottom: 0;
+    padding: 1.05rem 1.15rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    background-color: #fff;
 }
 
 .bg-foot-vt{
@@ -30037,6 +30049,13 @@ color: #32325d;
 .btn-ungu{
     background-color: #62467F;
     color: #fff;
+    border-color: #62467F;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.btn-bdr-u{
+    background-color: #FFFFFF;
+    color: #62467F;
     border-color: #62467F;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
@@ -30075,3 +30094,12 @@ color: #32325d;
     padding-top: 12px;
 }
 
+.ft-ds{
+    position: relative;
+    top: 40px;
+}
+
+.ft-cr{
+    position: relative;
+    top: 120px;
+}

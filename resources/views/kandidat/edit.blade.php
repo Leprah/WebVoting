@@ -1,4 +1,4 @@
-@extends('kandidat.layout')
+@extends('Pemilih.layout')
 
 @section('judul')
 <h1>Data Kandidat</h1>
@@ -99,42 +99,51 @@
         </ul>
 @endif
 <div class="container-fluid">
-<form action="/" method="POST" enctype="multipart/form-data">
+<form action="{{route('kandidat.update', $kandidat->id)}}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="container-data">
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" name="nama" placeholder="Nama">
+                <input type="text" class="form-control" name="nama" placeholder="Nama" value="{{ $kandidat->nama}}">
             </div>
+            <span class="text-form">
+              Nama yang diisikan adalah nama sesuai dokumen KTP/KTM.
+            </span>
         </div>
     
         <div class="form-group row">
-            <label for="alamat" class="col-sm-2 col-form-label">Visi :</label>
+            <label for="visi" class="col-sm-2 col-form-label">Visi :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" name="visi" placeholder="Visi">
+            <textarea name="visi" id="summernote2" rows="10" class="form-control">{{ $kandidat->visi}}</textarea>
             </div>
+            <span class="text-form kotak-plus color-pth"><br>
+              +
+            </span><span class="text-form pd-fm"> Tambah visi </span>
         </div>
     
         <div class="form-group row">
-            <label for="alamat" class="col-sm-2 col-form-label">Misi :</label>
+            <label for="nama" class="col-sm-2 col-form-label">Misi :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" name="misi" placeholder="Misi">
+            <textarea name="misi" id="summernote" rows="10" class="form-control">{{ $kandidat->misi}}</textarea>
             </div>
+            <span class="text-form kotak-plus color-pth"><br>
+              +
+            </span><span class="text-form pd-fm"> Tambah misi </span>
         </div>
 
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Foto :</label>
             <div class="col-sm-10">
             <input type="file" name="foto" class="form-control" placeholder="image">
+            <img src="/thumb/{{ $kandidat->foto }}" width="200px">  
             </div>
         </div>
 
-
         <div class="col-xs-12 col-sm-12 col-md-12 text-left">
             <br>
-                <button type="submit" class="btn btn-success btn-sm">Simpan</button>
-                <a class="btn btn-danger btn-sm" href="/buku"> Batal</a>
+              <button type="submit" class="btn btn-success btn-sm">Simpan</button>
+              <a class="btn btn-danger btn-sm" href="{{ url()->previous() }}"> Batal</a>
         </div>
     </div>
     </form>

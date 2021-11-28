@@ -1,4 +1,4 @@
-@extends('pemilih.layout')
+@extends('Pemilih.layout')
 
 @section('judul')
 <h1>Data Kandidat</h1>
@@ -93,9 +93,9 @@
         </div>
     
         <div class="form-group row">
-            <label for="alamat" class="col-sm-2 col-form-label">Visi :</label>
+            <label for="visi" class="col-sm-2 col-form-label">Visi :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="visi" placeholder="Visi">
+            <textarea name="visi" id="summernote2" rows="10" class="form-control"></textarea>
             </div>
             <span class="text-form kotak-plus color-pth"><br>
               +
@@ -103,13 +103,13 @@
         </div>
     
         <div class="form-group row">
-            <label for="alamat" class="col-sm-2 col-form-label">Misi :</label>
+            <label for="nama" class="col-sm-2 col-form-label">Misi :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="misi" placeholder="Misi">
+            <textarea name="misi" id="summernote" rows="10" class="form-control"></textarea>
             </div>
             <span class="text-form kotak-plus color-pth"><br>
-                 +
-            </span><span class="text-form pd-fm"> Tambah misi </span>  
+              +
+            </span><span class="text-form pd-fm"> Tambah misi </span>
         </div>
 
         <div class="form-group row">
@@ -127,5 +127,5 @@
     </div>
     </form>
 </div>
-</div>
+
 @endsection

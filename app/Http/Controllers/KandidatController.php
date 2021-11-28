@@ -18,8 +18,8 @@ class KandidatController extends Controller
     public function store(Request $request){
         $this->validate($request,[
         'nama' => 'required|string',
-        'visi' => 'required|string|max:30',
-        'misi' => 'required|string',
+        // 'visi' => 'required|text',
+        // 'misi' => 'required|text',
         // 'foto' => 'required|image|mimes: jpg,png,jpeg',
         ]);
         $data = new Kandidat;
@@ -40,10 +40,10 @@ class KandidatController extends Controller
         $data->delete();
         return redirect('webVote/dataKandidat')->with('pesan','Data Kandidat Berhasil dihapus');;
     }
-    public function edit($id)
-    {
-        $data = Kandidat::find($id);
-        return view('kandidat/edit', ['Kandidat'=>$data]);
+
+    public function edit($id){
+        $kandidat = Kandidat::find($id);
+        return view('kandidat.edit', compact('kandidat'));
     }
 
     public function update(Request $request, $id)
@@ -54,7 +54,7 @@ class KandidatController extends Controller
         $data->misi = $request->misi;
         
         if ($request->foto!= NULL) {
-            $oldfilename = $galeri->foto;
+            $oldfilename = $data->foto;
             $image_path = "thumb/" . $oldfilename;
             if (File::exists($image_path)) {
                 File::delete($image_path);
@@ -71,4 +71,6 @@ class KandidatController extends Controller
         $data->update();
         return redirect('webVote/dataKandidat')->with('pesan', 'Data Galeri Berhasil diedit');
     }
+
+    
 }

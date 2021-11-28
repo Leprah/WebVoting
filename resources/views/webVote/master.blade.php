@@ -127,22 +127,9 @@
 
     @yield('content')
 
-    <div class="container-fluid">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
-      </div>
   
       <!-- Footer -->
-      <footer class="footer pt-0">
+      <footer class="footer pt-0 ft-ds">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted px-4">
