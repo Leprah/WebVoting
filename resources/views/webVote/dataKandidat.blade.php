@@ -117,11 +117,9 @@
                         <td>{!! $kandidat->visi !!}</td>
                         <td>{!! $kandidat->misi !!}</td>
                         <td>
-                        <form action="{{route('kandidat.destroy',$kandidat->id)}}" method="POST" > @csrf
-                          <a href=" {{ route('kandidat.edit', $kandidat->id) }}" class="btn btn-sm btn-ungu">Edit</a>
-                          <button onClick="return confirm('Yakin mau dihapus?')" class="btn btn-sm btn-danger">Hapus</button>
-                        </form>
-                        </td>
+                          <a href="/kandidat/edit/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-ungu"> Edit</button></a>
+                          <a href="/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-danger" onClick="return confirm('Yakin mau dihapus?')"> Hapus</button></a>
+                          </td>
                     </tr>
                 @endforeach
                 </tbody>
