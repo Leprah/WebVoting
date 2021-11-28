@@ -23,11 +23,11 @@
                     <div class="d-flex justify-content-between pd-top-btn-vt">
                         <button type="button" class="btn btn-sm btn-info  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
                         <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
+                        <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" href="{{ }}">Test voting</button>
                     </div>
             </div>
         </div>    
     </div>
-
         <div class="col-xl-3 order-xl-2 mg-vote">
         <div class="card-vote card-profile">
         <h2 class="no-urut lingkaran">2</h2>

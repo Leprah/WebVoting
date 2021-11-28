@@ -128,7 +128,7 @@ Kembali
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="nama" placeholder="Nama">
+                <input type="text" class="form-control" name="nama" placeholder="Nama">
             </div>
             <span class="text-form">
               Nama yang diisikan adalah nama sesuai dokumen KTP/KTM.
@@ -138,7 +138,7 @@ Kembali
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">NIM :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="alamat" placeholder="NIM">
+                <input type="text" class="form-control" name="nim" placeholder="NIM">
             </div>
             <span class="text-form">
               NIM yang diisikan adalah NIM sesuai dokumen KTM.
@@ -148,7 +148,7 @@ Kembali
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Jurusan :</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="alamat" placeholder="Jurusan">
+                <input type="text" class="form-control" name="jurusan" placeholder="Jurusan">
             </div>
             <span class="text-form">
                Silahkan isi jurusan Anda.

@@ -118,10 +118,10 @@
                         <td>{{ $pemilih->angkatan}}</td>
                         <td>{{ $pemilih->status}}</td>
 
-                        <td><center>
+                        <td>
                         <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-ungu btn-sm"> Edit</button></a>
                         <a href="/webVote/pemilih/delete/{{ $pemilih->id }}"><button type="button" class="btn btn-danger btn-sm"> Hapus</button></a>
-                        </center></td>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>
