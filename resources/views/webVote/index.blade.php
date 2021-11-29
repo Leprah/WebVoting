@@ -70,7 +70,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Kandidat</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">350,897</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">{{ $jumlah_kandidat }}</span>
                     </div>
                   </div>
                 </div>

@@ -2676,7 +2676,6 @@ pre code
 {
     display: block;
     overflow-x: auto;
-
     width: 100%;
 
     -webkit-overflow-scrolling: touch;
@@ -29850,52 +29849,6 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
     background-color: #FEC260;
 }
 
-.modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: .3rem;
-    outline: 0;
-}
-
-.modal-content {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
-}
-
-.modal-dialog {
-    max-width: 500px;
-    margin: 1.75rem auto;
-}
-
-.modal-dialog {
-    position: relative;
-    width: auto;
-    margin: .5rem;
-    pointer-events: none;
-}
-
-.modal-open .modal {
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1050;
-    display: none;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    outline: 0;
-}
-
 .chart {
     
     border-style: ridge;
@@ -30096,10 +30049,10 @@ color: #32325d;
 
 .ft-ds{
     position: relative;
-    top: 40px;
+    top: 100px;
 }
 
 .ft-cr{
     position: relative;
-    top: 120px;
+    top: 380px;
 }

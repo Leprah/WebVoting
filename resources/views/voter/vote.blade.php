@@ -25,8 +25,8 @@
                         </div>
                     
                         <div class="d-flex justify-content-between pd-top-btn-vt">
-                            <button type="button" class="btn btn-sm btn-ungu  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
-                            <button type="button" class="btn btn-sm btn-bdr-u float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
+                            <button id="visi_misi" class="btn btn-sm btn-ungu  mr-4 size-btn-vt btn-visi" data-toggle="modal" data-target="#modal-visimisi" data-visi="{!! $kandidat->visi !!}" data-misi="{!! $kandidat->misi !!}">Info</button>
+                            <button class="btn btn-sm btn-bdr-u float-right size-btn-vt">Vote</button>
                         </div>
                     </div>
                 </div>    
@@ -38,24 +38,41 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" id="center" role="document">
+
+<div class="modal fade" id="modal-visimisi" tabindex="-1" role="dialog" aria-labelledby="modal-visimisi" aria-hidden="true">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+      <h5 class="modal-title" id="modal-visimisi">Visi</h5>
+      <span id="visi"></span>
+      <h5 class="modal-title" id="modal-visimisi">Misi</h5>
+      <span id="misi"></span>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
 
 @endsection
+
+@section('script')
+<script>
+$(document).ready(function() {
+  $(document).on('click', '#visi_misi', function() {
+    var visi = $(this).data('visi');
+    var misi = $(this).data('misi');
+
+    $('#visi').text(visi).html(visi);
+    $('#misi').text(misi).html(misi);
+  })
+})
+
+</script>
+
+  @endsection

@@ -49,14 +49,6 @@
 
 @endsection
 
-@section('tambah')
-<div class="container-fluid">
-<div id ="right">
-<a class="btn btn-success btn-sm" href="{{ route('pemilih.create') }}"> Tambah Data</a>
-</div>
-</div>
-
-@endsection
 
 @section('search')
 <div class="container-fluid">
@@ -105,7 +97,6 @@
                     <th style="font-size:12px;">Jurusan</th>
                     <th style="font-size:12px;">Angkatan</th>
                     <th style="font-size:12px;">Status</th>
-                    <th style="font-size:12px;" width="80px">Action</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -117,12 +108,6 @@
                         <td>{{ $pemilih->jurusan}}</td>
                         <td>{{ $pemilih->angkatan}}</td>
                         <td>{{ $pemilih->status}}</td>
-                        <td>
-                        <form action="{{route('kandidat.destroy',$kandidat->id)}}" method="POST" > @csrf
-                          <a href=" {{ route('kandidat.edit', $kandidat->id) }}" class="btn btn-sm btn-ungu">Edit</a>
-                          <button onClick="return confirm('Yakin mau dihapus?')" class="btn btn-sm btn-danger">Hapus</button>
-                        </form>
-                        </td>
                     </tr>
                 @endforeach
                 </tbody>

@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>E-Voting</title>
+  <title>E-Vote</title>
   <!-- Favicon -->
-  <link rel="icon" href="../image/thumbnail.png" type="image/png">
+  <link rel="icon" href="{{ asset('/image/thumbnail.png') }}" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
@@ -108,7 +108,7 @@
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted px-4">
-              &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
+            &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
             </div>
           </div>  
         </div>
@@ -127,7 +127,7 @@
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
-  
+  @yield('script')
 </body>
 
 </html>

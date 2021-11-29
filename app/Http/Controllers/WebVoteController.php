@@ -9,11 +9,13 @@ use App\Pemilih;
 class WebVoteController extends Controller
 {
     public function index(){
-        return view('webVote.index');
+        $jumlah_kandidat = Kandidat::count();
+        return view('webVote.index', compact('jumlah_kandidat'));
     }
 
     public function dataKandidat(){
         $batas = 6;
+        $jumlah_kandidat = Kandidat::count();
         $data_kandidat = Kandidat::orderBy('id', 'desc')->paginate($batas);
         $no = $batas * ($data_kandidat->currentPage() - 1);
         return view('webVote.dataKandidat', compact('data_kandidat', 'no'));
@@ -42,6 +44,15 @@ class WebVoteController extends Controller
         $data_kandidat = Kandidat::orderBy('id', 'desc')->paginate($batas);
         $no = $batas * ($data_kandidat->currentPage() - 1);
         return view('voter.vote', compact('data_kandidat', 'no'));
+    }
+
+    public function visi($id){
+        $dt = Kandidat::find($id);
+
+        return response()->json([
+            'hasil' => $dt
+        ]);
+        
     }
 
 }
