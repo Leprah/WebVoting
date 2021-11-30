@@ -65,7 +65,9 @@
               <span aria-hidden="true">×</span>
             </button>
           </form>
-    </div>
+          <br>
+          <br>
+</div>
 @endsection
 
 

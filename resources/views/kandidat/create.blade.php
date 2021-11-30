@@ -78,7 +78,7 @@
 @endif
 
 <div class="container-fluid">
-<!-- Form Inout Data Kandidat -->
+<!-- Form Input Data Kandidat -->
 <form action="{{route('kandidat.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="container-data">
