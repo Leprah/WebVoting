@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Auth;
 class Level{
 
   public function handle($request, Closure $next, String $level) {
-    if (!Auth::check()) // This isnt necessary, it should be part of your 'auth' middleware
-      return redirect('/auth.login');
-
     $user = Auth::user();
     if($user->level == $level)
       return $next($request);

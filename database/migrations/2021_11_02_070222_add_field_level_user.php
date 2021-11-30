@@ -15,6 +15,6 @@ class AddFieldLevelUser extends Migration
 
     public function down()
     {
-        
+        Schema::dropIfExists('users');
     }
 }
