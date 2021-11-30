@@ -24,11 +24,10 @@
                             </div>
                         </div>
                     
-<<<<<<< HEAD
                     <div class="d-flex justify-content-between pd-top-btn-vt">
                         <button type="button" class="btn btn-sm btn-info  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
                         <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
-                        <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" href="{{ }}">Test voting</button>
+                        <button type="button" class="btn btn-sm btn-default float-right size-btn-vt" href="{{ route('voter.voting'), }}">Test voting</button>
                     </div>
             </div>
         </div>    
@@ -44,11 +43,6 @@
                         </h5>
                         <div class="h5 font-weight-300">
                         <i class="ni location_pin mr-2"></i>TRPL'20
-=======
-                        <div class="d-flex justify-content-between pd-top-btn-vt">
-                            <button type="button" class="btn btn-sm btn-ungu  mr-4 size-btn-vt" data-toggle="modal" data-target="#exampleModal">Info</button>
-                            <button type="button" class="btn btn-sm btn-bdr-u float-right size-btn-vt" data-toggle="modal" data-target="#exampleModal">Vote</button>
->>>>>>> a7fb44b1eee59719a230c5572b938598911f6f74
                         </div>
                     </div>
                 </div>    

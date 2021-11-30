@@ -11,8 +11,8 @@ class Voting extends Migration
     {
         Schema::create('voting', function (Blueprint $table) {
             $table->id();
-            $table->integer('kandidat_id')->unsigned();
-            $table->integer('users_id')->unsigned();
+            $table->unsignedBigInteger('kandidat_id')->unsigned();
+            $table->unsignedBigInteger('users_id')->unsigned();
             $table->foreign('kandidat_id')->references('id')->on('kandidat')->onDelete('restrict');
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
@@ -21,8 +21,6 @@ class Voting extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('voting', function(Blueprint $table){
-            //
-        });
+        Schema::dropIfExists('voting');
     }
 }

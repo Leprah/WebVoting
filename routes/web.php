@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 // Auth
 Auth::routes();
 
+Route::get('/', 'HomeController@index')->name('auth.login');
+
 // Admin
 Route::get('/webVote/index', 'WebVoteController@index')->middleware('level:admin')->name('webVote.index');
 
@@ -20,14 +22,6 @@ Route::get('/webVote/master', 'WebVoteController@master')->name('webVote.master'
 
 Route::get('/webVote/laporan', 'WebVoteController@laporan')->name('webVote.laporan');
 
-Route::get('/', 'HomeController@index')->name('auth.login');
-
-
-// pemilih
-Route::get('/pemilih/create', 'PemilihController@create')->name('pemilih.create');
-
-Route::get('/pemilih/destroy/{id}', 'PemilihController@destroy')->name('pemilih.destroy');
-
 // kandidat route
 Route::get('/kandidat/create', 'KandidatController@create')->name('kandidat.create');
 
@@ -42,7 +36,7 @@ Route::get('/kandidat/delete/{id}', 'KandidatController@destroy')->name('kandida
 // Voter
 Route::get('/voter/vote', 'WebVoteController@voter')->middleware('level:voter')->name('voter.vote');
 
-Route::get('/voter/vote', 'PemilihController@voting')->middleware('level:voter')->name('voter.vote');
+Route::get('/voter/vote/{id}', 'PemilihController@voting')->middleware('level:voter')->name('voter.voting');
 
 
 
