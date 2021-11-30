@@ -151,145 +151,18 @@
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script>
-    // Build the chart
-    Highcharts.chart('liveCount', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: ''
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        accessibility: {
-            point: {
-                valueSuffix: '%'
-            }
-        },
-        plotOptions: {
-            pie: {
-              colors: [
-                    '#A12568', 
-                    '#FEC260',
-                    '#2A0944',
-                    '#24CBE5', 
-                    '#64E572', 
-                    '#FF9655', 
-                    '#FFF263', 
-                    '#6AF9C4'
-                  ],
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false
-                },
-                showInLegend: true
-            }
-        },
-        series: [{
-            name: 'Brands',
-            colorByPoint: true,
-            data: [{
-                name: 'Ana',
-                y: 15,
-                sliced: true,
-                selected: true
-            }, {
-                name: 'Alief',
-                y: 35
-            }, {
-                name: 'Aveenda',
-                y: 50
-           
-            }]
-        }]
-    });
-    </script>
-
-    <!-- Chart Batang -->
-
-    <script>
-      var chart = Highcharts.chart('batang', {
-
-      chart: {
-          type: 'column'
-      },
-
-      title: {
-          text: 'Voter Berdasarkan Angkatan'
-      },
-
-      legend: {
-          align: 'right',
-          verticalAlign: 'middle',
-          layout: 'vertical'
-      },
-
-      xAxis: {
-          categories: ['Angkatan 2019', 'Angkatan 2020', 'Angkatan 2021'],
-          labels: {
-              x: -10
-          }
-      },
-
-      yAxis: {
-          allowDecimals: false,
-          title: {
-              text: 'Jumlah Pemilih'
-          }
-      },
-
-      series: [{
-          name: 'Ana',
-          data: [5, 10, 15]
-      }, {
-          name: 'Alief',
-          data: [15, 10, 5]
-      }, {
-          name: 'Aveenda',
-          data: [10, 10, 10]
-      }],
-
-      responsive: {
-          rules: [{
-              condition: {
-                  maxWidth: 500
-              },
-              chartOptions: {
-                  legend: {
-                      align: 'center',
-                      verticalAlign: 'bottom',
-                      layout: 'horizontal'
-                  },
-                  yAxis: {
-                      labels: {
-                          align: 'left',
-                          x: 0,
-                          y: -5
-                      },
-                      title: {
-                          text: null
-                      }
-                  },
-                  subtitle: {
-                      text: null
-                  },
-                  credits: {
-                      enabled: false
-                  }
-              }
-          }]
-      }
-      });
-
-    </script>
-
-
+  <!-- js quick count -->
+  <script src="../assets/js/liveCount.js"></script>
+  <!-- Vote Berdasarkan Angkatan -->
+  <script src="../assets/js/countAngkatan.js"></script>
+  <!-- Vote Berdasarkan Jurusan -->
+  <script src="../assets/js/countJurusan.js"></script>
+  <!-- Voter Berdasarkan Angkatan -->
+  <script src="../assets/js/jmlAngkatan.js"></script>
+  <!-- Voter Berdasarkan Jurusan -->
+  <script src="../assets/js/jmlJurusan.js"></script>
+  <!-- Penggunaan Hak Pilih -->
+  <script src="../assets/js/suara.js"></script>
 
 </body>
 

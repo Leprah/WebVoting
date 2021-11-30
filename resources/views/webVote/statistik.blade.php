@@ -51,17 +51,25 @@
 
 @section('content')
 <div class="container-fluid">
-    <h2><center> Nama Pemilihan </center></h2>
+    <h1 style="font-family:Montserrat;"><center> Pemilihan Ketua KMTEDI </center></h1>
+    <br>
     <!-- Hasil pemilihan -->
-    <!-- <div class="container-fluid"> -->
-        <h3>Quick Count</h3>
-        <div class='chart' id='liveCount'></div>
-    <!-- </div> -->
+    <div class='chart' id='liveCount'></div>
+    <br>
+    <!-- Penggunaan Hak Pilih -->
+    <div class='chart' id='suara'></div>
     <br>
     <div>
-        <div class="row justify-content-between" style="position:relative; margin-right:50px margin-left:50px">
-            <div class='chart' id='batang' style="width:40%"></div>
-            <div class='chart' id='batang' style="width:40%"></div>
+        <div class="row justify-content-between" style="position:relative; margin:2px">
+            <div class='chart' id='jmlAngkatan' style="width:48%"></div>
+            <div class='chart' id='jmlJurusan' style="width:48%"></div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="row justify-content-between" style="position:relative; margin:2px">
+            <div class='chart' id='countAngkatan' style="width:48%"></div>
+            <div class='chart' id='countJurusan' style="width:48%"></div>
         </div>
     </div>
 </div>
