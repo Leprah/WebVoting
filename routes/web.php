@@ -16,11 +16,13 @@ Route::get('/webVote/dataPemilih', 'WebVoteController@dataPemilih')->name('webVo
 
 Route::get('/webVote/pengaturan', 'WebVoteController@pengaturan')->name('webVote.pengaturan');
 
+Route::post('/webVote/store', 'WebVoteController@store_waktu')->name('webVote.store');
+
 Route::get('/webVote/statistik', 'WebVoteController@statistik')->name('webVote.statistik');
 
 Route::get('/webVote/master', 'WebVoteController@master')->name('webVote.master');
 
-Route::get('/webVote/laporan', 'WebVoteController@laporan')->name('webVote.laporan');
+
 
 // kandidat route
 Route::get('/kandidat/create', 'KandidatController@create')->name('kandidat.create');
@@ -36,10 +38,4 @@ Route::get('/kandidat/delete/{id}', 'KandidatController@destroy')->name('kandida
 // Voter
 Route::get('/voter/vote', 'WebVoteController@voter')->middleware('level:voter')->name('voter.vote');
 
-<<<<<<< HEAD
-
-
-
-=======
 Route::get('/voter/voting/{id}', 'PemilihController@voting')->middleware('level:voter')->name('voter.voting');
->>>>>>> 757352c5fb6fa70e0d9f09ca97fe302ec6b88888

@@ -30071,5 +30071,14 @@ color: #32325d;
     border-style: ridge;
     border-radius: 10px;
     height: auto;
-    margin-right: 30px;
+    margin-right: 50px;
+}
+
+.text-countdown{
+    font-size: 35px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    color: #32325d;
+    text-align: center;
 }
