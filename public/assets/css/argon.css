@@ -20648,7 +20648,8 @@ textarea[resize='horizontal']
 
 .modal-title
 {
-    font-size: 1.0625rem;
+    font-size: 24px;
+    font-family: Montserrat;
 }
 
 .modal-fluid .modal-dialog
