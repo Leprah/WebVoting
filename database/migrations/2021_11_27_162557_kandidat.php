@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class Kandidat extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('kandidat', function (Blueprint $table) {
@@ -23,13 +18,8 @@ class Kandidat extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        //
+        Schema::dropIfExists('kandidat');
     }
 }

@@ -20,7 +20,7 @@ class KandidatController extends Controller
         'nama' => 'required|string',
         // 'visi' => 'required|text',
         // 'misi' => 'required|text',
-        // 'foto' => 'required|image|mimes: jpg,png,jpeg',
+        'foto' => 'required|image|mimes: jpg,png,jpeg'
         ]);
         $data = new Kandidat;
         $data->nama = $request->nama;
