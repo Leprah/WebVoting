@@ -3,23 +3,22 @@
 @section('judul')
 <h1>Pengaturan</h1>
 @endsection
+
 @section('title')
 <div class="container-fluid">
 <div id ="left">
 <h3>Atur Periode Pemilihan</h3>
 </div>
 </div>
-
-
 @endsection
+
+
 @section('kembali')
 <div class="container-fluid">
 <div id ="right">
-<a class="btn btn-primary btn-sm" href="{{ route('webVote.dataKandidat') }}"> Kembali</a>
+<a class="btn btn-primary btn-sm" href="{{ route('webVote.index') }}"> Kembali</a>
 </div>
 </div>
-
-
 @endsection
 
 @section('menu')
@@ -73,39 +72,82 @@
 @section('content')
 
 @if (count($errors) > 0)
-
-    <ul class="alert alert-danger">
-
-            @foreach ($errors->all() as $error)
-
-                <li>{{ $error }}</li>
-
-            @endforeach
-
-        </ul>
-
+  <ul class="alert alert-danger">
+    @foreach ($errors->all() as $error)
+      <li>{{ $error }}</li>
+    @endforeach
+  </ul>
 @endif
 
 <div class="container-fluid">
-    <div class="container-fluid"> 
-        <form action="/" method="POST" enctype="multipart/form-data">
-        @csrf
-        <div class="container-data">
-            <div class="form-group row">
-                <label for="alamat" class="col-sm-2 col-form-label">Tanggal :</label>
-                <div class="col-sm-10">
-                <div class="input-control text" data-role="datepicker">
-                <input type="text">
+        <!-- Form Input Periode -->
+        <form action="{{route('kandidat.store')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="container-data">
+                  <div class="form-group row">
+                      <label for="nama" class="col-sm-2 col-form-label">Pemilihan :</label>
+                      <div class="col-sm-10">
+                          <input type="text" class="form-control" name="pemilihan" placeholder="Pemilihan">
+                      </div>
+                      <span class="text-form">
+                        Masukkan nama kegiatan pemilihan Anda.
+                      </span>
+                  </div>
+                <div class="form-group row">
+                  <label for="mulai" class="col-sm-2 col-form-label">Mulai :</label>
+                  <div class="col">
+                    <div class="input-group mb-2 mr-sm-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                        <i class="ni ni-calendar-grid-58"></i>
+                        </div>
+                      </div>
+                      <input type="date"  name="mulai" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <i class="ni ni-watch-time"></i>
+                          </div>
+                        </div>
+                        <input type="time" class="form-control">
+                      </div>
+                  </div>
                 </div>
+
+                <div class="form-group row">
+                  <label for="akhir" class="col-sm-2 col-form-label">Akhir :</label>
+                  <div class="col">
+                    <div class="input-group mb-2 mr-sm-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                        <i class="ni ni-calendar-grid-58"></i>
+                        </div>
+                      </div>
+                      <input type="date"  name="akhir" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <i class="ni ni-watch-time"></i>
+                          </div>
+                        </div>
+                        <input type="time" class="form-control">
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 text-left">
+                    <br>
+                      <button type="submit" class="btn btn-success btn-sm">Simpan</button>
+                      <a class="btn btn-danger btn-sm" href="{{ url()->previous() }}"> Batal</a>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-left">
-                <br>
-                    <button type="submit" class="btn btn-success btn-sm">Simpan</button>
-                    <a class="btn btn-danger btn-sm" href="/buku"> Batal</a>
-            </div>
+            </form>
         </div>
-    </form>
-</div>
-</div>
+
 @endsection

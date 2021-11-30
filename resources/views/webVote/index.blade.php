@@ -39,7 +39,7 @@
       </a>
     </li>
     </ul>
-    <!-- <hr class="my-3"> -->
+    <hr class="my-3">
     <!-- Heading -->
     <!-- Navigation -->
     <!-- <ul class="navbar-nav mb-md-3">
@@ -56,10 +56,8 @@
       <div class="container-fluid">
           <!-- Card stats -->
           <div class="row">
-
             <div class="col-xl-3 col-md-6">
               <div class="card card-stats">
-
                 <!-- Card body Jumlah Kandidat-->
                 <div class="card-body">
                   <div class="row">
@@ -136,9 +134,38 @@
               </div>
             </div>
           </div>
-    <!-- Page content -->   
-    <br>
-    <h3>Quick Count</h3>
-    <div class='chart' id='liveCount'></div>
+    <!-- Page content -->
+    
+      <div class="container-fluid">
+          <br>
+        
+          <h3>Quick Count</h3>
+          <div class="row">  
+          <div class='chart left' id='liveCount'></div>
+          
+         
+          
+            <div class="card-ds" style="width: 30rem;">
+            <h3>Countdown</h3>
+            <div class='bdr-ds'>
+            00:00:00:00
+            </div>
+            <br>
+
+            <h3>Perolehan Suara</h3>
+            <div class='bdr-ds'>
+            @foreach ($data_kandidat as $kandidat)
+            <span>{{ $kandidat->nama }}</span>
+            <span> : </span>
+            <br>
+            @endforeach
+            </div>
+            </div>
+         
+      </div>
+      </div>
+  
+    
+
 </div>
  @endsection

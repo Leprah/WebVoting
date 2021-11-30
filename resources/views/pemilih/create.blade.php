@@ -120,7 +120,7 @@ Kembali
 
 @endif
 
-<div class="container-fluid">   
+  
 <div class="container-fluid">
     <div class="container-data">
     <form action="/" method="POST" enctype="multipart/form-data">

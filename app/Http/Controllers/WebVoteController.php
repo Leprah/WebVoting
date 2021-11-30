@@ -10,7 +10,8 @@ class WebVoteController extends Controller
 {
     public function index(){
         $jumlah_kandidat = Kandidat::count();
-        return view('webVote.index', compact('jumlah_kandidat'));
+        $data_kandidat = Kandidat:: all();
+        return view('webVote.index', compact('jumlah_kandidat', 'data_kandidat' ));
     }
 
     public function dataKandidat(){
@@ -46,13 +47,5 @@ class WebVoteController extends Controller
         return view('voter.vote', compact('data_kandidat', 'no'));
     }
 
-    public function visi($id){
-        $dt = Kandidat::find($id);
-
-        return response()->json([
-            'hasil' => $dt
-        ]);
-        
-    }
 
 }

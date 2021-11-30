@@ -13,7 +13,7 @@
             <div class="col-xl-3 order-xl-2 mg-vote">
                 <div class="card-vote card-profile">
                     <h2 class="no-urut lingkaran">{{ ++$no}}</h2>
-                    <img src="{{asset('thumb/'.$kandidat->foto) }}" height="230" width="70" alt="Image placeholder" class="card-img-top">
+                    <img src="{{asset('thumb/'.$kandidat->foto) }}" alt="Image placeholder" class="card-img-top">
                     <div class="card-header-vote text-center">
                         <div class="text-center">
                             <h5 class="h3">
@@ -48,9 +48,9 @@
         </button>
       </div>
       <div class="modal-body">
-      <h5 class="modal-title" id="modal-visimisi">Visi</h5>
+      <h1 class="modal-title" id="modal-visimisi">Visi</h1>
       <span id="visi"></span>
-      <h5 class="modal-title" id="modal-visimisi">Misi</h5>
+      <h1 class="modal-title" id="modal-visimisi">Misi</h1>
       <span id="misi"></span>
       </div>
       <div class="modal-footer">

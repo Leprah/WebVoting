@@ -20,8 +20,6 @@
   <link rel="stylesheet" href="{{ asset('assets/css/status.css') }}" type="text/css">
   <!-- summernote -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-  
-        
 </head>
 
 <body>

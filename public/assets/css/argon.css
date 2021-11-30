@@ -19939,7 +19939,7 @@ a.btn-icon-only
 .footer
 {
     padding: 30px 0; 
-    background: #f8f9fe;
+    background: #fff;
 }
 .footer .col-footer .heading
 {
@@ -29854,7 +29854,7 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
     border-style: ridge;
     border-radius: .975rem;
 }
-#left {
+.left {
     float:left;
     
 }
@@ -30055,4 +30055,20 @@ color: #32325d;
 .ft-cr{
     position: relative;
     top: 380px;
+}
+
+.card-ds{
+    position: relative;
+    left: 40px;
+    min-height: 1px;
+    background-color: #fff;
+    flex: 1 1 auto;
+}
+
+.bdr-ds{
+    padding: 1.5rem;
+    border-style: ridge;
+    border-radius: 10px;
+    height: auto;
+    margin-right: 30px;
 }
