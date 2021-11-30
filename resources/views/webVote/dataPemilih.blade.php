@@ -52,7 +52,7 @@
 @section('tambah')
 <div class="container-fluid">
 <div id ="right">
-<a class="btn btn-success btn-sm" href="{{ route('pemilih.create') }}"> Tambah Data</a>
+<!-- <a class="btn btn-success btn-sm" href="{{ route('pemilih.create') }}"> Tambah Data</a> -->
 </div>
 </div>
 
@@ -117,18 +117,11 @@
                         <td>{{ $pemilih->jurusan}}</td>
                         <td>{{ $pemilih->angkatan}}</td>
                         <td>{{ $pemilih->status}}</td>
-<<<<<<< HEAD
-
                         <td>
-                        <a href="/webVote/pemilih/edit/{{ $pemilih->id }}"><button type="button" class="btn btn-ungu btn-sm"> Edit</button></a>
-                        <a href="/webVote/pemilih/delete/{{ $pemilih->id }}"><button type="button" class="btn btn-danger btn-sm"> Hapus</button></a>
-=======
-                        <td>
-                        <form action="{{route('kandidat.destroy',$kandidat->id)}}" method="POST" > @csrf
-                          <a href=" {{ route('kandidat.edit', $kandidat->id) }}" class="btn btn-sm btn-ungu">Edit</a>
+                        <form action="{{route('kandidat.destroy',$pemilih->id)}}" method="POST" > @csrf
+                          <a href=" {{ route('kandidat.edit', $pemilih->id) }}" class="btn btn-sm btn-ungu">Edit</a>
                           <button onClick="return confirm('Yakin mau dihapus?')" class="btn btn-sm btn-danger">Hapus</button>
                         </form>
->>>>>>> a7fb44b1eee59719a230c5572b938598911f6f74
                         </td>
                     </tr>
                 @endforeach
