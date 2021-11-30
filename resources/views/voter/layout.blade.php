@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>E-Voting</title>
+  <title>E-Vote</title>
   <!-- Favicon -->
-  <link rel="icon" href="../image/thumbnail.png" type="image/png">
+  <link rel="icon" href="{{ asset('/image/thumbnail.png') }}" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
@@ -59,7 +59,9 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
@@ -108,7 +110,7 @@
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted px-4">
-              &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
+            &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
             </div>
           </div>  
         </div>
@@ -127,7 +129,7 @@
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
-  
+  @yield('script')
 </body>
 
 </html>

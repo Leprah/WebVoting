@@ -20,7 +20,7 @@ class KandidatController extends Controller
         'nama' => 'required|string',
         // 'visi' => 'required|text',
         // 'misi' => 'required|text',
-        // 'foto' => 'required|image|mimes: jpg,png,jpeg',
+        'foto' => 'required|image|mimes: jpg,png,jpeg'
         ]);
         $data = new Kandidat;
         $data->nama = $request->nama;
@@ -29,7 +29,7 @@ class KandidatController extends Controller
 
         $foto = $request->foto;
         $namafile = time().'.'. $foto->getClientOriginalExtension();
-        Image::make($foto)->resize(200,150)->save('thumb/'.$namafile);
+        Image::make($foto)->resize(150,150)->save('thumb/'.$namafile);
         $foto->move('image/', $namafile);
         $data->foto = $namafile;
         $data->save();

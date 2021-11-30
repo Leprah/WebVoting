@@ -36,7 +36,4 @@ Route::get('/kandidat/delete/{id}', 'KandidatController@destroy')->name('kandida
 // Voter
 Route::get('/voter/vote', 'WebVoteController@voter')->middleware('level:voter')->name('voter.vote');
 
-Route::get('/voter/vote/{id}', 'PemilihController@voting')->middleware('level:voter')->name('voter.voting');
-
-
-
+Route::get('/voter/voting/{id}', 'PemilihController@voting')->middleware('level:voter')->name('voter.voting');

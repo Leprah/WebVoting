@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>E-Voting</title>
+  <title>E-Vote</title>
   <!-- Favicon -->
-  <link rel="icon" href="../image/thumbnail.png" type="image/png">
+  <link rel="icon" href="{{ asset('/image/thumbnail.png') }}" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700">
   <!-- Icons -->
@@ -27,7 +27,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../image/logo.png" class="navbar-brand-img" alt="...">
+          <img src="{{ asset('/image/logo.png') }}" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
