@@ -81,20 +81,20 @@
 
 <div class="container-fluid">
         <!-- Form Input Periode -->
-        <form action="{{route('kandidat.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('webVote.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="container-data">
                   <div class="form-group row">
-                      <label for="nama" class="col-sm-2 col-form-label">Pemilihan :</label>
+                      <label for="nama_kegiatan" class="col-sm-2 col-form-label">Pemilihan :</label>
                       <div class="col-sm-10">
-                          <input type="text" class="form-control" name="pemilihan" placeholder="Pemilihan">
+                          <input type="text" class="form-control" name="nama_kegiatan" placeholder="Nama Kegiatan Pemilihan">
                       </div>
                       <span class="text-form">
                         Masukkan nama kegiatan pemilihan Anda.
                       </span>
                   </div>
                 <div class="form-group row">
-                  <label for="mulai" class="col-sm-2 col-form-label">Mulai :</label>
+                  <label for="dt_mulai" class="col-sm-2 col-form-label">Mulai :</label>
                   <div class="col">
                     <div class="input-group mb-2 mr-sm-2">
                       <div class="input-group-prepend">
@@ -102,23 +102,13 @@
                         <i class="ni ni-calendar-grid-58"></i>
                         </div>
                       </div>
-                      <input type="date"  name="mulai" class="form-control">
+                      <input type="datetime-local" class="form-control" name="dt_mulai">
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-group mb-2 mr-sm-2">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                          <i class="ni ni-watch-time"></i>
-                          </div>
-                        </div>
-                        <input type="time" class="form-control">
-                      </div>
                   </div>
                 </div>
 
                 <div class="form-group row">
-                  <label for="akhir" class="col-sm-2 col-form-label">Akhir :</label>
+                  <label for="dt_akhir" class="col-sm-2 col-form-label">Akhir :</label>
                   <div class="col">
                     <div class="input-group mb-2 mr-sm-2">
                       <div class="input-group-prepend">
@@ -126,25 +116,15 @@
                         <i class="ni ni-calendar-grid-58"></i>
                         </div>
                       </div>
-                      <input type="date"  name="akhir" class="form-control">
+                      <input type="datetime-local"  name="dt_akhir" class="form-control">
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-group mb-2 mr-sm-2">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                          <i class="ni ni-watch-time"></i>
-                          </div>
-                        </div>
-                        <input type="time" class="form-control">
-                      </div>
                   </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                     <br>
                       <button type="submit" class="btn btn-success btn-sm">Simpan</button>
-                      <a class="btn btn-danger btn-sm" href="{{ url()->previous() }}"> Batal</a>
+                      <a class="btn btn-danger btn-sm" href="/"> Batal</a>
                 </div>
             </div>
             </form>
