@@ -85,7 +85,7 @@
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="nama" placeholder="Nama">
+                <input type="text" class="form-control" name="nama" placeholder="Nama" value="{{ old('nama') }}">
             </div>
             <span class="text-form">
               Nama yang diisikan adalah nama sesuai dokumen KTP/KTM.
@@ -95,7 +95,7 @@
         <div class="form-group row">
             <label for="visi" class="col-sm-2 col-form-label">Visi :</label>
             <div class="col-sm-10">
-            <textarea name="visi" id="summernote2" rows="10" class="form-control"></textarea>
+            <textarea name="visi" id="summernote2" rows="10" class="form-control">{{ old('visi') }}</textarea>
             </div>
             <span class="text-form kotak-plus color-pth"><br>
               +
@@ -105,7 +105,7 @@
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Misi :</label>
             <div class="col-sm-10">
-            <textarea name="misi" id="summernote" rows="10" class="form-control"></textarea>
+            <textarea name="misi" id="summernote" rows="10" class="form-control">{{ old('misi') }}</textarea>
             </div>
             <span class="text-form kotak-plus color-pth"><br>
               +

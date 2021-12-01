@@ -29960,7 +29960,7 @@ color: #32325d;
     border-radius: 0;
     background-color: #fff;
     background-clip: border-box;
-    width: 95%;
+    width: 100%;
 	height: auto;
 	grid-column: span 8;
 	margin: 10px 0;
@@ -30064,6 +30064,11 @@ color: #32325d;
     min-height: 1px;
     background-color: #fff;
     flex: 1 1 auto;
+}
+
+.container-vote{
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .bdr-ds{
