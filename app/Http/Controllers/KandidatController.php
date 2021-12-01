@@ -17,9 +17,9 @@ class KandidatController extends Controller
     public function store(Request $request){
         $this->validate($request,[
         'nama' => 'required|string',
-        // 'visi' => 'required|text',
-        // 'misi' => 'required|text',
-        'foto' => 'required|image|mimes: jpg,png,jpeg'
+        'visi' => 'required',
+        'misi' => 'required',
+        'foto' => 'required|mimes:jpeg,jpg,png'
         ]);
         $data = new Kandidat;
         $data->nama = $request->nama;
