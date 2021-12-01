@@ -92,7 +92,7 @@
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
                 <thead class="thead-color">
-                  <tr>
+                  <tr style="text-align: center;">
                     <th style="font-size:12px;" width="30px">No</th>
                     <th style="font-size:12px;">Nama</th>
                     <th style="font-size:12px;">NIM</th>

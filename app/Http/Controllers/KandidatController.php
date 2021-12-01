@@ -16,13 +16,20 @@ class KandidatController extends Controller
 
     public function store(Request $request){
         $this->validate($request,[
+        'no_urut' => 'required|numeric',
         'nama' => 'required|string',
+        'nim' => 'required|string',
+        'angkatan' => 'required|numeric',
         'visi' => 'required',
         'misi' => 'required',
         'foto' => 'required|mimes:jpeg,jpg,png'
         ]);
         $data = new Kandidat;
+        $data->no_urut = $request->no_urut;
         $data->nama = $request->nama;
+        $data->nim = $request->nim;
+        $data->jurusan = $request->jurusan;
+        $data->angkatan = $request->angkatan;
         $data->visi = $request->visi; 
         $data->misi = $request->misi;
 
@@ -48,7 +55,11 @@ class KandidatController extends Controller
     public function update(Request $request, $id)
     {
         $data = Kandidat::find($id);
+        $data->no_urut = $request->no_urut;
         $data->nama = $request->nama;
+        $data->nim = $request->nim;
+        $data->jurusan = $request->jurusan;
+        $data->angkatan = $request->angkatan;
         $data->visi = $request->visi;
         $data->misi = $request->misi;
         

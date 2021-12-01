@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePemilih extends Migration
+class AddKolomKandidat extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,20 @@ class CreatePemilih extends Migration
      */
     public function up()
     {
-        Schema::create('pemilih', function (Blueprint $table) {
-            $table->id();
+        Schema::table('kandidat', function(Blueprint $table){
             $table->string('nim');
-            $table->string('nama');
             $table->string('jurusan');
             $table->integer('angkatan');
-            $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('pemilih');
+        //
     }
 }

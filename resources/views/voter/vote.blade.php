@@ -9,24 +9,24 @@
 
 <div class="container-vote">
     <div class="row">
-        @foreach ($data_kandidat as $kandidat)
+        @foreach ($kandidat as $kandidats)
             <div class="col-xl-3 order-xl-2 mg-vote">
                 <div class="card-vote card-profile">
-                    <h2 class="no-urut lingkaran">{{ ++$no}}</h2>
-                    <img src="{{asset('thumb/'.$kandidat->foto) }}" alt="Image placeholder" class="card-img-top">
+                    <h2 class="no-urut lingkaran">{{ $kandidats->no_urut }}</h2>
+                    <img src="{{asset('thumb/'.$kandidats->foto) }}" alt="Image placeholder" class="card-img-top">
                     <div class="card-header-vote text-center">
                         <div class="text-center">
                             <h5 class="h3">
-                            {{ $kandidat->nama }}
+                            {{ $kandidats->nama }}
                             </h5>
                             <div class="h5 font-weight-300">
-                            <i class="ni location_pin mr-2"></i>TRPL'20
+                            <i class="ni location_pin mr-2"></i>{{ $kandidats->jurusan }}'{{ $kandidats->angkatan }}
                             </div>
                         </div>
                     
                         <div class="d-flex justify-content-between pd-top-btn-vt">
-                            <button id="visi_misi" class="btn btn-sm btn-bdr-u mr-4 size-btn-vt btn-visi" data-toggle="modal" data-target="#modal-visimisi" data-visi="{!! $kandidat->visi !!}" data-misi="{!! $kandidat->misi !!}">Info</button>
-                            <a href="/voter/voting/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-ungu float-right size-btn-vt">Voting</button></a>
+                            <button id="visi_misi" class="btn btn-sm btn-bdr-u mr-4 size-btn-vt btn-visi" data-toggle="modal" data-target="#modal-visimisi" data-visi="{!! $kandidats->visi !!}" data-misi="{!! $kandidats->misi !!}">Info</button>
+                            <a href="/voter/voting/{{ $kandidats->id }}"><button type="button" class="btn btn-sm btn-ungu float-right size-btn-vt">Voting</button></a>
                         </div>
                     </div>
                 </div>    

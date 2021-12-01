@@ -75,10 +75,13 @@
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
                 <thead class="thead-color" >
-                  <tr style="font-size:12px;">
-                    <th style="font-size:12px;">No</th>
+                  <tr style="text-align: center;">
+                    <th style="font-size:12px;">No Urut</th>
                     <th style="font-size:12px;">Foto</th>
                     <th style="font-size:12px;">Nama</th>
+                    <th style="font-size:12px;">NIM</th>
+                    <th style="font-size:12px;">Jurusan</th>
+                    <th style="font-size:12px;">Angkatan</th>
                     <th style="font-size:12px;">Visi</th>
                     <th style="font-size:12px;">Misi</th>
                     <th style="font-size:12px;" width="80px">Action</th>
@@ -87,9 +90,12 @@
                 <tbody class="list">
                 @foreach ($data_kandidat as $kandidat)
                     <tr>
-                        <td>{{ ++$no}}</td>
+                        <td>{{ $kandidat->no_urut }}</td>
                         <td><img src="{{asset('thumb/'.$kandidat->foto) }}" width="100px"></td>
                         <td>{{ $kandidat->nama }}</td>
+                        <td>{{ $kandidat->nim }}</td>
+                        <td>{{ $kandidat->jurusan }}</td>
+                        <td>{{ $kandidat->angkatan }}</td>
                         <td>{!! $kandidat->visi !!}</td>
                         <td>{!! $kandidat->misi !!}</td>
                         <td>
