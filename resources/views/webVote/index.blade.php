@@ -68,11 +68,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Kandidat</h5>
-<<<<<<< HEAD
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">2223</span>
-=======
                       <span class="h1 font-weight-bold mb-0" style="color:white;">0</span>
->>>>>>> d070e3ef638acf2d2285619d3f58eff245eb8ed1
                     </div>
                   </div>
                 </div>
@@ -161,14 +157,11 @@
 
             <h3>Perolehan Suara</h3>
             <div class='bdr-ds'>
-<<<<<<< HEAD
-=======
            
             <span></span>
             <span> : </span>
             <br>
            
->>>>>>> d070e3ef638acf2d2285619d3f58eff245eb8ed1
             </div>
             </div>
          

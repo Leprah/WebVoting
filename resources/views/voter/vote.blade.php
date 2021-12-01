@@ -26,7 +26,7 @@
                     
                         <div class="d-flex justify-content-between pd-top-btn-vt">
                             <button id="visi_misi" class="btn btn-sm btn-bdr-u mr-4 size-btn-vt btn-visi" data-toggle="modal" data-target="#modal-visimisi" data-visi="{!! $kandidat->visi !!}" data-misi="{!! $kandidat->misi !!}">Info</button>
-                            <button class="btn btn-sm btn-ungu float-right size-btn-vt">Vote</button>
+                            <a url="{{ url('/voter/voting/'.$kandidat->id) }}" class="btn btn-sm btn-ungu float-right size-btn-vt">Vote</button>
                         </div>
                     </div>
                 </div>    
@@ -35,10 +35,7 @@
     </div>        
 </div>
 
-
-
 <!-- Modal -->
-
 <div class="modal fade" id="modal-visimisi" tabindex="-1" role="dialog" aria-labelledby="modal-visimisi" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -75,4 +72,4 @@ $(document).ready(function() {
 
 </script>
 
-  @endsection
+@endsection

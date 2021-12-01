@@ -50,13 +50,13 @@ class PemilihController extends Controller
         return view('pemilih.edit');
     }
 
-    public function voting(){
+    public function voting($id){
         $data = new Voting;
         $data->kandidat_id= $id;
         $data->user_id = \Auth::users()->id;
         $data->save();
 
-        \Session::flash('sukses','Data berhasil');
+        \Session::flash('sukses','Terimakasih sudah voting');
         return redirect('voter/vote');
     }
 }

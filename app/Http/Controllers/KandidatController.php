@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Kandidat;
-use App\Pemilih;
 use App\Galeri;
 use Image;
 use File;

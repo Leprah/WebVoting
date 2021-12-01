@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+// Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // Admin
 Route::get('/webVote/index', 'WebVoteController@index')->middleware('level:admin')->name('webVote.index');
