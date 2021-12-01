@@ -110,15 +110,6 @@
                         <td>{{ $pemilih->jurusan}}</td>
                         <td>{{ $pemilih->angkatan}}</td>
                         <td>{{ $pemilih->status}}</td>
-<<<<<<< HEAD
-                        <td>
-                        <form action="{{route('kandidat.destroy',$pemilih->id)}}" method="POST" > @csrf
-                          <a href=" {{ route('kandidat.edit', $pemilih->id) }}" class="btn btn-sm btn-ungu">Edit</a>
-                          <button onClick="return confirm('Yakin mau dihapus?')" class="btn btn-sm btn-danger">Hapus</button>
-                        </form>
-                        </td>
-=======
->>>>>>> 3549ed21ec1774341baff3dbf519f3463d1f592a
                     </tr>
                 @endforeach
                 </tbody>

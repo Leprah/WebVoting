@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Kandidat;
 use App\Pemilih;
+use App\Pengaturan;
+
 
 class WebVoteController extends Controller
 {
     public function index(){
         $jumlah_kandidat = Kandidat::count();
         $data_kandidat = Kandidat:: all();
-        return view('webVote/index', compact('jumlah_kandidat', 'data_kandidat'));
+        $pengaturan = Pengaturan::all();
+        return view('webVote.index', compact('jumlah_kandidat', 'data_kandidat', 'pengaturan' ));
     }
 
     public function dataKandidat(){
@@ -30,6 +33,15 @@ class WebVoteController extends Controller
 
     public function pengaturan(){
         return view('webVote.pengaturan');
+    }
+
+    public function store_waktu(Request $request){
+        $data =new Pengaturan;
+        $data->nama_kegiatan = $request->nama_kegiatan;
+        $data->dt_mulai = $request->dt_mulai;
+        $data->dt_akhir = $request->dt_akhir;
+    	$data->save();
+    	return redirect('webVote/index'); 
     }
 
     public function statistik(){

@@ -68,7 +68,11 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Kandidat</h5>
+<<<<<<< HEAD
                       <span class="h1 font-weight-bold mb-0" style="color:white;">2223</span>
+=======
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">0</span>
+>>>>>>> d070e3ef638acf2d2285619d3f58eff245eb8ed1
                     </div>
                   </div>
                 </div>
@@ -143,24 +147,66 @@
           <div class="row">  
           <div class='chart left' id='liveCount'></div>
           
-         
-          
-            <div class="card-ds" style="width: 30rem;">
+            <div class="card-ds">
             <h3>Countdown</h3>
             <div class='bdr-ds'>
-            00:00:00:00
+              <div class="text-countdown">
+              <span id="hari">NA</span><span> : </span>
+              <span id="jam">NA</span><span> : </span>
+              <span id="menit">NA</span><span> : </span>
+              <span id="detik">NA</span>
+              </div>
             </div>
             <br>
 
             <h3>Perolehan Suara</h3>
             <div class='bdr-ds'>
+<<<<<<< HEAD
+=======
+           
+            <span></span>
+            <span> : </span>
+            <br>
+           
+>>>>>>> d070e3ef638acf2d2285619d3f58eff245eb8ed1
             </div>
             </div>
          
       </div>
       </div>
-  
-    
-
 </div>
+
+<script type="text/javascript">
+
+var countDate = new Date('Dec 03 2021 00:00:00').getTime();
+
+function newYear(){
+	var now = new Date().getTime();
+	gap = countDate - now;
+
+	var detik = 1000;
+	var menit = detik * 60;
+	var jam = menit * 60;
+	var hari = jam * 24;
+
+	var h = Math.floor(gap / (hari));
+	var j = Math.floor( (gap % (hari)) / (jam) );
+	var m = Math.floor( (gap % (jam))  / (menit) );
+	var d = Math.floor( (gap % (menit))  / (detik) );
+
+	document.getElementById('hari').innerText = h;
+	document.getElementById('jam').innerText = j;
+	document.getElementById('menit').innerText = m;
+	document.getElementById('detik').innerText = d;
+}
+
+setInterval( function(){
+	newYear();
+}, 1000);
+
+</script>
+
  @endsection
+
+
+   
