@@ -12,15 +12,6 @@
 </div>
 @endsection
 
-
-@section('kembali')
-<div class="container-fluid">
-<div id ="right">
-<a class="btn btn-primary btn-sm" href="{{ route('webVote.index') }}"> Kembali</a>
-</div>
-</div>
-@endsection
-
 @section('menu')
 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
@@ -124,7 +115,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                     <br>
                       <button type="submit" class="btn btn-success btn-sm">Simpan</button>
-                      <a class="btn btn-danger btn-sm" href="/"> Batal</a>
+                      <a class="btn btn-danger btn-sm" href="{{route('webVote.pengaturan')}}"> Batal</a>
                 </div>
             </div>
             </form>
