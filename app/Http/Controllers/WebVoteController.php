@@ -56,7 +56,7 @@ class WebVoteController extends Controller
         $batas = 6;
         $data_kandidat = Kandidat::orderBy('id', 'desc')->paginate($batas);
         $no = $batas * ($data_kandidat->currentPage() - 1);
-        return view('voter.vote', compact('data_kandidat', 'no'));
+        return view('voter/vote', compact('data_kandidat', 'no'));
     }
 
 
