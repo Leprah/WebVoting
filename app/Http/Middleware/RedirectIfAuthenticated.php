@@ -19,9 +19,8 @@ class RedirectIfAuthenticated
             case 'voter':
                return redirect('/voter/vote');
                break; 
-      
             default:
-               return redirect('/auth/login'); 
+               return view('/auth/login');
                break;
           }
         }

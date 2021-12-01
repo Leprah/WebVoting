@@ -106,7 +106,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Sudah Memilih</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">924</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">3123</span>
                     </div>
                   </div>
                 </div>

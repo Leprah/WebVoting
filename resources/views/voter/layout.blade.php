@@ -106,7 +106,7 @@
     @yield('content')
 
       <!-- Footer -->
-      <footer class="footer pt-0 ft-cr bg-foot-vt">
+      <footer class="footer pt-0 ft-ds bg-foot-vt">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted px-4">

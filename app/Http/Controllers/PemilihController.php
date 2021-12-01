@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Voting;
+use App\Pemilih;
 
 class PemilihController extends Controller
 {
+
     public function create(){
         return view('pemilih.create');
     }
@@ -50,13 +53,14 @@ class PemilihController extends Controller
         return view('pemilih.edit');
     }
 
-    public function voting(){
-        $data = new Voting;
-        $data->kandidat_id= $id;
-        $data->user_id = \Auth::users()->id;
-        $data->save();
+    public function voting($id){
 
-        \Session::flash('sukses','Data berhasil');
+        $data = Voting::firstOrCreate(
+            ['user_id'=>\Auth::user()->id],
+            ['kandidat_id'=>$id,'user_id'=>\Auth::user()->id]
+        );
+
+        \Session::flash('sukses','Terimakasih sudah voting');
         return redirect('voter/vote');
     }
 }

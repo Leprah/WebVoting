@@ -8,5 +8,5 @@ class Pemilih extends Model
 {
     protected $table = 'pemilih';
     protected $primaryKey = "id_pemilih";
-    protected $fillable= ['nama','nim','jurusan','angkatan'];
+    protected $fillable= ['nama','nim','jurusan','angkatan','status'];
 }

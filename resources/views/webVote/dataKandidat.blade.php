@@ -64,7 +64,6 @@
 @endsection
 
 
-
 @section('content')    
     <!-- Page content -->
     <div class="container-fluid mt--6">
