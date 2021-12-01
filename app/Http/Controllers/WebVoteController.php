@@ -11,12 +11,11 @@ class WebVoteController extends Controller
     public function index(){
         $jumlah_kandidat = Kandidat::count();
         $data_kandidat = Kandidat:: all();
-        return view('webVote.index', compact('jumlah_kandidat', 'data_kandidat' ));
+        return view('webVote/index', compact('jumlah_kandidat', 'data_kandidat'));
     }
 
     public function dataKandidat(){
         $batas = 6;
-        $jumlah_kandidat = Kandidat::count();
         $data_kandidat = Kandidat::orderBy('id', 'desc')->paginate($batas);
         $no = $batas * ($data_kandidat->currentPage() - 1);
         return view('webVote.dataKandidat', compact('data_kandidat', 'no'));
@@ -40,6 +39,7 @@ class WebVoteController extends Controller
     public function master(){
         return view('webVote.master');
     }
+
     public function voter(){
         $batas = 6;
         $data_kandidat = Kandidat::orderBy('id', 'desc')->paginate($batas);

@@ -20,9 +20,6 @@ class LoginController extends Controller
             case 'voter':
                 return view('voter.vote');
                 break;
-            default:
-                return view('/'); 
-                break;
         }
     }
 

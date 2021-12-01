@@ -5,7 +5,11 @@ use Illuminate\Support\Facades\Route;
 // Auth
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('auth.login');
+Route::get('/', function () {
+    return view('auth/login');
+});
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // Admin
 Route::get('/webVote/index', 'WebVoteController@index')->middleware('level:admin')->name('webVote.index');
@@ -36,10 +40,4 @@ Route::get('/kandidat/delete/{id}', 'KandidatController@destroy')->name('kandida
 // Voter
 Route::get('/voter/vote', 'WebVoteController@voter')->middleware('level:voter')->name('voter.vote');
 
-<<<<<<< HEAD
-
-
-
-=======
 Route::get('/voter/voting/{id}', 'PemilihController@voting')->middleware('level:voter')->name('voter.voting');
->>>>>>> 757352c5fb6fa70e0d9f09ca97fe302ec6b88888

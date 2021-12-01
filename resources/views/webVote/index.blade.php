@@ -68,7 +68,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Kandidat</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">{{ $jumlah_kandidat }}</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">2223</span>
                     </div>
                   </div>
                 </div>
@@ -106,7 +106,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Sudah Memilih</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">924</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">3123</span>
                     </div>
                   </div>
                 </div>
@@ -154,11 +154,6 @@
 
             <h3>Perolehan Suara</h3>
             <div class='bdr-ds'>
-            @foreach ($data_kandidat as $kandidat)
-            <span>{{ $kandidat->nama }}</span>
-            <span> : </span>
-            <br>
-            @endforeach
             </div>
             </div>
          
