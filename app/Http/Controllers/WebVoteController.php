@@ -58,6 +58,4 @@ class WebVoteController extends Controller
         $no = $batas * ($data_kandidat->currentPage() - 1);
         return view('voter/vote', compact('data_kandidat', 'no'));
     }
-
-
 }
