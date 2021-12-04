@@ -68,7 +68,11 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Kandidat</h5>
+                      @if($kandidat)
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">{{ count($kandidat) }}</span>
+                      @else
                       <span class="h1 font-weight-bold mb-0" style="color:white;">0</span>
+                      @endif
                     </div>
                   </div>
                 </div>
@@ -86,7 +90,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Pemilih</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">2,356</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">356</span>
                     </div>
                   </div>
                 </div>
@@ -106,7 +110,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Sudah Memilih</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">3123</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">300</span>
                     </div>
                   </div>
                 </div>
@@ -127,7 +131,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Belum Memilih</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">49,65%</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">56</span>
                     </div>
                   </div>
                 </div>
@@ -135,69 +139,89 @@
             </div>
           </div>
     <!-- Page content -->
-    
-      <div class="container-fluid">
-          <br>
-        
-          <h3>Quick Count</h3>
-          <div class="row">  
-          <div class='chart left' id='liveCount'></div>
-          
-            <div class="card-ds">
-            <h3>Countdown</h3>
-            <div class='bdr-ds'>
-              <div class="text-countdown">
-              <span id="hari">NA</span><span> : </span>
-              <span id="jam">NA</span><span> : </span>
-              <span id="menit">NA</span><span> : </span>
-              <span id="detik">NA</span>
+          <br> 
+          <div class="row"> 
+            <div class="card-ds mg-chrt">
+              <h3>Quick Count</h3>
+              <div class='chart left' id='liveCount'></div>
+            </div>
+
+            <div class="card-ds mg-cd-pr">
+              <h3>Countdown</h3>
+              <div class='bdr-ds'>
+                <div class="text-countdown">
+                @if($pengaturan)
+                <script>
+                    CountDownTimer('{{$pengaturan->dt_awal}}', 'countdown');
+                    function CountDownTimer(dt, id)
+                    {
+                      var end = new Date('{{$pengaturan->dt_akhir}}');
+                      var _second = 1000;
+                      var _minute = _second * 60;
+                      var _hour = _minute * 60;
+                      var _day = _hour * 24;
+                      var timer;
+                      function showRemaining() {
+                        var now = new Date();
+                        var distance = end - now;
+                        if (distance < 0) {
+
+                          clearInterval(timer);
+                          document.getElementById(id).innerHTML = '<b>Pemilihan Berakhir</b> ';
+                          return;
+                        }
+                        var days = Math.floor(distance / _day);
+                        var hours = Math.floor((distance % _day) / _hour);
+                        var minutes = Math.floor((distance % _hour) / _minute);
+                        var seconds = Math.floor((distance % _minute) / _second);
+
+                        document.getElementById(id).innerHTML = days + ' : ';
+                        document.getElementById(id).innerHTML += hours + ' : ';
+                        document.getElementById(id).innerHTML += minutes + ' : ';
+                        document.getElementById(id).innerHTML += seconds + '';
+                      }
+                      timer = setInterval(showRemaining, 1000);
+                    }
+                  </script>
+
+
+
+                  <div id="countdown"></div>
+                @else
+                <span id="hari">00</span><span> : </span>
+                <span id="jam">00</span><span> : </span>
+                <span id="menit">00</span><span> : </span>
+                <span id="detik">00</span>
+                @endif
+                </div>
+              </div>
+              <br>
+
+              <h3>Perolehan Suara</h3>
+              <div class='bdr-ds'>
+              @if(count($kandidat) > 0)
+                  @foreach ($kandidat as $kandidats)
+                  <table cellpadding="4">
+                      <tr>
+                          <td>{{ $kandidats->nama }}</td>
+                          <td> : </td>
+                          <td> 180 </td>
+                          <td>suara</td>
+                      </tr>
+                  </table>
+                  @endforeach
+              @else
+              <ul type="none">
+                      <li>John Ferdian<span>  : </span> <span>  150 </span> </li>
+                      <li>Andi Saputra<span>  : </span> <span>  100 </span> </li>
+                      <li>Lala Lestari<span>  : </span> <span>  101 </span> </li>
+              </ul>
+              @endif
               </div>
             </div>
-            <br>
-
-            <h3>Perolehan Suara</h3>
-            <div class='bdr-ds'>
-           
-            <span></span>
-            <span> : </span>
-            <br>
-           
-            </div>
-            </div>
-         
-      </div>
-      </div>
+          </div>
 </div>
 
-<script type="text/javascript">
-
-var countDate = new Date('Dec 03 2021 00:00:00').getTime();
-
-function newYear(){
-	var now = new Date().getTime();
-	gap = countDate - now;
-
-	var detik = 1000;
-	var menit = detik * 60;
-	var jam = menit * 60;
-	var hari = jam * 24;
-
-	var h = Math.floor(gap / (hari));
-	var j = Math.floor( (gap % (hari)) / (jam) );
-	var m = Math.floor( (gap % (jam))  / (menit) );
-	var d = Math.floor( (gap % (menit))  / (detik) );
-
-	document.getElementById('hari').innerText = h;
-	document.getElementById('jam').innerText = j;
-	document.getElementById('menit').innerText = m;
-	document.getElementById('detik').innerText = d;
-}
-
-setInterval( function(){
-	newYear();
-}, 1000);
-
-</script>
 
  @endsection
 

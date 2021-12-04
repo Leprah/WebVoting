@@ -13,7 +13,7 @@
 @endsection
 @section('kembali')
 <div class="container-fluid">
-<div id ="right">
+<div class ="right">
 <a class="btn btn-primary btn-sm" href="{{ route('webVote.dataKandidat') }}"> Kembali</a>
 </div>
 </div>

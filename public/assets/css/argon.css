@@ -29863,7 +29863,7 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
     margin:0 auto;
 }
 
-#right {
+.right {
     float:right;
     
 }
@@ -30049,7 +30049,7 @@ color: #32325d;
 
 .ft-ds{
     position: relative;
-    top: 100px;
+    top: 150px;
 }
 
 .ft-cr{
@@ -30059,7 +30059,6 @@ color: #32325d;
 
 .card-ds{
     position: relative;
-    left: 40px;
     min-height: 1px;
     background-color: #fff;
     flex: 1 1 auto;
@@ -30071,18 +30070,31 @@ color: #32325d;
 }
 
 .bdr-ds{
-    padding: 1.5rem;
+    padding: 1.20rem;
     border-style: ridge;
     border-radius: 10px;
     height: auto;
-    margin-right: 50px;
 }
 
 .text-countdown{
-    font-size: 35px;
+    font-size: 50px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     color: #32325d;
     text-align: center;
 }
+
+.mg-chrt{
+    margin-left: 18px;
+}
+
+.mg-cd-pr{
+    margin-right: 18px;
+}
+
+.mg-tp-lg{
+    margin-top: 18px;
+}
+
+

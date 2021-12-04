@@ -10,12 +10,6 @@ use App\Pengaturan;
 
 class WebVoteController extends Controller
 {
-    public function index(){
-        $jumlah_kandidat = Kandidat::count();
-        $data_kandidat = Kandidat:: all();
-        $pengaturan = Pengaturan::all();
-        return view('webVote.index', compact('jumlah_kandidat', 'data_kandidat', 'pengaturan' ));
-    }
 
     public function dataKandidat(){
         $batas = 6;
@@ -25,8 +19,8 @@ class WebVoteController extends Controller
     }
 
     public function dataPemilih(){
-        $batas = 10;
-        $data_pemilih = Pemilih::orderBy('id', 'desc')->paginate($batas);
+        $batas = 8;
+        $data_pemilih = Pemilih::orderBy('nama', 'asc')->paginate($batas);
         $no = $batas * ($data_pemilih->currentPage() - 1);
         return view('webVote.dataPemilih', compact('data_pemilih', 'no'));
     }
@@ -45,19 +39,14 @@ class WebVoteController extends Controller
     }
 
     public function statistik(){
-        return view('webVote.statistik');
+        $pengaturan = Pengaturan::first();
+        return view('webVote.statistik' , ['pengaturan' => $pengaturan]);
     }
 
     public function master(){
         return view('webVote.master');
     }
 
-    public function voter(){
-        $batas = 6;
-        $kandidat = Kandidat::orderBy('no_urut', 'asc')->paginate($batas);
-        $no = $batas * ($kandidat->currentPage() - 1);
-        $pengaturan = Pengaturan::all();
-        return view('voter/vote' , ['kandidat' => $kandidat, 'pengaturan'=>$pengaturan]);
-    }
+    
 
 }
