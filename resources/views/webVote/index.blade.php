@@ -150,49 +150,11 @@
               <h3>Countdown</h3>
               <div class='bdr-ds'>
                 <div class="text-countdown">
-                @if($pengaturan)
-                <script>
-                    CountDownTimer('{{$pengaturan->dt_awal}}', 'countdown');
-                    function CountDownTimer(dt, id)
-                    {
-                      var end = new Date('{{$pengaturan->dt_akhir}}');
-                      var _second = 1000;
-                      var _minute = _second * 60;
-                      var _hour = _minute * 60;
-                      var _day = _hour * 24;
-                      var timer;
-                      function showRemaining() {
-                        var now = new Date();
-                        var distance = end - now;
-                        if (distance < 0) {
-
-                          clearInterval(timer);
-                          document.getElementById(id).innerHTML = '<b>Pemilihan Berakhir</b> ';
-                          return;
-                        }
-                        var days = Math.floor(distance / _day);
-                        var hours = Math.floor((distance % _day) / _hour);
-                        var minutes = Math.floor((distance % _hour) / _minute);
-                        var seconds = Math.floor((distance % _minute) / _second);
-
-                        document.getElementById(id).innerHTML = days + ' : ';
-                        document.getElementById(id).innerHTML += hours + ' : ';
-                        document.getElementById(id).innerHTML += minutes + ' : ';
-                        document.getElementById(id).innerHTML += seconds + '';
-                      }
-                      timer = setInterval(showRemaining, 1000);
-                    }
-                  </script>
-
-
-
-                  <div id="countdown"></div>
-                @else
                 <span id="hari">00</span><span> : </span>
                 <span id="jam">00</span><span> : </span>
                 <span id="menit">00</span><span> : </span>
                 <span id="detik">00</span>
-                @endif
+                
                 </div>
               </div>
               <br>
