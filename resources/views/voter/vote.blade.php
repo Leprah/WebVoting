@@ -16,6 +16,17 @@
 
 @if($pengaturan)
 
+
+@if($voting)
+<div class="container-fluid">
+<div class="container-voter">
+  <h2 class="text-vote">Pengumuman kandidat terpilih dapat dilihat pada</h2>
+  <br>
+  <h2 class="text-vote">{{ $pengaturan->pg_mulai }}</h2>
+</div>
+</div>
+
+@else
 <div class="container-vote">
     <div class="row">
         @foreach ($kandidat as $kandidats)
@@ -42,6 +53,11 @@
         @endforeach
     </div>        
 </div>
+
+
+@endif
+
+
 @else
 <div class="container-fluid">
 <div class="container-voter">
