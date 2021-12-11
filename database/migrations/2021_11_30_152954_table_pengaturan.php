@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class TablePengaturan extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('pengaturan', function (Blueprint $table) {
@@ -22,13 +18,9 @@ class TablePengaturan extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+
     public function down()
     {
-        //
+        Schema::dropIfExists('pengaturan');
     }
 }

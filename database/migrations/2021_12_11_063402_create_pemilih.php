@@ -15,10 +15,13 @@ class CreatePemilih extends Migration
     {
         Schema::create('pemilih', function (Blueprint $table) {
             $table->id();
-            $table->string('nim');
+            $table->unsignedBigInteger('user_id')->unsigned();
             $table->string('nama');
+            $table->string('nim');
             $table->string('jurusan');
-            $table->integer('angkatan');
+            $table->string('angkatan');
+
+            $table->foreign('user_id')->references('id')->on('users')->onDetele('restrict');
             $table->timestamps();
         });
     }
