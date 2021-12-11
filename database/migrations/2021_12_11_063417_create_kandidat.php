@@ -4,16 +4,26 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Kandidat extends Migration
+class CreateKandidat extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('kandidat', function (Blueprint $table) {
             $table->id();
+            $table->integer('no_urut');
             $table->string('nama');
+            $table->string('foto');
+            $table->string('nim');
+            $table->string('jurusan');
+            $table->string('angkatan');
             $table->text('visi');
             $table->text('misi');
-            $table->string('foto');
+
             $table->timestamps();
         });
     }
