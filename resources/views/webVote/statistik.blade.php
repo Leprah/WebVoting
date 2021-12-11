@@ -51,7 +51,11 @@
 
 @section('content')
 <div class="container-fluid">
-    <h1 style="font-family:Montserrat;"><center> Pemilihan Ketua KMTEDI </center></h1>
+    @if($pengaturan)
+    <h1 style="font-family:Montserrat;"><center>{{ $pengaturan->nama_kegiatan }}</center></h1>
+    @else
+    <h1 style="font-family:Montserrat;"><center> Statistik Pemilihan</center></h1>
+    @endif
     <br>
     <!-- Hasil pemilihan -->
     <div class='chart' id='liveCount'></div>

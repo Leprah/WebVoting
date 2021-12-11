@@ -1,12 +1,18 @@
 @extends('voter.layout')
 
-@section('content')
+@section('judul')
 <div>
-<br>
+    <br>
+    @if($pengaturan)
+    <h1 class="judul-vote">{{ $pengaturan->nama_kegiatan }}</h1>
+    @else
     <h1 class="judul-vote">Voting Kandidat</h1>
-<br>
+    @endif
+    <br>
 </div>
+@endsection
 
+@section('content')
 <div class="container-vote">
     <div class="row">
         @foreach ($kandidat as $kandidats)
@@ -36,7 +42,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="modal-visimisi" tabindex="-1" role="dialog" aria-labelledby="modal-visimisi" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

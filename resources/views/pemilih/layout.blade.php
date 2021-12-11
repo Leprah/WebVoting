@@ -130,15 +130,18 @@
 
       <!-- Footer -->
       <!-- Footer -->
-      <footer class="footer pt-0 ft-cr">
-        <div class="row align-items-center justify-content-lg-between">
+      <footer class="ft-ds d-flex flex-wrap justify-content-between align-items-center border-top py-3 my-4">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted px-4">
-              &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
+            &copy; 2021 <a class="font-weight-bold ml-1" target="_blank">e-vote Creative Team</a>
             </div>
-          </div>  
-        </div>
-      </footer>
+          </div>
+
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3 mg-tp-lg"><img src="{{ asset('/image/Logo Assets.png') }}" height="30" width="120"></li>
+            <li class="ms-3 px-4" ><img src="{{ asset('/image/LAMBANG UGM.png') }}" width="60" height="60"></li> 
+          </ul> 
+       </footer>
   
   <!-- Argon Scripts -->
   <!-- Core -->

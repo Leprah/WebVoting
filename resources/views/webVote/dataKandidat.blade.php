@@ -53,7 +53,7 @@
 
 @section('tambah')
 <div class="container-fluid">
-  <a class="btn btn-success btn-sm" href="{{ route('kandidat.create') }}" id="right"> Tambah Data</a>
+  <a class="btn btn-success btn-sm right" href="{{ route('kandidat.create') }}"> Tambah Data</a>
   <br>
   <br>
   <br>
@@ -84,7 +84,7 @@
                     <th style="font-size:12px;">Angkatan</th>
                     <th style="font-size:12px;">Visi</th>
                     <th style="font-size:12px;">Misi</th>
-                    <th style="font-size:12px;" width="80px">Action</th>
+                    <th style="font-size:12px;">Action</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -96,8 +96,8 @@
                         <td>{{ $kandidat->nim }}</td>
                         <td>{{ $kandidat->jurusan }}</td>
                         <td>{{ $kandidat->angkatan }}</td>
-                        <td>{!! $kandidat->visi !!}</td>
-                        <td>{!! $kandidat->misi !!}</td>
+                        <td style="word-wrap: break-word;min-width: 400px; white-space: normal;">{!! $kandidat->visi !!}</td>
+                        <td style="word-wrap: break-word;min-width: 400px; white-space: normal;">{!! $kandidat->misi !!}</td>
                         <td>
                           <a href="/kandidat/edit/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-ungu"> Edit</button></a>
                           <a href="/kandidat/delete/{{ $kandidat->id }}"><button type="button" class="btn btn-sm btn-danger" onClick="return confirm('Yakin mau dihapus?')"> Hapus</button></a>

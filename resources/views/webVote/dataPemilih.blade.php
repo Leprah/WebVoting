@@ -92,7 +92,7 @@
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
                 <thead class="thead-color">
-                  <tr style="text-align: center;">
+                  <tr>
                     <th style="font-size:12px;" width="30px">No</th>
                     <th style="font-size:12px;">Nama</th>
                     <th style="font-size:12px;">NIM</th>
@@ -122,8 +122,14 @@
                   </center>
                 </tbody>
               </table>
-            </div>
             <!-- Card footer -->
+            <div class="card-footer py-4">
+              <nav aria-label="...">
+                <ul class="pagination justify-content-end mb-0">
+                {{ $data_pemilih->links() }}
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
         </div>

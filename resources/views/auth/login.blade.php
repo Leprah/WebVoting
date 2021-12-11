@@ -95,16 +95,5 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
-	<footer class="footer pt-0">
-        <div class="row align-items-center justify-content-lg-between">
-          <div class="col-lg-2">
-            <div class="copyright text-center  text-lg-left  text-muted">
-              &copy; 2021 <a>Creative x E-voting Team</a>
-            </div>
-          </div>
-    	</div>
-    </footer>
-
 </body>
 </html>
