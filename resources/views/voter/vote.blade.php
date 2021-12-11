@@ -29,7 +29,6 @@
                             <i class="ni location_pin mr-2"></i>{{ $kandidats->jurusan }}'{{ $kandidats->angkatan }}
                             </div>
                         </div>
-                    
                         <div class="d-flex justify-content-between pd-top-btn-vt">
                             <button id="visi_misi" class="btn btn-sm btn-bdr-u mr-4 size-btn-vt btn-visi" data-toggle="modal" data-target="#modal-visimisi" data-visi="{!! $kandidats->visi !!}" data-misi="{!! $kandidats->misi !!}">Info</button>
                             <a href="/voter/voting/{{ $kandidats->id }}"><button type="button" class="btn btn-sm btn-ungu float-right size-btn-vt">Voting</button></a>

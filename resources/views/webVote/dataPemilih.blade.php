@@ -102,16 +102,24 @@
                   </tr>
                 </thead>
                 <tbody class="list">
-                @foreach ($data_pemilih as $pemilih)
-                    <tr>
+                  <center>
+                    @foreach ($data_pemilih as $pemilih)
+                      <tr>
                         <td>{{ ++$no}}</td>
                         <td>{{ $pemilih->nama }}</td>
                         <td>{{ $pemilih->nim }}</td>
                         <td>{{ $pemilih->jurusan}}</td>
                         <td>{{ $pemilih->angkatan}}</td>
-                        <td><i class="fas fa-times text-red"></i></td>
-                    </tr>
-                @endforeach
+                    @endforeach
+                    @foreach ($voting as $data)
+                      @if ($data->status != NULL)
+                        <td><span class='checkmark'></span></td>
+                      @else
+                        <td><span class='cross'></span></td>
+                      @endif
+                      </tr>
+                    @endforeach
+                  </center>
                 </tbody>
               </table>
             <!-- Card footer -->
