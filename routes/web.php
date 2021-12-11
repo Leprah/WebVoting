@@ -24,9 +24,6 @@ Route::get('/webVote/statistik', 'WebVoteController@statistik')->name('webVote.s
 
 Route::get('/webVote/master', 'WebVoteController@master')->name('webVote.master');
 
-
-
-
 // kandidat route
 Route::get('/kandidat/create', 'KandidatController@create')->name('kandidat.create');
 

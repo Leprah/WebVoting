@@ -68,8 +68,8 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Kandidat</h5>
-                      @if($kandidat)
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">{{ count($kandidat) }}</span>
+                      @if($kandidat != NULL)
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">{{ $jumlah_kandidat }}</span>
                       @else
                       <span class="h1 font-weight-bold mb-0" style="color:white;">0</span>
                       @endif
@@ -90,7 +90,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Jumlah Pemilih</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">356</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">{{ $jumlah_pemilih }}</span>
                     </div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Sudah Memilih</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">300</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">{{ $jumlah_voting }}</span>
                     </div>
                   </div>
                 </div>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="col">
                       <h5 class="card-title text-uppercase mb-0" style="color:white;">Belum Memilih</h5>
-                      <span class="h1 font-weight-bold mb-0" style="color:white;">56</span>
+                      <span class="h1 font-weight-bold mb-0" style="color:white;">{{ $belum_voting }}</span>
                     </div>
                   </div>
                 </div>

@@ -55,9 +55,10 @@ class PemilihController extends Controller
 
     public function voting($id){
 
+        $status = 1;
         $data = Voting::firstOrCreate(
             ['user_id'=>\Auth::user()->id],
-            ['kandidat_id'=>$id,'user_id'=>\Auth::user()->id]
+            ['kandidat_id'=>$id,'user_id'=>\Auth::user()->id,'status'=>$status]
         );
 
         \Session::flash('sukses','Terimakasih sudah voting');

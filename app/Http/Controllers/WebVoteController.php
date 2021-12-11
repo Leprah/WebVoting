@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Kandidat;
 use App\Pemilih;
 use App\Pengaturan;
+use App\Voting;
 
 
 class WebVoteController extends Controller
@@ -21,8 +22,9 @@ class WebVoteController extends Controller
     public function dataPemilih(){
         $batas = 8;
         $data_pemilih = Pemilih::orderBy('nama', 'asc')->paginate($batas);
+        $voting = Voting::all();
         $no = $batas * ($data_pemilih->currentPage() - 1);
-        return view('webVote.dataPemilih', compact('data_pemilih', 'no'));
+        return view('webVote.dataPemilih', compact('data_pemilih', 'no','voting'));
     }
 
     public function pengaturan(){
@@ -47,6 +49,5 @@ class WebVoteController extends Controller
         return view('webVote.master');
     }
 
-    
 
 }
