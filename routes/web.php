@@ -10,7 +10,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // Admin
-Route::get('/webVote/index', 'WebVoteController@index')->middleware('level:admin')->name('webVote.index');
+Route::get('/webVote/index', 'IndexController@index')->middleware('level:admin')->name('webVote.index');
 
 Route::get('/webVote/dataKandidat', 'WebVoteController@dataKandidat')->name('webVote.dataKandidat');
 
@@ -26,6 +26,7 @@ Route::get('/webVote/master', 'WebVoteController@master')->name('webVote.master'
 
 
 
+
 // kandidat route
 Route::get('/kandidat/create', 'KandidatController@create')->name('kandidat.create');
 
@@ -38,6 +39,6 @@ Route::get('/kandidat/edit/{id}', 'KandidatController@edit')->name('kandidat.edi
 Route::get('/kandidat/delete/{id}', 'KandidatController@destroy')->name('kandidat.destroy');
 
 // Voter
-Route::get('/voter/vote', 'WebVoteController@voter')->middleware('level:voter')->name('voter.vote');
+Route::get('/voter/vote', 'VoterController@voter')->middleware('level:voter')->name('voter.vote');
 
 Route::get('/voter/voting/{id}', 'PemilihController@voting')->middleware('level:voter')->name('voter.voting');

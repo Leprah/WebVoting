@@ -18,7 +18,7 @@ class CreatePemilih extends Migration
             $table->string('nim');
             $table->string('nama');
             $table->string('jurusan');
-            $table->string('angkatan');
+            $table->integer('angkatan');
             $table->timestamps();
         });
     }

@@ -79,10 +79,10 @@
                       <label for="nama_kegiatan" class="col-sm-2 col-form-label">Pemilihan :</label>
                       <div class="col-sm-10">
                           <input type="text" class="form-control" name="nama_kegiatan" placeholder="Nama Kegiatan Pemilihan">
+                          <span class="text-form">
+                          Masukkan nama kegiatan pemilihan Anda.
+                          </span>
                       </div>
-                      <span class="text-form">
-                        Masukkan nama kegiatan pemilihan Anda.
-                      </span>
                   </div>
                 <div class="form-group row">
                   <label for="dt_mulai" class="col-sm-2 col-form-label">Mulai :</label>
@@ -95,6 +95,9 @@
                       </div>
                       <input type="datetime-local" class="form-control" name="dt_mulai">
                     </div>
+                    <span class="text-form">
+                      Masukkan tanggal dan waktu mulainya kegiatan Anda.
+                    </span>
                   </div>
                 </div>
 
@@ -109,6 +112,9 @@
                       </div>
                       <input type="datetime-local"  name="dt_akhir" class="form-control">
                     </div>
+                    <span class="text-form">
+                      Masukkan tanggal dan waktu berakhirnya kegiatan Anda.
+                      </span>
                   </div>
                 </div>
 

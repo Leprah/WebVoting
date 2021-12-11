@@ -12,7 +12,7 @@
 @endsection
 @section('kembali')
 <div class="container-fluid">
-<div id ="right">
+<div class ="right">
 <a class="btn btn-primary btn-sm" href="{{ route('webVote.dataKandidat') }}"> Kembali</a>
 </div>
 </div>
@@ -74,33 +74,72 @@
     @csrf
     <div class="container-data">
         <div class="form-group row">
+            <label for="no_urut" class="col-sm-2 col-form-label">No. Urut :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="no_urut" placeholder="Nomor Urut" value="{{ $kandidat->no_urut}}">
+                <span class="text-form">
+                Masukkan nomor urut Anda.
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Nama :</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="nama" placeholder="Nama" value="{{ $kandidat->nama}}">
+                <span class="text-form">
+                Nama yang diisikan adalah nama sesuai dokumen KTP/KTM.
+                </span>
             </div>
-            <span class="text-form">
-              Nama yang diisikan adalah nama sesuai dokumen KTP/KTM.
-            </span>
+        </div>
+
+        <div class="form-group row">
+            <label for="nim" class="col-sm-2 col-form-label">NIM :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="nim" placeholder="NIM" value="{{ $kandidat->nim}}">
+                <span class="text-form">
+                NIM yang diisikan adalah NIM sesuai dokumen KTM.
+                </span>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="jurusan" class="col-sm-2 col-form-label">Jurusan :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="jurusan" placeholder="Jurusan" value="{{ $kandidat->jurusan}}">
+                <span class="text-form">
+                Silahkan isi jurusan Anda.
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="angkatan" class="col-sm-2 col-form-label">Angkatan :</label>
+            <div class="col-sm-10">
+            <select name="angkatan" class="form-control">
+                <option selected>{{ $kandidat->angkatan}}</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select>
+            </div>
         </div>
     
         <div class="form-group row">
             <label for="visi" class="col-sm-2 col-form-label">Visi :</label>
             <div class="col-sm-10">
             <textarea name="visi" id="summernote2" rows="10" class="form-control">{{ $kandidat->visi}}</textarea>
+            <span class="text-form"> Silahkan isikan visi Anda dalam bentuk list angka </span>
             </div>
-            <span class="text-form kotak-plus color-pth"><br>
-              +
-            </span><span class="text-form pd-fm"> Tambah visi </span>
         </div>
     
         <div class="form-group row">
             <label for="nama" class="col-sm-2 col-form-label">Misi :</label>
             <div class="col-sm-10">
             <textarea name="misi" id="summernote" rows="10" class="form-control">{{ $kandidat->misi}}</textarea>
+            <span class="text-form"> Silahkan isikan misi Anda dalam bentuk list angka </span>
             </div>
-            <span class="text-form kotak-plus color-pth"><br>
-              +
-            </span><span class="text-form pd-fm"> Tambah misi </span>
         </div>
 
         <div class="form-group row">
