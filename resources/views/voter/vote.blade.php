@@ -6,13 +6,16 @@
     @if($pengaturan)
     <h1 class="judul-vote">{{ $pengaturan->nama_kegiatan }}</h1>
     @else
-    <h1 class="judul-vote">Voting Kandidat</h1>
+    <h1 class="judul-vote"></h1>
     @endif
     <br>
 </div>
 @endsection
 
 @section('content')
+
+@if($pengaturan)
+
 <div class="container-vote">
     <div class="row">
         @foreach ($kandidat as $kandidats)
@@ -39,6 +42,15 @@
         @endforeach
     </div>        
 </div>
+@else
+<div class="container-fluid">
+<div class="container-voter">
+  <h2 class="text-vote">Tidak ada pemilihan yang sedang berlangsung</h2>
+</div>
+</div>
+
+@endif
+
 
 <!-- Modal -->
 <div class="modal fade" id="modal-visimisi" tabindex="-1" role="dialog" aria-labelledby="modal-visimisi" aria-hidden="true">

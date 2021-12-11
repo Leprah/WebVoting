@@ -210,9 +210,9 @@
                   @endforeach
               @else
               <ul type="none">
-                      <li>John Ferdian<span>  : </span> <span>  150 </span> </li>
-                      <li>Andi Saputra<span>  : </span> <span>  100 </span> </li>
-                      <li>Lala Lestari<span>  : </span> <span>  101 </span> </li>
+                      <li> </li>
+                      
+                      
               </ul>
               @endif
               </div>
