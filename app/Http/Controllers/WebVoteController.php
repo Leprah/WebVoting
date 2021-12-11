@@ -36,6 +36,8 @@ class WebVoteController extends Controller
         $data->nama_kegiatan = $request->nama_kegiatan;
         $data->dt_mulai = $request->dt_mulai;
         $data->dt_akhir = $request->dt_akhir;
+        $data->pg_mulai = $request->pg_mulai;
+        $data->pg_akhir = $request->pg_akhir;
     	$data->save();
     	return redirect('webVote/index'); 
     }

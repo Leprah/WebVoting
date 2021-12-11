@@ -136,7 +136,7 @@
                           <i class="ni ni-watch-time"></i>
                           </div>
                         </div>
-                        <input type="datetime-local"  name="pg_akhir_akhir" class="form-control">
+                        <input type="datetime-local"  name="pg_akhir" class="form-control">
                         <span class="text-form">
                         Masukkan tanggal dan waktu berakhirnya pengumuman hasil kegiatan Anda.
                       </span>
