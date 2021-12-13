@@ -84,8 +84,8 @@
                           </span>
                       </div>
                   </div>
-                <div class="form-group row">
-                  <label for="dt_mulai" class="col-sm-2 col-form-label">Mulai :</label>
+                  <div class="form-group row">
+                  <label for="mulai" class="col-sm-2 col-form-label">Periode Voting :</label>
                   <div class="col">
                     <div class="input-group mb-2 mr-sm-2">
                       <div class="input-group-prepend">
@@ -94,29 +94,57 @@
                         </div>
                       </div>
                       <input type="datetime-local" class="form-control" name="dt_mulai">
-                    </div>
-                    <span class="text-form">
+                      <span class="text-form">
                       Masukkan tanggal dan waktu mulainya kegiatan Anda.
                     </span>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <i class="ni ni-calendar-grid-58"></i>
+                          </div>
+                        </div>
+                        <input type="datetime-local"  name="dt_akhir" class="form-control">
+                        <span class="text-form">
+                      Masukkan tanggal dan waktu berakhirnya kegiatan Anda.
+                      </span>
+                      </div>
                   </div>
                 </div>
 
                 <div class="form-group row">
-                  <label for="dt_akhir" class="col-sm-2 col-form-label">Akhir :</label>
+                  <label for="mulai" class="col-sm-2 col-form-label">Periode Pengumuman :</label>
                   <div class="col">
                     <div class="input-group mb-2 mr-sm-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
-                        <i class="ni ni-calendar-grid-58"></i>
+                        <i class="ni ni-watch-time"></i>
                         </div>
                       </div>
-                      <input type="datetime-local"  name="dt_akhir" class="form-control">
+                      <input type="datetime-local" class="form-control" name="pg_mulai">
+                      <span class="text-form">
+                      Masukkan tanggal dan waktu mulainya pengumuman hasil kegiatan Anda.
+                    </span>
                     </div>
-                    <span class="text-form">
-                      Masukkan tanggal dan waktu berakhirnya kegiatan Anda.
+                  </div>
+                  <div class="col">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                          <i class="ni ni-watch-time"></i>
+                          </div>
+                        </div>
+                        <input type="datetime-local"  name="pg_akhir" class="form-control">
+                        <span class="text-form">
+                        Masukkan tanggal dan waktu berakhirnya pengumuman hasil kegiatan Anda.
                       </span>
+                      </div>
                   </div>
                 </div>
+
+                
 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                     <br>
