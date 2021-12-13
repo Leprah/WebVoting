@@ -102,7 +102,15 @@
                 series: [{
                     name: 'Kandidat',
                     colorByPoint: true,
-                    data: {!! json_encode($hasil) !!}
+                    data:  'Ana',
+                        y: 15
+                    }, {
+                        name: 'Alief',
+                        y: 35
+                    }, {
+                        name: 'Aveenda',
+                        y: 50,
+                    }]
                 }]
             });
         </script>

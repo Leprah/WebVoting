@@ -258,15 +258,9 @@
                 @endforeach
               @else
               <ul type="none">
-<<<<<<< HEAD
-                <li>John Ferdian<span>  : </span> <span>  150 </span> </li>
-                <li>Andi Saputra<span>  : </span> <span>  100 </span> </li>
-                <li>Lala Lestari<span>  : </span> <span>  101 </span> </li>
-=======
                       <li> </li>
                       
                       
->>>>>>> af2315358404b645aaac4b9b339a3a1c65ca01eb
               </ul>
               @endif
               </div>

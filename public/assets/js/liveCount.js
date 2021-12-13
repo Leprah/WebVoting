@@ -48,8 +48,6 @@ Highcharts.chart('liveCount', {
         }, {
             name: 'Aveenda',
             y: 50,
-            // sliced: true,
-            // selected: true
         }]
     }]
 });
