@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePemilih extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('pemilih', function (Blueprint $table) {
