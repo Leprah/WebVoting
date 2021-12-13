@@ -84,18 +84,19 @@
                           </span>
                       </div>
                   </div>
+                  
                   <div class="form-group row">
-                  <label for="mulai" class="col-sm-2 col-form-label">Periode Voting :</label>
+                  <label for="mulai_pv" class="col-sm-2 col-form-label">Periode Voting :</label>
                   <div class="col">
                     <div class="input-group mb-2 mr-sm-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
-                        <i class="ni ni-calendar-grid-58"></i>
+                        <i class="ni ni-watch-time"></i>
                         </div>
                       </div>
                       <input type="datetime-local" class="form-control" name="dt_mulai">
                       <span class="text-form">
-                      Masukkan tanggal dan waktu mulainya kegiatan Anda.
+                      Masukkan tanggal dan waktu mulainya kegiatan pemilihan Anda.
                     </span>
                     </div>
                   </div>
@@ -103,12 +104,12 @@
                     <div class="input-group mb-2 mr-sm-2">
                         <div class="input-group-prepend">
                           <div class="input-group-text">
-                          <i class="ni ni-calendar-grid-58"></i>
+                          <i class="ni ni-watch-time"></i>
                           </div>
                         </div>
                         <input type="datetime-local"  name="dt_akhir" class="form-control">
                         <span class="text-form">
-                      Masukkan tanggal dan waktu berakhirnya kegiatan Anda.
+                        Masukkan tanggal dan waktu berakhirnya kegiatan pemilihan Anda.
                       </span>
                       </div>
                   </div>
