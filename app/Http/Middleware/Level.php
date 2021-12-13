@@ -12,6 +12,6 @@ class Level{
     if($user->level == $level)
       return $next($request);
 
-    return redirect('/auth.login');
+    return redirect('auth/login');
   }
 }

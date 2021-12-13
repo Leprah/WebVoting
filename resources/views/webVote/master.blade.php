@@ -152,20 +152,5 @@
   <script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <!-- js quick count -->
-  <script src="../assets/js/liveCount.js"></script>
-  <!-- Vote Berdasarkan Angkatan -->
-  <script src="../assets/js/countAngkatan.js"></script>
-  <!-- Vote Berdasarkan Jurusan -->
-  <script src="../assets/js/countJurusan.js"></script>
-  <!-- Voter Berdasarkan Angkatan -->
-  <script src="../assets/js/jmlAngkatan.js"></script>
-  <!-- Voter Berdasarkan Jurusan -->
-  <script src="../assets/js/jmlJurusan.js"></script>
-  <!-- Penggunaan Hak Pilih -->
-  <script src="../assets/js/suara.js"></script>
-
 </body>
-
 </html>

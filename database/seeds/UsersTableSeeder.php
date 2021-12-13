@@ -14,8 +14,32 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('P@ssw0rd!'),
         ]);
         DB::table('users')->insert([
-            'name' => 'Test voter',
+            'name' => 'Leprah',
             'email' => 'imvoterr@gmail.com',
+            'level' => 'voter',
+            'password' => Hash::make('password'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Rivaldy',
+            'email' => 'imvoter@gmail.com',
+            'level' => 'voter',
+            'password' => Hash::make('password'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Nizan',
+            'email' => 'imvoter1@gmail.com',
+            'level' => 'voter',
+            'password' => Hash::make('password'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Ayun',
+            'email' => 'imvoter2@gmail.com',
+            'level' => 'voter',
+            'password' => Hash::make('password'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Rafid',
+            'email' => 'imvoter3@gmail.com',
             'level' => 'voter',
             'password' => Hash::make('password'),
         ]);

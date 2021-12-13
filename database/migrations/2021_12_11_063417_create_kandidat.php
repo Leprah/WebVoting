@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateKandidat extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('kandidat', function (Blueprint $table) {
