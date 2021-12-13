@@ -42,7 +42,7 @@ class PemilihController extends Controller
     {
         $data = Kandidat::find($id);
         $data->nama = $request->nama;
-        $data->nim = $request->nim; 
+        $data->nim = $request->nim;
         $data->jurusan = $request->jurusan;
         $data->angkatan = $request->angkatan;
         $data->update();
@@ -61,7 +61,6 @@ class PemilihController extends Controller
             ['kandidat_id'=>$id,'user_id'=>\Auth::user()->id,'status'=>$status]
         );
 
-        \Session::flash('sukses','Terimakasih sudah voting');
-        return redirect('voter/vote');
+        return redirect('/logout');
     }
 }

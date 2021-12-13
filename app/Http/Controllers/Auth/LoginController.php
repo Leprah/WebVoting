@@ -15,13 +15,13 @@ class LoginController extends Controller
         $level = Auth::user()->level; 
         switch ($level) {
             case 'admin':
-                return view('webVote.index');
+                return route('webVote.index');
                 break;
             case 'voter':
-                return view('voter.vote');
+                return route('voter.vote');
                 break;
             default:
-                return view('auth.login');
+                return route('/logout');
                 break;
         }
     }

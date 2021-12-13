@@ -143,9 +143,60 @@
           <div class="row"> 
             <div class="card-ds mg-chrt">
               <h3>Quick Count</h3>
-              <div class='chart left' id='liveCount'></div>
-            </div>
+              <div class='chart left' id='liveCount' ></div>
 
+              <script src="https://code.highcharts.com/highcharts.js"></script>
+              @if($hasil != NULL)
+              <script type="text/javascript">
+                  Highcharts.chart('liveCount',{
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false,
+                        type: 'pie'
+                    },
+                    title: {
+                        text: {!! json_encode($title) !!}
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    accessibility: {
+                        point: {
+                            valueSuffix: '%'
+                        }
+                    },
+                    plotOptions: {
+                        pie: {
+                          colors: [
+                                '#A12568', 
+                                '#FEC260',
+                                '#2A0944',
+                                '#24CBE5', 
+                                '#64E572', 
+                                '#FF9655', 
+                                '#FFF263', 
+                                '#6AF9C4'
+                              ],
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: false
+                            },
+                            showInLegend: true
+                        }
+                    },
+                    series: [{
+                        name: 'Kandidat',
+                        colorByPoint: true,
+                        data: {!! json_encode($hasil) !!}
+                    }]
+                  });
+              </script>
+              @else
+              <p>Kandidat Belum ada, Silakan tambahkan kandidat</p>
+              @endif
+            </div>
             <div class="card-ds mg-cd-pr">
               <h3>Countdown</h3>
               <div class='bdr-ds'>
@@ -165,7 +216,6 @@
                         var now = new Date();
                         var distance = end - now;
                         if (distance < 0) {
-
                           clearInterval(timer);
                           document.getElementById(id).innerHTML = '<b>Pemilihan Berakhir</b> ';
                           return;
@@ -190,38 +240,34 @@
                 <span id="menit">00</span><span> : </span>
                 <span id="detik">00</span>
                 @endif
-                
                 </div>
               </div>
               <br>
-
               <h3>Perolehan Suara</h3>
               <div class='bdr-ds'>
-              @if(count($kandidat) > 0)
-                  @foreach ($kandidat as $kandidats)
-                  <table cellpadding="4">
-                      <tr>
-                          <td>{{ $kandidats->nama }}</td>
-                          <td> : </td>
-                          <td> 180 </td>
-                          <td>suara</td>
-                      </tr>
-                  </table>
-                  @endforeach
+              @if($hasil != NULL)
+                @foreach ($hasil as $hs)
+                <table cellpadding="4">
+                    <tr>
+                        <td>Kandidat {{ $hs['name'] }}</td>
+                        <td> : </td>
+                        <td>{{ $hs['y'] }}</td>
+                        <td>suara</td>
+                    </tr>
+                </table>
+                @endforeach
               @else
               <ul type="none">
-                      <li>John Ferdian<span>  : </span> <span>  150 </span> </li>
-                      <li>Andi Saputra<span>  : </span> <span>  100 </span> </li>
-                      <li>Lala Lestari<span>  : </span> <span>  101 </span> </li>
+                <li>John Ferdian<span>  : </span> <span>  150 </span> </li>
+                <li>Andi Saputra<span>  : </span> <span>  100 </span> </li>
+                <li>Lala Lestari<span>  : </span> <span>  101 </span> </li>
               </ul>
               @endif
               </div>
             </div>
           </div>
 </div>
-
-
- @endsection
+@endsection
 
 
    
