@@ -10,40 +10,22 @@ use App\Voting;
 
 class StatistikController extends Controller
 {
-    public function jumlahAngkt(){
-        //
-    }
-
-    public function suara(){
-        // 
-    }
-    
-    public function suaraAngkatan(){
-        // 
-    }
-
-    public function jumlahJurusan(){
-        // 
-    }
-
-    public function suaraJurusan(){
-        //
-    }
 
     public function hasilVoting(){
+        $kandidat = Kandidat::all();
+        $pengaturan = pengaturan::first();
         $title = 'Hasil Voting';
         $hasil = [];
 
         foreach ($kandidat as $key => $kd){
             $id_kandidat = $kd->id;
-            $nama = $kd->id;
+            $no_urut = $kd->no_urut;
             $total = Voting::where('kandidat_id', $id_kandidat)->count();
-            $nama = Kandidat::where('nama', $id_kandidat)->get();
 
-            $a['name'] = $nama + $id;
+            $a['name'] = $no_urut;
             $a['y'] = $total;
             array_push($hasil,$a);
         }
-        return view('webVote.statistik', compact('hasil','title'));
+        return view('/webVote/statistik', compact('hasil','title','pengaturan'));
     }
 }

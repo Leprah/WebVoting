@@ -51,5 +51,4 @@ class IndexController extends Controller
         }
         return view('webVote.index', compact('hasil','title'));
     }
-
 }

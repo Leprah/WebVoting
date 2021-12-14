@@ -25,8 +25,6 @@ Route::get('/webVote/pengaturan', 'WebVoteController@pengaturan')->name('webVote
 
 Route::post('/webVote/store', 'WebVoteController@store_waktu')->name('webVote.store');
 
-Route::get('/webVote/statistik', 'WebVoteController@statistik')->name('webVote.statistik');
-
 Route::get('/webVote/master', 'WebVoteController@master')->name('webVote.master');
 
 // kandidat route
@@ -45,3 +43,6 @@ Route::get('/kandidat/delete/{id}', 'KandidatController@destroy')->name('kandida
 Route::get('/voter/vote', 'VoterController@voter')->middleware('level:voter')->name('voter.vote');
 
 Route::get('/voter/voting/{id}', 'PemilihController@voting')->middleware('level:voter')->name('voter.voting');
+
+//statistik
+Route::get('/webVote/statistik', 'StatistikController@hasilVoting')->name('webVote.statistik');
