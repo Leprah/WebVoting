@@ -61,7 +61,7 @@
     <div class='chart' id='liveCount'></div>
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script type="text/javascript">
-            Highcharts.chart('liveCount', {
+            Highcharts.chart('liveCount',{
                 chart: {
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
@@ -69,7 +69,7 @@
                     type: 'pie'
                 },
                 title: {
-                    text: 'Jumlah Suara Total'
+                    text: {!! json_encode($title) !!}
                 },
                 tooltip: {
                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -81,7 +81,7 @@
                 },
                 plotOptions: {
                     pie: {
-                    colors: [
+                        colors: [
                             '#A12568', 
                             '#FEC260',
                             '#2A0944',
@@ -90,7 +90,7 @@
                             '#FF9655', 
                             '#FFF263', 
                             '#6AF9C4'
-                        ],
+                            ],
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
@@ -102,15 +102,7 @@
                 series: [{
                     name: 'Kandidat',
                     colorByPoint: true,
-                    data:  'Ana',
-                        y: 15
-                    }, {
-                        name: 'Alief',
-                        y: 35
-                    }, {
-                        name: 'Aveenda',
-                        y: 50,
-                    }]
+                    data: {!! json_encode($hasil) !!}
                 }]
             });
         </script>
