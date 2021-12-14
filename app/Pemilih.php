@@ -10,8 +10,13 @@ class Pemilih extends Model
     protected $primaryKey = "id_pemilih";
     protected $fillable= ['nama','nim','jurusan','angkatan'];
 
-    public function voting()
+    // public function voting()
+    // {
+    //     return $this->belongsTo('App\Voting');
+    // }
+
+    public function user()
     {
-        return $this->belongsTo('App\Voting');
+        return $this->belongsTo('App\User');
     }
 }

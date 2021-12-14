@@ -21,4 +21,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function pemiilh()
+    {
+        return $this->hasOne('App\Pemilih', 'user_id','id');
+    }
+    public function voting()
+    {
+        return $this->hasOne('App\Voting', 'user_id','id');
+    }
 }

@@ -7,7 +7,7 @@ use App\Kandidat;
 use App\Pemilih;
 use App\Pengaturan;
 use App\Voting;
-
+use App\User;
 
 class WebVoteController extends Controller
 {
@@ -19,16 +19,23 @@ class WebVoteController extends Controller
         return view('webVote.dataKandidat', compact('data_kandidat', 'no'));
     }
 
+    // public function dataPemilih(){
+    //     $batas = 8;
+    //     $data_pemilih = Pemilih::orderBy('nama', 'asc')->paginate($batas);
+    //     $voting = Voting::all();
+    //     $no = $batas * ($data_pemilih->currentPage() - 1);
+    //     return view('webVote.dataPemilih', compact('data_pemilih', 'no','voting'));
+    // }
+
     public function dataPemilih(){
-        $batas = 8;
-        $data_pemilih = Pemilih::orderBy('nama', 'asc')->paginate($batas);
-        $voting = Voting::all();
-        $no = $batas * ($data_pemilih->currentPage() - 1);
-        return view('webVote.dataPemilih', compact('data_pemilih', 'no','voting'));
+        $data_pemilih = Pemilih::join('voting', 'pemilih.user_id', '=', 'voting.user_id')->get(['pemilih.*','voting.status']);
+        $no = 0;
+        return view('webVote.dataPemilih', compact('data_pemilih', 'no'));
     }
 
     public function pengaturan(){
-        return view('webVote.pengaturan');
+        $pengaturan = Pengaturan::all();
+        return view('webVote.pengaturan', compact('pengaturan'));
     }
 
     public function store_waktu(Request $request){
