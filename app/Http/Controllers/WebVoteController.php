@@ -32,6 +32,8 @@ class WebVoteController extends Controller
     }
 
     public function store_waktu(Request $request){
+        \DB::table('pengaturan')->delete();
+        
         $data =new Pengaturan;
         $data->nama_kegiatan = $request->nama_kegiatan;
         $data->dt_mulai = $request->dt_mulai;
