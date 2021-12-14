@@ -103,7 +103,7 @@
                 </thead>
                 <tbody class="list">
                   <center>
-                    @foreach ($data_pemilih as $pemilih)
+                    @foreach ($voter as $pemilih)
                       <tr>
                         <td>{{ ++$no}}</td>
                         <td>{{ $pemilih->nama }}</td>
@@ -127,6 +127,13 @@
                 </tbody>
               </table>
             <!-- Card footer -->
+            <div class="card-footer py-4">
+              <nav aria-label="...">
+                <ul class="pagination justify-content-end mb-0">
+                {{ $data_pemilih->links() }}
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
         </div>

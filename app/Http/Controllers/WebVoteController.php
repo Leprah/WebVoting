@@ -28,9 +28,11 @@ class WebVoteController extends Controller
     // }
 
     public function dataPemilih(){
-        $data_pemilih = Pemilih::join('voting', 'pemilih.user_id', '=', 'voting.user_id')->get(['pemilih.*','voting.status']);
-        $no = 0;
-        return view('webVote.dataPemilih', compact('data_pemilih', 'no'));
+        $batas = 8;
+        $voter = Pemilih::join('voting', 'pemilih.user_id', '=', 'voting.user_id')->get(['pemilih.*','voting.status']);
+        $data_pemilih = Pemilih::orderBy('id','asc')->paginate($batas);
+        $no = $batas * ($data_pemilih->currentPage() - 1);
+        return view('webVote.dataPemilih', compact('data_pemilih', 'no', 'voter'));
     }
 
     public function pengaturan(){
